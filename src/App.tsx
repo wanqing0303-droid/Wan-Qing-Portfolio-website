@@ -279,7 +279,11 @@ export default function App() {
                 <span>▲ {projects[(active + projects.length - 1) % projects.length].number} // PREVIOUS WORK</span>
               </button>
               <button className="featured-project" onClick={() => setModalOpen(true)}>
-                <img src={current.image} alt={current.subtitle} />
+                <img
+                  className={active === 0 ? "seijo-slide-image" : ""}
+                  src={current.image}
+                  alt={current.subtitle}
+                />
                 <span className="shade" />
                 <span className="featured-copy">
                   <strong> {current.title}</strong>
