@@ -37,6 +37,7 @@ const projects = [
       asset("ION Content 1.png"),
       asset("ION content 2.png"),
       asset("ION Content 3.png"),
+      asset("ION content 2 (2).png"),
     ],
   },
   {
@@ -514,15 +515,35 @@ export default function App() {
                     <li>ARCHIVAL PROTOCOL: ISO-2026 COMPLIANT SYSTEM</li>
                   </ul>
                 </section>
+                {detailImages[3] && (
+                  <>
+                    <figure>
+                      <img src={detailImages[3]} alt="ION Orchard additional content study" />
+                      <figcaption>
+                        <span>FIG 03. ION ORCHARD CONTENT DEVELOPMENT</span>
+                        <span>REF_ID // ION-2026-03</span>
+                      </figcaption>
+                    </figure>
+                    <section>
+                      <h3>03 // CONTENT DEVELOPMENT</h3>
+                      <p>
+                        Additional ION Orchard research and content development exploring customer needs,
+                        experience opportunities, and the strategic direction of the proposed solution.
+                      </p>
+                    </section>
+                  </>
+                )}
                 <figure>
                   <img src={detailImages[2]} alt="" />
                   <figcaption>
-                    <span>FIG 03. DETAIL EXECUTION &amp; STRUCTURAL DOCUMENTATION</span>
+                    <span>
+                      FIG {detailImages[3] ? "04" : "03"}. DETAIL EXECUTION &amp; STRUCTURAL DOCUMENTATION
+                    </span>
                     <span>ARCHIVE CERTIFIED</span>
                   </figcaption>
                 </figure>
                 <section>
-                  <h3>03 // PRODUCTION REFLECTION</h3>
+                  <h3>{detailImages[3] ? "04" : "03"} // PRODUCTION REFLECTION</h3>
                   <p>
                     Documented as part of Wan Qing&apos;s ongoing exploration of brutalist design languages,
                     interactive archival structures, and contemporary digital practice.
