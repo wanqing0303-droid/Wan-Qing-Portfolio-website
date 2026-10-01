@@ -303,7 +303,7 @@ export default function App() {
               </button>
               <button className="peek" onClick={() => moveProject(1)}>
                 <img src={projects[(active + 1) % 6].image} alt="" />
-                <span>▼ PORTFOLIO ITEM {projects[(active + 1) % 6].number} // NEXT WORK</span>
+                <span>▼  {projects[(active + 1) % 6].number} // NEXT WORK</span>
               </button>
             </div>
 
