@@ -389,6 +389,11 @@ main {
 
 .featured-project > .seijo-slide-image {
   object-position: center 30%;
+  transform: translateX(4%) scale(.94);
+}
+
+.featured-project.seijo-project {
+  background: #111;
 }
 
 .shade {

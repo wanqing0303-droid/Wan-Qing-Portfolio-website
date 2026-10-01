@@ -278,7 +278,10 @@ export default function App() {
                 <img src={projects[(active + projects.length - 1) % projects.length].image} alt="" />
                 <span>▲ {projects[(active + projects.length - 1) % projects.length].number} // PREVIOUS WORK</span>
               </button>
-              <button className="featured-project" onClick={() => setModalOpen(true)}>
+              <button
+                className={`featured-project ${active === 0 ? "seijo-project" : ""}`}
+                onClick={() => setModalOpen(true)}
+              >
                 <img
                   className={active === 0 ? "seijo-slide-image" : ""}
                   src={current.image}
