@@ -14,7 +14,7 @@ const projects = [
     coords: "38.9067° N, 1.4206° E",
     description:
       "Monumental live event stage architecture, generative lighting systems, and dynamic crowd scenography engineered for Ibiza open-air pavilions.",
-    image: asset("c124a.png"),
+    image: asset("public/assets/SEIJO_title.jpg"),
   },
   {
     number: "02",
