@@ -58,7 +58,7 @@ const projects = [
   {
     number: "05",
     year: "2024",
-    title: "PORTFOLIO ITEM 05",
+    title: "SONY",
     subtitle: "MODERN SPATIAL INSTALLATION & GALLERY INTERIOR",
     client: "WAN QING LAB",
     role: "PACKAGING & CMF",
