@@ -32,7 +32,7 @@ const projects = [
   {
     number: "03",
     year: "2025",
-    title: "Ch",
+    title: "Chateraise",
     subtitle: "INDUSTRIAL CANAL HARBOR & CELESTIAL DOCKS",
     client: "FESTIVAL ARCHIVE",
     role: "SPATIAL BRANDING",
