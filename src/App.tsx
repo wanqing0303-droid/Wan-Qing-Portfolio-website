@@ -505,6 +505,7 @@ export default function App() {
                   <p>{current.description}</p>
                   <p>
                     To identify pain points in Chateraise’s existing pre-order experience and understand user needs, then develop a more intuitive and seamless digital experience that improves usability and the overall customer journey.
+
                   </p>
                 </section>
                 <figure>
