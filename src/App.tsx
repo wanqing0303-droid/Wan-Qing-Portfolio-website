@@ -15,7 +15,11 @@ const projects = [
     description:
       "Monumental live event stage architecture, generative lighting systems, and dynamic crowd scenography engineered for Ibiza open-air pavilions.",
     image: asset("SEIJO_title.jpg"),
-    popupImage: asset("Seijo content 1")
+    popupImages: [
+      asset("Seijo content 1.jpg"),
+      asset("Seijo content 2.jpg"),
+      asset("Seijo content 3.jpg"),
+    ],
   },
   {
     number: "02",
@@ -208,6 +212,14 @@ export default function App() {
   const [selectedExperience, setSelectedExperience] = useState<number | null>(null);
   const experienceRef = useRef<HTMLDivElement>(null);
   const current = projects[active];
+  const popupImages =
+    "popupImages" in current
+      ? current.popupImages
+      : [
+          current.image,
+          projects[(active + 1) % projects.length].image,
+          projects[(active + 2) % projects.length].image,
+        ];
 
   const moveProject = (direction: number) => {
     setActive((value) => (value + direction + projects.length) % projects.length);
@@ -460,7 +472,7 @@ export default function App() {
                 <span><label>STATUS</label>{current.status}</span>
               </div>
               <figure>
-                <img src={current.popupimage} alt={current.subtitle} />
+                <img src={popupImages[0]} alt={current.subtitle} />
                 <figcaption>
                   <span>FIG 01. PRIMARY VIEW // HERO ARCHIVE COMPOSITION</span>
                   <span>{current.coords}</span>
@@ -477,7 +489,7 @@ export default function App() {
                   </p>
                 </section>
                 <figure>
-                  <img src={projects[(active + 1) % projects.length].image} alt="" />
+                  <img src={popupImages[1]} alt="" />
                   <figcaption>
                     <span>FIG 02. PROCESS &amp; SPATIAL TYPOGRAPHIC STUDY</span>
                     <span>REF_ID // SPEC_2026</span>
@@ -498,7 +510,7 @@ export default function App() {
                   </ul>
                 </section>
                 <figure>
-                  <img src={projects[(active + 2) % projects.length].image} alt="" />
+                  <img src={popupImages[2]} alt="" />
                   <figcaption>
                     <span>FIG 03. DETAIL EXECUTION &amp; STRUCTURAL DOCUMENTATION</span>
                     <span>ARCHIVE CERTIFIED</span>
