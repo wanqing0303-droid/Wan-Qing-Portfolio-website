@@ -51,7 +51,7 @@ const projects = [
     coords: "52.3676° N, 4.9041° E",
     description:
       "Atmospheric canal dockscapes and celestial astronomical line work deployed across structural signage and physical urban installations.",
-    image: asset("Chate.png"),
+    image: asset("Chateraise.png"),
   },
   {
     number: "04",
