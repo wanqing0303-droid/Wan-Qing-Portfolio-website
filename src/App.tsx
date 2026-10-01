@@ -515,7 +515,7 @@ export default function App() {
                   </figcaption>
                 </figure>
                 <section>
-                  <h3>02 // SYSTEM SPECIFICATIONS &amp; METHODOLOGY</h3>
+                  <h3>02 // COMP</h3>
                   <p>
                     Every layout element exists within a mathematical rhythm defined by calibrated margins
                     and crosshairs. Dynamic states trigger subtle chromatic pulses in high-visibility
