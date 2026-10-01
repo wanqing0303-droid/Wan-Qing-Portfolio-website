@@ -84,7 +84,7 @@ const projects = [
     coords: "19.0760° N, 72.8777° E",
     description:
       "Atmospheric gallery environments, luminous spatial reflections, and tactile packaging hardware prototypes designed for contemporary craft.",
-    image: asset("8d6a6.png"),
+    image: asset(".png"),
   },
 ];
 
