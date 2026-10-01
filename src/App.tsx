@@ -19,7 +19,7 @@ const projects = [
   {
     number: "02",
     year: "2026",
-    title: "PORTFOLIO ITEM 02",
+    title: "PO2",
     subtitle: "DIGITAL INTERFACE & HISTORIC CATHEDRAL SPACES",
     client: "ATELIER WAN QING",
     role: "UI/UX SYSTEM",
