@@ -279,7 +279,7 @@ export default function App() {
                     key={project.number}
                     onClick={() => setActive(index)}
                   >
-                    <i />  {project.title}
+                    <i /> {project.title}
                   </button>
                 ))}
               </div>
