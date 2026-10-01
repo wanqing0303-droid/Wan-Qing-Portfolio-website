@@ -228,7 +228,7 @@ export default function App() {
             <span /> PORTFOLIO [5]
           </a>
           <a href="#experience">
-            <span /> EXPERIENCE
+            <span /> PROFESSIONAL EXPERIENCE
           </a>
           <a href="#about">
             <span /> ABOUT ME
@@ -246,14 +246,14 @@ export default function App() {
         <section className="portfolio" id="portfolio">
           <div className="index-line">
             <span>
-              <i /> INDEX / WAN QING ARCHIVE 2026
+              <i /> INDEX / WAN QING&apos;S PROJECT ARCHIVE 2026
             </span>
             <span>SELECTED WORKS &amp; SYSTEMS</span>
             <span>STATUS: AVAILABLE</span>
           </div>
 
           <h1>
-            <i /> WAN QING ARCHIVE <i />
+            <i /> WAN QING&apos;S PROJECT ARCHIVE <i />
           </h1>
 
           <div className="project-stage">
@@ -322,7 +322,7 @@ export default function App() {
               </div>
             }
           >
-            EXPERIENCE //
+            PROFESSIONAL EXPERIENCE //
           </SectionTitle>
           <div className="experience-track" ref={experienceRef}>
             {experience.map((item, index) => (
