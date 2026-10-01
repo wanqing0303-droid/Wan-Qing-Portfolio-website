@@ -39,6 +39,28 @@ const projects = [
       asset("ION Content 3.png"),
       asset("ION content 2 (2).png"),
     ],
+    detailSections: [
+      {
+        heading: "01 // PROJECT OBJECTIVE",
+        caption: "CHOSEN OPPORTUNITY & PROJECT DIRECTION",
+        text: "To understand how visitors navigate ION Orchard’s digital and physical touchpoints, identify friction in the existing journey, and develop a clearer experience strategy that supports discovery, engagement, and conversion.",
+      },
+      {
+        heading: "02 // SECONDARY RESEARCH",
+        caption: "MARKET & EXPERIENCE RESEARCH",
+        text: "Reviewed comparable retail destinations and digital experiences to identify established patterns, service gaps, and opportunities for ION Orchard to create a more distinctive and useful customer journey.",
+      },
+      {
+        heading: "03 // EXPERIENCE DIRECTION",
+        caption: "STRATEGY & DESIGN DIRECTION",
+        text: "Translated the research findings into an experience direction focused on clearer information hierarchy, intuitive discovery, and stronger connections between digital planning and the on-site retail experience.",
+      },
+      {
+        heading: "04 // USER JOURNEY",
+        caption: "CUSTOMER JOURNEY DEVELOPMENT",
+        text: "Mapped the end-to-end visitor journey across discovery, planning, arrival, navigation, and post-visit engagement to reveal priority touchpoints and actionable opportunities for improvement.",
+      },
+    ],
   },
   {
     number: "03",
@@ -58,6 +80,33 @@ const projects = [
       asset("Chateraise content 3.png"),
       asset("Chateraise content 4.png"),
       asset("Chateraise content 5.jpg"),
+    ],
+    detailSections: [
+      {
+        heading: "01 // PROJECT OBJECTIVE",
+        caption: "CHOSEN PAIN POINT",
+        text: "To identify pain points in Chateraise’s existing pre-order experience and understand user needs, then develop a more intuitive and seamless digital experience that improves usability and the overall customer journey.",
+      },
+      {
+        heading: "02 // RESEARCH",
+        caption: "SECONDARY RESEARCH",
+        text: "Conducted competitor analysis to benchmark existing experiences and identify gaps in Chateraise’s digital journey. Compared key features, user flows and usability to uncover opportunities for improvement.",
+      },
+      {
+        heading: "03 // USER JOURNEY",
+        caption: "PRIMARY RESEARCH",
+        text: "Mapped the end-to-end Chateraise pre-order journey to understand how users interact with the existing experience at each stage. Documented key user actions, touchpoints and friction points to identify pain points and opportunities for improvement.",
+      },
+      {
+        heading: "04 // CONTENT STUDY",
+        caption: "DESIGN DEVELOPMENT",
+        text: "Supporting Chateraise research and design development documenting the project’s process, findings, and evolving experience direction.",
+      },
+      {
+        heading: "05 // CONTENT STUDY",
+        caption: "FINAL EXPERIENCE DIRECTION",
+        text: "Final design exploration connecting the research findings to a clearer, more intuitive pre-order experience and customer journey.",
+      },
     ],
   },
   {
@@ -233,6 +282,17 @@ export default function App() {
           projects[(active + 1) % projects.length].image,
           projects[(active + 2) % projects.length].image,
         ];
+  const detailSections =
+    "detailSections" in current
+      ? current.detailSections
+      : detailImages.map((_, index) => ({
+          heading: `${String(index + 1).padStart(2, "0")} // CONTENT STUDY`,
+          caption: `${current.title} CONTENT STUDY`,
+          text:
+            index === 0
+              ? current.description
+              : `Supporting ${current.title} research and design development documenting the project's process, findings, and final experience direction.`,
+        }));
 
   const moveProject = (direction: number) => {
     setActive((value) => (value + direction + projects.length) % projects.length);
@@ -492,96 +552,41 @@ export default function App() {
                 <span><label>ROLE</label>{current.role}</span>
                 <span><label>STATUS</label>{current.status}</span>
               </div>
-              <figure>
-                <img src={detailImages[0]} alt={current.subtitle} />
-                <figcaption>
-                  <span>FIG 01. CHOSEN PAIN POINT </span>
-                  <span>{current.coords}</span>
-                </figcaption>
-              </figure>
               <div className="case-notes">
-                <section>
-                  <h3>01 // PROJECT OBJECTIVE </h3>
-                  <p>{current.description}</p>
-                  <p>
-                    To identify pain points in Chateraise’s existing pre-order experience and understand user needs, then develop a more intuitive and seamless digital experience that improves usability and the overall customer journey.
-                  </p>
-                </section>
-                <figure>
-                  <img src={detailImages[1]} alt="" />
-                  <figcaption>
-                    <span>FIG 02. SECONDARY RESEARCH </span>
-                    <span>REF_ID // SPEC_2026</span>
-                  </figcaption>
-                </figure>
-                <section>
-                  <h3>02 // RESEARCH </h3>
-                  <p>
-                    Conducted competitor analysis to benchmark existing experiences and identify gaps in Chateraise’s digital journey. Compared key features, user flows and usability to uncover opportunities for improvement.
-                  </p>
-                </section>
-                {current.number === "02" && detailImages[3] && (
-                  <>
-                    <figure>
-                      <img src={detailImages[3]} alt="ION Orchard additional content study" />
-                      <figcaption>
-                        <span>FIG 03. PRIMARY RESEARCH </span>
-                        <span>REF_ID // ION-2026-03</span>
-                      </figcaption>
-                    </figure>
-                    <section>
-                      <h3>03 // USER JOURNEY </h3>
-                      <p>
-                        Mapped the end-to-end Chateraise pre-order journey to understand how users interact with the existing experience at each stage. Documented key user actions, touchpoints and friction points to identify pain points and opportunities for improvement.
-                      </p>
-                    </section>
-                  </>
-                )}
-                <figure>
-                  <img src={detailImages[2]} alt="" />
-                  <figcaption>
-                    <span>
-                      FIG {current.number === "02" && detailImages[3] ? "04" : "03"}. DETAIL EXECUTION &amp;
-                      STRUCTURAL DOCUMENTATION
-                    </span>
-                    <span>ARCHIVE CERTIFIED</span>
-                  </figcaption>
-                </figure>
-                <section>
-                  <h3>
-                    {current.number === "02" && detailImages[3] ? "04" : "03"} // USER JOURNEY
-                  </h3>
-                  <p>
-                    Mapped the end-to-end Chateraise pre-order journey to understand how users interact with the existing experience at each stage. Documented key user actions, touchpoints and friction points to identify pain points and opportunities for improvement.
-                  </p>
-                </section>
-                {current.number !== "02" &&
-                  detailImages.slice(3).map((image, index) => (
+                {detailImages.map((image, index) => {
+                  const section = detailSections[index];
+                  return (
                     <div className="additional-study" key={image}>
                       <figure>
                         <img
                           className={
-                            current.number === "03" && index === 1 ? "chateraise-figure-five" : ""
+                            current.number === "03" && index === 4 ? "chateraise-figure-five" : ""
                           }
                           src={image}
-                          alt={`${current.title} content ${index + 4}`}
+                          alt={`${current.title} content ${index + 1}`}
                         />
                         <figcaption>
                           <span>
-                            FIG {String(index + 4).padStart(2, "0")}. {current.title} CONTENT STUDY
+                            FIG {String(index + 1).padStart(2, "0")}.{" "}
+                            {section?.caption ?? `${current.title} CONTENT STUDY`}
                           </span>
-                          <span>ARCHIVE // {current.number}-{String(index + 4).padStart(2, "0")}</span>
+                          <span>
+                            {index === 0
+                              ? current.coords
+                              : `ARCHIVE // ${current.number}-${String(index + 1).padStart(2, "0")}`}
+                          </span>
                         </figcaption>
                       </figure>
                       <section>
-                        <h3>{String(index + 4).padStart(2, "0")} // CONTENT STUDY</h3>
-                        <p>
-                          Supporting {current.title} research and design development documenting the
-                          project&apos;s process, findings, and final experience direction.
-                        </p>
+                        <h3>
+                          {section?.heading ??
+                            `${String(index + 1).padStart(2, "0")} // CONTENT STUDY`}
+                        </h3>
+                        <p>{section?.text ?? current.description}</p>
                       </section>
                     </div>
-                  ))}
+                  );
+                })}
               </div>
             </div>
             <Corners />
