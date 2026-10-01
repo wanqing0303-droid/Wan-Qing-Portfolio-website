@@ -61,7 +61,7 @@ const projects = [
     title: "SONY",
     subtitle: "MODERN SPATIAL INSTALLATION & GALLERY INTERIOR",
     client: "WAN QING LAB",
-    role: "Re",
+    role: "Res",
     status: "PROTOTYPED",
     coords: "19.0760° N, 72.8777° E",
     description:
