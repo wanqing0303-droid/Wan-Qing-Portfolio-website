@@ -388,7 +388,7 @@ main {
 }
 
 .featured-project > .seijo-slide-image {
-  object-position: center 40%;
+  object-position: center 60%;
   transform: translateX(3%) scale(1.08);
 }
 
