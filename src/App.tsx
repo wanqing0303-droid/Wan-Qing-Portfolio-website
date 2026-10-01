@@ -60,7 +60,7 @@ const projects = [
     year: "2024",
     title: "SONY",
     subtitle: "Research on Consumer Behaviour",
-    client: "WAN QING LAB",
+    client: "W",
     role: "Research",
     status: "PROTOTYPED",
     coords: "19.0760° N, 72.8777° E",
