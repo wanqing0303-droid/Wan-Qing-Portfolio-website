@@ -553,7 +553,6 @@ export default function App() {
                   </h3>
                   <p>
                     Mapped the end-to-end Chateraise pre-order journey to understand how users interact with the existing experience at each stage. Documented key user actions, touchpoints and friction points to identify pain points and opportunities for improvement.
-
                   </p>
                 </section>
                 {current.number !== "02" &&
