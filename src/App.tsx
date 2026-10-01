@@ -552,8 +552,8 @@ export default function App() {
                     {current.number === "02" && detailImages[3] ? "04" : "03"} // PRODUCTION REFLECTION
                   </h3>
                   <p>
-                    Documented as part of Wan Qing&apos;s ongoing exploration of brutalist design languages,
-                    interactive archival structures, and contemporary digital practice.
+                    Mapped the end-to-end Chateraise pre-order journey to understand how users interact with the existing experience at each stage. Documented key user actions, touchpoints and friction points to identify pain points and opportunities for improvement.
+
                   </p>
                 </section>
                 {current.number !== "02" &&
