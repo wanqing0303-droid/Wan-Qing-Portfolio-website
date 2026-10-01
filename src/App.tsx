@@ -33,7 +33,7 @@ const projects = [
     number: "03",
     year: "2025",
     title: "Chateraise",
-    subtitle: "Research & UIUX Heuristics",
+    subtitle: "Research & UI/UX Heuristics",
     client: "FESTIVAL ARCHIVE",
     role: "SPATIAL BRANDING",
     status: "CATALOGUED",
