@@ -515,7 +515,7 @@ export default function App() {
                   </figcaption>
                 </figure>
                 <section>
-                  <h3>02 // resea </h3>
+                  <h3>02 //  </h3>
                   <p>
                     Conducted competitor analysis to benchmark existing experiences and identify gaps in Chateraise’s digital journey. Compared key features, user flows and usability to uncover opportunities for improvement.
                   </p>
