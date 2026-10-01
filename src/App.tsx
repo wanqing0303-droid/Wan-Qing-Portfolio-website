@@ -510,7 +510,7 @@ export default function App() {
                 <figure>
                   <img src={detailImages[1]} alt="" />
                   <figcaption>
-                    <span>FIG 02. PROCESS &amp; SPATIAL TYPOGRAPHIC STUDY</span>
+                    <span>FIG 02. SLIDE</span>
                     <span>REF_ID // SPEC_2026</span>
                   </figcaption>
                 </figure>
