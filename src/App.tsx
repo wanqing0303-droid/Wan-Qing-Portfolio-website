@@ -36,7 +36,8 @@ const projects = [
     subtitle: "Research & UI/UX Heuristics",
     client: "FESTIVAL ARCHIVE",
     role: "SPATIAL BRANDING",
-INDEX    coords: "52.3676° N, 4.9041° E",
+    status: "CATALOGUED",
+    coords: "52.3676° N, 4.9041° E",
     description:
       "Atmospheric canal dockscapes and celestial astronomical line work deployed across structural signage and physical urban installations.",
     image: asset("14ff5.png"),
