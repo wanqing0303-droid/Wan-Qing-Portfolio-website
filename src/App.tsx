@@ -525,7 +525,7 @@ export default function App() {
                     <figure>
                       <img src={detailImages[3]} alt="ION Orchard additional content study" />
                       <figcaption>
-                        <span>FIG 03. PRIMARY RESEAR</span>
+                        <span>FIG 03. PRIMARY RESEARCH </span>
                         <span>REF_ID // ION-2026-03</span>
                       </figcaption>
                     </figure>
