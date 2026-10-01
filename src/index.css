@@ -597,17 +597,30 @@ main {
   letter-spacing: .6px;
 }
 
-.portrait-frame > p {
+.portrait-signature {
   position: absolute;
-  top: 44%;
-  left: 50%;
-  margin: 0;
-  color: white;
+  top: 11px;
+  bottom: 11px;
+  left: 11px;
+  width: 58%;
+  height: calc(100% - 22px);
+  overflow: visible;
+  pointer-events: none;
+}
+
+.portrait-signature path {
+  fill: none;
+}
+
+.portrait-signature text {
+  fill: white;
   font-family: "Caveat:Bold", cursive;
-  font-size: 64px;
+  font-size: 58px;
   font-weight: 700;
   letter-spacing: 2.55px;
-  transform: translate(-50%, -50%) rotate(-62deg);
+  paint-order: stroke;
+  stroke: rgba(0, 0, 0, .28);
+  stroke-width: 2px;
 }
 
 .about-grid {
@@ -1105,8 +1118,12 @@ main {
     height: 396px;
   }
 
-  .portrait-frame > p {
-    font-size: 42px;
+  .portrait-signature {
+    width: 78%;
+  }
+
+  .portrait-signature text {
+    font-size: 48px;
   }
 
   .coordinates {

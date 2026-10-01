@@ -368,7 +368,19 @@ export default function App() {
             <span className="shade" />
             <span className="portrait-dot"><i /></span>
             <span className="coordinates">1.3521° N, 103.8198° E</span>
-            <p>Hi I&apos;m Wan Qing</p>
+            <svg
+              className="portrait-signature"
+              viewBox="0 0 500 540"
+              role="img"
+              aria-label="Hi I'm Wan Qing"
+            >
+              <defs>
+                <path id="signature-curve" d="M 82 430 C 30 310, 76 148, 275 82" />
+              </defs>
+              <text>
+                <textPath href="#signature-curve">Hi I&apos;m Wan Qing</textPath>
+              </text>
+            </svg>
             <Corners />
           </div>
 
