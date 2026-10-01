@@ -45,7 +45,7 @@ const projects = [
   {
     number: "04",
     year: "2025",
-    title: "Chat",
+    title: "Chateraise",
     subtitle: "BRUTALIST ARCHITECTURAL PAVILION GEOMETRY",
     client: "CULTURE FOUNDATION",
     role: "EDITORIAL DESIGN",
