@@ -15,7 +15,7 @@ const projects = [
     description:
       "Monumental live event stage architecture, generative lighting systems, and dynamic crowd scenography engineered for Ibiza open-air pavilions.",
     image: asset("SEIJO_title.jpg"),
-    popupImage: asset("Se")
+    popupImage: asset("Seijo")
   },
   {
     number: "02",
