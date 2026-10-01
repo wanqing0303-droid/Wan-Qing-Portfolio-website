@@ -32,7 +32,7 @@ const projects = [
     coords: "38.7223° N, 9.1393° W",
     description:
       "Exploration into functionalist web standard frameworks, architectural Lisbon cathedral drafts, and high-contrast responsive layouts.",
-    image: asset("d3722.png"),
+    image: asset("ION .png"),
   },
   {
     number: "03",
