@@ -46,7 +46,7 @@ const projects = [
     number: "04",
     year: "2026",
     title: "L'oreal",
-    subtitle: "BRUTALIST ARCHITECTURAL PAVILION GEOMETRY",
+    subtitle: "B",
     client: "CULTURE FOUNDATION",
     role: "EDITORIAL DESIGN",
     status: "PUBLISHED",
