@@ -32,7 +32,7 @@ const projects = [
   {
     number: "03",
     year: "2025",
-    title: "Chateraise",
+    title: "CHATERAISE",
     subtitle: "Research & UI/UX Heuristics",
     client: "-",
     role: "Digital product + UX",
