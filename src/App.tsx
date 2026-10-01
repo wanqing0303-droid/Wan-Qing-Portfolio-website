@@ -59,7 +59,7 @@ const projects = [
     number: "05",
     year: "2024",
     title: "SONY",
-    subtitle: "Research on Consumer Beha",
+    subtitle: "Research on Consumer Behavior",
     client: "WAN QING LAB",
     role: "Research",
     status: "PROTOTYPED",
