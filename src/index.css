@@ -606,6 +606,8 @@ main {
   height: calc(100% - 22px);
   overflow: visible;
   pointer-events: none;
+  transform: rotate(8deg);
+  transform-origin: center;
 }
 
 .portrait-signature path {
