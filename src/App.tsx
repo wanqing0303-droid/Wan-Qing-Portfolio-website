@@ -45,7 +45,7 @@ const projects = [
   {
     number: "04",
     year: "2026",
-    title: "L'oreal - CLient",
+    title: "L'oreal - Cli",
     subtitle: "The future of Luxury Fragrances",
     client: "L'oreal",
     role: "Product brainstorm",
