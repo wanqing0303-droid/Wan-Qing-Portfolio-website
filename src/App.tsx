@@ -45,7 +45,7 @@ const projects = [
   {
     number: "04",
     year: "2026",
-    title: "L'OR' ",
+    title: "L'OREAL' ",
     subtitle: "Client Consulting Project",
     client: "L'oreal",
     role: "Consumer Research / Product Development / Testing",
