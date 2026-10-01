@@ -606,7 +606,7 @@ main {
   height: calc(100% - 22px);
   overflow: visible;
   pointer-events: none;
-  transform: translate(clamp(52px, 9vw, 125px), -42px) rotate(8deg);
+  transform: translate(clamp(40px, 8vw, 110px), -52px) rotate(8deg);
   transform-origin: center;
 }
 
