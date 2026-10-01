@@ -10,7 +10,7 @@ const projects = [
     subtitle: "Product & Branding",
     client: "WAN QING STUDIO",
     role: "CREATIVE DIRECTOR",
-    status: "ACTIVE",
+    status: "IN",
     coords: "38.9067° N, 1.4206° E",
     description:
       "Monumental live event stage architecture, generative lighting systems, and dynamic crowd scenography engineered for Ibiza open-air pavilions.",
