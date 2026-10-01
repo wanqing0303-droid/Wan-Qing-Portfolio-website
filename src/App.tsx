@@ -19,7 +19,7 @@ const projects = [
   {
     number: "02",
     year: "2026",
-    title: "ION O",
+    title: "ION OR",
     subtitle: "How to improve ION's SEO",
     client: "ION ORCHARD",
     role: "RESEARCHER",
