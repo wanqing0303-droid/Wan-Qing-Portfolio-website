@@ -22,7 +22,7 @@ const projects = [
     title: "ION ORCHARD - Client Consulting Project",
     subtitle: "How to improve ION's SEO",
     client: "ION ORCHARD",
-    role: "RESEARCHER",
+    role: "UX Research · Competitor Analysis · Client Engagement",
     status: "INDEXED",
     coords: "38.7223° N, 9.1393° W",
     description:
