@@ -785,6 +785,11 @@ main {
   height: 612px;
 }
 
+.experience-modal {
+  width: min(762px, 100%);
+  height: 612px;
+}
+
 .case-modal > header {
   position: relative;
   z-index: 3;

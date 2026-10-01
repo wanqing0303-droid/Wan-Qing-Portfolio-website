@@ -513,7 +513,7 @@ export default function App() {
 
       {selectedExperience !== null && (
         <div
-          className="modal-backdrop"
+          className="modal-backdrop portfolio-backdrop"
           role="dialog"
           aria-modal="true"
           aria-label="Experience record details"
