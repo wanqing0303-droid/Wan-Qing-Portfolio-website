@@ -530,7 +530,7 @@ export default function App() {
                       </figcaption>
                     </figure>
                     <section>
-                      <h3>03 // CONTENT DEVELOPMENT</h3>
+                      <h3>03 // USER JOURNEY</h3>
                       <p>
                         Additional ION Orchard research and content development exploring customer needs,
                         experience opportunities, and the strategic direction of the proposed solution.
