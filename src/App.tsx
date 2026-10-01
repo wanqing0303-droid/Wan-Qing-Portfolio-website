@@ -62,7 +62,7 @@ const projects = [
     subtitle: "Research on Consumer Behaviour",
     client: "-",
     role: "Consumer Research",
-    status: "PROTOTYPED",
+    status: "Inde",
     coords: "19.0760° N, 72.8777° E",
     description:
       "Atmospheric gallery environments, luminous spatial reflections, and tactile packaging hardware prototypes designed for contemporary craft.",
