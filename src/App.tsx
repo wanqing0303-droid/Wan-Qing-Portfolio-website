@@ -21,7 +21,7 @@ const projects = [
     year: "2026",
     title: "ION",
     subtitle: "How to improve ION's SEO",
-    client: "ATELIER WAN QING",
+    client: "ION ORCHARD",
     role: "UI/UX SYSTEM",
     status: "INDEXED",
     coords: "38.7223° N, 9.1393° W",
