@@ -20,7 +20,7 @@ const projects = [
     number: "02",
     year: "2026",
     title: "ION ORCHARD",
-    subtitle: " - Client Consulting Project",
+    subtitle: "Client Consulting Project",
     client: "ION ORCHARD",
     role: "UX Research / Strategy",
     status: "INDEXED",
