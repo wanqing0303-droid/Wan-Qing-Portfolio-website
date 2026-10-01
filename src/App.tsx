@@ -289,7 +289,7 @@ export default function App() {
             <div className="project-reel">
               <button className="peek" onClick={() => moveProject(-1)}>
                 <img src={projects[(active + 5) % 6].image} alt="" />
-                <span>▲ PORTFOLIO ITEM {projects[(active + 5) % 6].number} // PREVIOUS WORK</span>
+                <span>▲  {projects[(active + 5) % 6].number} // PREVIOUS WORK</span>
               </button>
               <button className="featured-project" onClick={() => setModalOpen(true)}>
                 <img src={current.image} alt={current.subtitle} />
