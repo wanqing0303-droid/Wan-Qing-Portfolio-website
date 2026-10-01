@@ -396,6 +396,10 @@ main {
   object-position: center 70%;
 }
 
+.featured-project > .loreal-slide-image {
+  object-position: center 30%;
+}
+
 .shade {
   position: absolute;
   inset: 0;
