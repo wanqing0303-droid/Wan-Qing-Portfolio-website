@@ -519,12 +519,7 @@ export default function App() {
                   <p>
                     Conducted competitor analysis to benchmark existing experiences and identify gaps in Chateraise’s digital journey. Compared key features, user flows and usability to uncover opportunities for improvement.
                   </p>
-                  <h4>SPECIFICATION INDEX:</h4>
-                  <ul>
-                    <li>TYPOGRAPHY: SPACE MONO REGULAR / BOLD</li>
-                    <li>CHROMATIC CODE: CARBON / VERMILION / PLATINUM</li>
-                    <li>ARCHIVAL PROTOCOL: ISO-2026 COMPLIANT SYSTEM</li>
-                  </ul>
+                
                 </section>
                 {current.number === "02" && detailImages[3] && (
                   <>
