@@ -52,6 +52,13 @@ const projects = [
     description:
       "Atmospheric canal dockscapes and celestial astronomical line work deployed across structural signage and physical urban installations.",
     image: asset("Chateraise front pic.jpg"),
+    detailImages: [
+      asset("Chateraise content 1.png"),
+      asset("Chateraise content 2.png"),
+      asset("Chateraise content 3.png"),
+      asset("Chateraise content 4.png"),
+      asset("Chateraise content 5.jpg"),
+    ],
   },
   {
     number: "04",
@@ -517,7 +524,7 @@ export default function App() {
                     <li>ARCHIVAL PROTOCOL: ISO-2026 COMPLIANT SYSTEM</li>
                   </ul>
                 </section>
-                {detailImages[3] && (
+                {current.number === "02" && detailImages[3] && (
                   <>
                     <figure>
                       <img src={detailImages[3]} alt="ION Orchard additional content study" />
@@ -539,18 +546,33 @@ export default function App() {
                   <img src={detailImages[2]} alt="" />
                   <figcaption>
                     <span>
-                      FIG {detailImages[3] ? "04" : "03"}. DETAIL EXECUTION &amp; STRUCTURAL DOCUMENTATION
+                      FIG {current.number === "02" && detailImages[3] ? "04" : "03"}. DETAIL EXECUTION &amp;
+                      STRUCTURAL DOCUMENTATION
                     </span>
                     <span>ARCHIVE CERTIFIED</span>
                   </figcaption>
                 </figure>
                 <section>
-                  <h3>{detailImages[3] ? "04" : "03"} // PRODUCTION REFLECTION</h3>
+                  <h3>
+                    {current.number === "02" && detailImages[3] ? "04" : "03"} // PRODUCTION REFLECTION
+                  </h3>
                   <p>
                     Documented as part of Wan Qing&apos;s ongoing exploration of brutalist design languages,
                     interactive archival structures, and contemporary digital practice.
                   </p>
                 </section>
+                {current.number !== "02" &&
+                  detailImages.slice(3).map((image, index) => (
+                    <figure key={image}>
+                      <img src={image} alt={`${current.title} content ${index + 4}`} />
+                      <figcaption>
+                        <span>
+                          FIG {String(index + 4).padStart(2, "0")}. {current.title} CONTENT STUDY
+                        </span>
+                        <span>ARCHIVE // {current.number}-{String(index + 4).padStart(2, "0")}</span>
+                      </figcaption>
+                    </figure>
+                  ))}
               </div>
             </div>
             <Corners />
