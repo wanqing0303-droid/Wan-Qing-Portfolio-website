@@ -1,1 +1,10 @@
-{}
+{
+  "description": "Showcase your skills and projects with a professional portfolio website designed to highlight your work and attract potential clients or employers.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
