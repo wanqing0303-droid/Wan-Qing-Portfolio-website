@@ -47,7 +47,7 @@ const projects = [
     year: "2026",
     title: "L'oreal",
     subtitle: "The future of Luxury Fragrances",
-    client: "",
+    client: "L",
     role: "EDITORIAL DESIGN",
     status: "PUBLISHED",
     coords: "52.3792° N, 4.8994° E",
