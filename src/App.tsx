@@ -31,7 +31,7 @@ const projects = [
     status: "INDEXED",
     coords: "38.7223° N, 9.1393° W",
     description:
-      "Exploration into functionalist web standard frameworks, architectural Lisbon cathedral drafts, and high-contrast responsive layouts.",
+      "",
     image: asset("ION front pic.jpg"),
     detailImages: [
       asset("ION Content 1.png"),
