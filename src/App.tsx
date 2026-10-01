@@ -31,7 +31,7 @@ const projects = [
   },
   {
     number: "03",
-    year: "2025",
+    year: "2026",
     title: "L'oreal",
     subtitle: "INDUSTRIAL CANAL HARBOR & CELESTIAL DOCKS",
     client: "FESTIVAL ARCHIVE",
