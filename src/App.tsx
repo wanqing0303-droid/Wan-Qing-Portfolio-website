@@ -20,7 +20,7 @@ const projects = [
     number: "02",
     year: "2026",
     title: "ION",
-    subtitle: "DIGITAL INTERFACE & HISTORIC CATHEDRAL SPACES",
+    subtitle: "S",
     client: "ATELIER WAN QING",
     role: "UI/UX SYSTEM",
     status: "INDEXED",
