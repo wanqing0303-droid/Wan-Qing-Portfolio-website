@@ -400,6 +400,7 @@ main {
   align-items: center;
   justify-content: center;
   color: white;
+  text-align: center;
   text-shadow: 0 0 24px #000, 0 4px 16px #000;
 }
 
@@ -410,7 +411,9 @@ main {
 }
 
 .featured-copy small {
-  margin-top: 2px;
+  display: block;
+  width: 100%;
+  margin-top: -2px;
   color: #e0e0e0;
   font-family: "Space Mono:Bold", monospace;
   font-size: 11px;
@@ -419,7 +422,7 @@ main {
 }
 
 .featured-copy b {
-  margin-top: 12px;
+  margin-top: 24px;
   padding: 5px 17px;
   border: 1px solid rgba(255, 255, 255, .6);
   font-family: "Space Mono:Bold", monospace;
