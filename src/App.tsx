@@ -6,7 +6,7 @@ const projects = [
   {
     number: "01",
     year: "2025",
-    title: "Seij",
+    title: "Seijo",
     subtitle: "IBIZA FESTIVAL STAGE & LIVE CROWD VISUALS",
     client: "WAN QING STUDIO",
     role: "ART DIRECTION",
