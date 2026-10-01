@@ -295,7 +295,7 @@ export default function App() {
                 <img src={current.image} alt={current.subtitle} />
                 <span className="shade" />
                 <span className="featured-copy">
-                  <strong>PORTFOLIO ITEM {current.number}</strong>
+                  <strong>PORTFOLIO ITEM {current.title}</strong>
                   <small>{current.subtitle}</small>
                   <b>CLICK TO VIEW ↳</b>
                 </span>
