@@ -375,7 +375,10 @@ export default function App() {
               aria-label="Hi I'm Wan Qing"
             >
               <defs>
-                <path id="signature-curve" d="M 278 370 C 227 293, 270 170, 540 96" />
+                <path
+                  id="signature-curve"
+                  d="M 278 370 C 227 293, 270 170, 390 112 C 452 78, 516 108, 558 164"
+                />
               </defs>
               <text>
                 <textPath href="#signature-curve">Hi I&apos;m Wan Qing</textPath>
