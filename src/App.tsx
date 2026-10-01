@@ -61,7 +61,7 @@ const projects = [
     title: "SONY",
     subtitle: "Research on Consumer Behaviour",
     client: "-",
-    role: "ConsResearch",
+    role: "Consumer Research",
     status: "PROTOTYPED",
     coords: "19.0760° N, 72.8777° E",
     description:
