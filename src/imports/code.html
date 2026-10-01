@@ -1,0 +1,696 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head></head><body class="bg-surface-container-lowest text-on-surface font-body-md text-body-md relative min-h-screen selection:bg-primary selection:text-on-primary"><svg aria-hidden="true" class="inline-defs-container" style="position:absolute;width:0;height:0;overflow:hidden"></svg><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&amp;family=Caveat:wght@600;700&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:auto;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}
+.custom-modal-scroll::-webkit-scrollbar { width: 6px; }
+.custom-modal-scroll::-webkit-scrollbar-track { background: #eeeeee; }
+.custom-modal-scroll::-webkit-scrollbar-thumb { background: #000000; border-radius: 0px; }
+.custom-modal-scroll::-webkit-scrollbar-thumb:hover { background: #E02020; }
+.custom-modal-scroll { scrollbar-width: thin; scrollbar-color: #000000 #eeeeee; }
+</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "surface-dim": "#dadada",
+        "surface-container-lowest": "#ffffff",
+        "on-surface": "#1a1c1c",
+        "surface-container-highest": "#e2e2e2",
+        "primary-fixed-dim": "#c6c6c6",
+        "secondary-fixed": "#e3e2e2",
+        "on-primary-fixed": "#1b1b1b",
+        "background": "#f9f9f9",
+        "primary-container": "#1b1b1b",
+        "secondary-container": "#e3e2e2",
+        "active-red": "#E02020",
+        "on-error-container": "#93000a",
+        "on-error": "#ffffff",
+        "on-background": "#1a1c1c",
+        "on-tertiary-fixed": "#1b1b1b",
+        "primary-fixed": "#e2e2e2",
+        "surface-container": "#eeeeee",
+        "secondary": "#5e5e5e",
+        "inverse-on-surface": "#f0f1f1",
+        "border-subtle": "#E5E5E5",
+        "primary": "#000000",
+        "tertiary-fixed": "#e2e2e2",
+        "border-ultra-light": "#F0F0F0",
+        "inverse-surface": "#2f3131",
+        "on-secondary-fixed-variant": "#464747",
+        "on-secondary-container": "#646464",
+        "on-tertiary": "#ffffff",
+        "on-surface-variant": "#4c4546",
+        "secondary-fixed-dim": "#c7c6c6",
+        "on-primary-container": "#848484",
+        "on-primary": "#ffffff",
+        "inactive-gray": "#CCCCCC",
+        "tertiary": "#000000",
+        "surface-container-high": "#e8e8e8",
+        "error-container": "#ffdad6",
+        "on-secondary-fixed": "#1b1c1c",
+        "on-tertiary-fixed-variant": "#474747",
+        "surface-variant": "#e2e2e2",
+        "tertiary-container": "#1b1b1b",
+        "inverse-primary": "#c6c6c6",
+        "tertiary-fixed-dim": "#c6c6c6",
+        "on-tertiary-container": "#848484",
+        "on-secondary": "#ffffff",
+        "outline-variant": "#cfc4c5",
+        "surface": "#f9f9f9",
+        "on-primary-fixed-variant": "#474747",
+        "electric-cyan": "#00DEFF",
+        "error": "#ba1a1a",
+        "surface-container-low": "#f3f3f4",
+        "surface-bright": "#f9f9f9",
+        "surface-tint": "#5e5e5e",
+        "outline": "#7e7576"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "space-sm": "0.5rem",
+        "gutter": "1.5rem",
+        "space-lg": "1.5rem",
+        "space-xs": "0.25rem",
+        "space-xl": "3rem",
+        "margin": "2rem",
+        "space-md": "1rem"
+      },
+      "fontFamily": {
+        "headline-lg": ["Space Mono"],
+        "display-lg": ["Space Mono"],
+        "body-md": ["Space Mono"],
+        "label-sm": ["Space Mono"],
+        "headline-sm": ["Space Mono"],
+        "body-sm": ["Space Mono"],
+        "label-md": ["Space Mono"]
+      },
+      "fontSize": {
+        "headline-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "0.06em", "fontWeight": "700"}],
+        "display-lg": ["24px", {"lineHeight": "32px", "letterSpacing": "0.08em", "fontWeight": "700"}],
+        "body-md": ["12px", {"lineHeight": "18px", "letterSpacing": "0.04em", "fontWeight": "400"}],
+        "label-sm": ["9px", {"lineHeight": "12px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+        "headline-sm": ["13px", {"lineHeight": "18px", "letterSpacing": "0.06em", "fontWeight": "700"}],
+        "body-sm": ["11px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "400"}],
+        "label-md": ["11px", {"lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "700"}]
+      }
+    }
+  }
+}</script><div class="fixed top-3 left-3 w-3 h-3 pointer-events-none z-50"><div class="w-full h-full border-t border-l border-primary"></div></div><div class="fixed top-3 right-3 w-3 h-3 pointer-events-none z-50"><div class="w-full h-full border-t border-r border-primary"></div></div><div class="fixed bottom-3 left-3 w-3 h-3 pointer-events-none z-50"><div class="w-full h-full border-b border-l border-primary"></div></div><div class="fixed bottom-3 right-3 w-3 h-3 pointer-events-none z-50"><div class="w-full h-full border-b border-r border-primary"></div></div><header class="fixed top-0 left-0 right-0 z-40 border-b border-border-ultra-light bg-surface-container-lowest"><div class="h-20 w-full px-margin flex items-center justify-between relative"><div class="flex items-center gap-space-md z-10"><a class="flex items-center group gap-space-xs" href="#portfolio" title="WAN QING"><div class="flex items-center justify-start" style="height: 42px; width: 148px;"><svg class="w-full h-full object-contain filter group-hover:opacity-75 transition-opacity" fill="none" viewBox="0 0 460 90" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 20 C20 36 24 58 27 74 C31 58 35 40 43 30 C47 43 51 60 55 75 C60 56 66 35 73 18" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="7"></path>
+<path d="M84 76 C88 58 96 34 104 16 C107 12 112 14 115 22 C120 38 128 55 137 73" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="7"></path>
+<path d="M88 52 C98 55 114 47 132 44" stroke="#000000" stroke-linecap="round" stroke-width="6.5"></path>
+<path d="M152 74 C151 58 149 38 152 18" stroke="#000000" stroke-linecap="round" stroke-width="7"></path>
+<path d="M152 18 C163 36 177 56 191 74" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="7"></path>
+<path d="M191 74 C190 56 191 38 193 20" stroke="#000000" stroke-linecap="round" stroke-width="7"></path>
+<path d="M246 22 C232 15 214 24 212 44 C210 64 227 76 242 73 C256 70 264 54 260 36 C257 22 244 19 231 22" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="7"></path>
+<path d="M244 58 C252 65 262 74 274 78" stroke="#000000" stroke-linecap="round" stroke-width="7.5"></path>
+<path d="M292 18 C290 34 293 54 295 73" stroke="#000000" stroke-linecap="round" stroke-width="7"></path>
+<path d="M315 73 C314 55 315 37 317 21" stroke="#000000" stroke-linecap="round" stroke-width="7"></path>
+<path d="M317 21 C328 38 340 57 352 73" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="7"></path>
+<path d="M352 73 C353 55 354 38 356 22" stroke="#000000" stroke-linecap="round" stroke-width="7"></path>
+<path d="M425 26 C414 14 388 13 376 28 C362 45 366 64 384 73 C402 78 422 67 421 50 C420 47 405 47 394 48" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="7"></path>
+</svg></div><span class="font-body-md text-body-md text-on-surface uppercase tracking-widest hidden xl:inline-block font-bold">// ARCHIVE 2026</span></a></div><!-- Centered Navigation Items --><nav class="hidden md:flex absolute inset-0 items-center justify-center pointer-events-none z-20"><div class="flex items-center gap-space-lg font-headline-sm text-headline-sm uppercase tracking-wider pointer-events-auto" id="main-nav"><a aria-current="page" class="nav-link flex items-center gap-space-xs transition-colors group text-primary font-bold active" data-target="portfolio" href="#portfolio"><span class="bullet w-2 h-2 bg-active-red transition-colors inline-block"></span><span class="">PORTFOLIO [6]</span></a><a class="nav-link flex items-center gap-space-xs text-on-surface hover:text-primary transition-colors group font-bold" data-target="archive-cards-section" href="#archive-cards-section"><span class="bullet w-2 h-2 bg-primary group-hover:bg-active-red transition-colors inline-block"></span><span class="">EXPERIENCE</span></a><a class="nav-link flex items-center gap-space-xs text-on-surface hover:text-primary transition-colors group font-bold" data-target="about" href="#about"><span class="bullet w-2 h-2 bg-primary group-hover:bg-active-red transition-colors inline-block"></span><span class="">ABOUT ME</span></a></div></nav><div class="flex items-center gap-space-md z-10"><span class="font-body-md text-body-md text-primary font-bold uppercase tracking-widest hidden sm:inline-block">[SYSTEM 2026]</span><div class="flex items-center gap-1.5 font-body-sm text-body-sm text-primary font-bold uppercase border-2 border-primary px-2 py-1"><span class="w-2 h-2 bg-[#00C853] animate-pulse"></span><span class="">AVAILABLE</span></div></div></div></header><main class="w-full bg-surface-container-lowest pt-space-xl"><div class="flex flex-col w-full relative">
+<!-- Primary Events Layout Container -->
+<section class="w-full px-margin flex flex-col justify-between relative overflow-hidden pb-margin" id="portfolio">
+<!-- Top Level Metadata Index -->
+<div class="w-full flex items-center justify-between py-1 font-body-md text-body-md text-on-surface font-bold uppercase tracking-widest border-border-ultra-light"><div class="flex items-center gap-space-xs"><span class="inline-block w-2 h-2 bg-active-red"></span><span class="">INDEX / WAN QING ARCHIVE 2026</span></div><div class="hidden sm:flex items-center gap-space-lg"><span class="text-secondary">SELECTED WORKS &amp; SYSTEMS</span><span class="text-primary font-bold">STATUS: AVAILABLE</span></div></div>
+<!-- Subheader Title Banner -->
+<div class="w-full text-center border-border-ultra-light flex items-center justify-center gap-space-md pt-space-xl pb-space-md mt-space-md"><span class="w-2.5 h-2.5 bg-primary"></span><h1 class="text-center font-display-lg text-display-lg uppercase tracking-[0.25em] text-primary font-bold" style="font-size: calc(20px);">WAN QING ARCHIVE</h1><span class="w-2.5 h-2.5 bg-primary"></span></div>
+<!-- Center Stage 3-Column Display: Left Events List | Center Single Art Frame | Right Details & Status -->
+<div class="w-full grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center relative xl:gap-space-xl py-12 md:py-20">
+<!-- LEFT COLUMN: UPCOMING EVENTS SELECTOR -->
+<div class="flex flex-col justify-between order-2 lg:order-1 z-20 lg:col-span-2 py-1 h-full"><div class="flex items-center gap-space-xs mb-3 h-5" style="white-space: nowrap;"><h2 class="font-headline-lg text-headline-lg uppercase tracking-widest text-primary font-bold leading-none" style="white-space: nowrap; font-size: calc(12.8px);">SELECTED WORKS</h2></div><div class="flex flex-col gap-2.5 font-headline-sm text-headline-sm uppercase tracking-wider my-auto" id="event-selector-list"><button class="event-item text-left flex items-center gap-space-sm transition-all duration-200 group text-inactive-gray font-normal hover:text-primary cursor-pointer h-6" data-index="0" onclick="selectPortfolioItem(0)" type="button"><span class="w-1.5 h-1.5 bg-transparent inline-block bullet-indicator"></span><span class="event-name group-hover:translate-x-1 transition-transform leading-none">PORTFOLIO ITEM 01</span></button><button class="event-item text-left flex items-center gap-space-sm transition-all duration-200 group text-primary font-bold cursor-pointer h-6" data-index="1" onclick="selectPortfolioItem(1)" type="button"><span class="w-1.5 h-1.5 bg-active-red inline-block bullet-indicator"></span><span class="event-name group-hover:translate-x-1 transition-transform leading-none">PORTFOLIO ITEM 02</span></button><button class="event-item text-left flex items-center gap-space-sm transition-all duration-200 group text-inactive-gray font-normal hover:text-primary cursor-pointer h-6" data-index="2" onclick="selectPortfolioItem(2)" type="button"><span class="w-1.5 h-1.5 bg-transparent inline-block bullet-indicator"></span><span class="event-name group-hover:translate-x-1 transition-transform leading-none">PORTFOLIO ITEM 03</span></button><button class="event-item text-left flex items-center gap-space-sm transition-all duration-200 group text-inactive-gray font-normal hover:text-primary cursor-pointer h-6" data-index="3" onclick="selectPortfolioItem(3)" type="button"><span class="w-1.5 h-1.5 bg-transparent inline-block bullet-indicator"></span><span class="event-name group-hover:translate-x-1 transition-transform leading-none">PORTFOLIO ITEM 04</span></button><button class="event-item text-left flex items-center gap-space-sm transition-all duration-200 group text-inactive-gray font-normal hover:text-primary cursor-pointer h-6" data-index="4" onclick="selectPortfolioItem(4)" type="button"><span class="w-1.5 h-1.5 bg-transparent inline-block bullet-indicator"></span><span class="event-name group-hover:translate-x-1 transition-transform leading-none">PORTFOLIO ITEM 05</span></button><button class="event-item text-left flex items-center gap-space-sm transition-all duration-200 group text-inactive-gray font-normal hover:text-primary cursor-pointer h-6" data-index="5" onclick="selectPortfolioItem(5)" type="button"><span class="w-1.5 h-1.5 bg-transparent inline-block bullet-indicator"></span><span class="event-name group-hover:translate-x-1 transition-transform leading-none">PORTFOLIO ITEM 06</span></button></div><div class="mt-4 pt-2 hidden lg:flex items-center gap-space-sm font-body-md text-body-md font-bold text-secondary h-6"><span class="font-body-md text-body-md font-bold text-secondary tracking-wider whitespace-nowrap">NAV: [CLICK / SCROLL]</span></div></div>
+<!-- CENTER COLUMN: AUTHENTIC VERTICAL STACKED SLIDER REEL WITH VISIBLE PEEK PREVIEWS -->
+<div class="flex flex-col items-center justify-center relative order-1 lg:order-2 my-2 lg:my-0 lg:col-span-8">
+<div class="w-full flex flex-col items-center relative select-none">
+<!-- TOP VISIBLE PEEK PREVIEW BAR (Directly Clickable) -->
+<div aria-label="Previous portfolio item" class="w-full h-14 sm:h-20 mb-1 relative border border-border-subtle bg-surface-container-high/90 overflow-hidden cursor-pointer group transition-all duration-300 hover:border-primary flex items-center justify-center px-space-md shadow-xs" id="peek-prev-bar" onclick="prevEvent()" role="button" tabindex="0"><div class="absolute inset-0 bg-cover bg-center opacity-50 group-hover:opacity-85 transition-all duration-300 filter grayscale group-hover:grayscale-0 group-hover:scale-105" id="peek-prev-bg" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAaXuWT3UWWAcyCerSST7odk2bx3Hhrjky7WWWsEBO5t8E0CgK_wuxPRjcHDC-3Z5qoNu5uVYczBRLgSZMLM7jfQxhvd-rvfjNRdEiLAXrNkbyNDRNaYOKXn2uJFVlbw9VtOcEiGipAK-QXoT82aiP5jneIZ7bNsKNboAUSM8jEFXToGc0mcZJpZgq0i6B5oSDadTRChjnC9kIyVrniDtveR3fSge8gGK-14i8f_gaCscPrwoNQS-jLDQ&quot;);"></div><div class="absolute inset-0 bg-primary/40 pointer-events-none transition-colors group-hover:bg-primary/20"></div><div class="relative z-10 flex items-center justify-center gap-space-xs font-label-md text-label-md tracking-widest uppercase font-bold bg-transparent border-0 shadow-none text-on-primary" style="text-shadow: rgba(0, 0, 0, 0.9) 0px 2px 6px, rgba(0, 0, 0, 0.95) 0px 0px 12px;"><span class="group-hover:-translate-y-0.5 transition-transform text-xs inline-block">▲</span><span class="uppercase tracking-widest font-bold" id="peek-prev-title">PORTFOLIO ITEM 01 // ART DIRECTION</span></div></div>
+<!-- MAIN ACTIVE VIEWPORT WITH VIEWFINDER MARKS -->
+<div aria-label="Open portfolio case study" class="relative w-full p-2.5 bg-surface-container-lowest cursor-pointer select-none aspect-[16/9] group/viewport" id="interactive-artwork-viewport" onclick="openPortfolioModal()" role="button" tabindex="0">
+<!-- Viewfinder Technical Crop Marks (Corner Brackets) -->
+<div class="absolute top-0 left-0 w-3.5 h-3.5 border-t-2 border-l-2 border-primary pointer-events-none z-30"></div>
+<div class="absolute top-0 right-0 w-3.5 h-3.5 border-t-2 border-r-2 border-primary pointer-events-none z-30"></div>
+<div class="absolute bottom-0 left-0 w-3.5 h-3.5 border-b-2 border-l-2 border-primary pointer-events-none z-30"></div>
+<div class="absolute bottom-0 right-0 w-3.5 h-3.5 border-b-2 border-r-2 border-primary pointer-events-none z-30"></div>
+<!-- Vertical Frame Viewport with overflow hidden -->
+<div class="relative w-full h-full overflow-hidden border border-border-subtle bg-surface-container-low shadow-sm">
+<!-- Continuous Vertical Sliding Stack / Track -->
+<div class="absolute inset-0 w-full h-full transition-transform duration-500 ease-out will-change-transform" id="vertical-slides-track" style="transform: translateY(-100%);">
+<!-- Slide 0: Ibiza night festival/crowd stage illustration -->
+<div class="slide-item absolute inset-0 w-full h-full" style="top: 0%;">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 ease-out group-hover/viewport:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAaXuWT3UWWAcyCerSST7odk2bx3Hhrjky7WWWsEBO5t8E0CgK_wuxPRjcHDC-3Z5qoNu5uVYczBRLgSZMLM7jfQxhvd-rvfjNRdEiLAXrNkbyNDRNaYOKXn2uJFVlbw9VtOcEiGipAK-QXoT82aiP5jneIZ7bNsKNboAUSM8jEFXToGc0mcZJpZgq0i6B5oSDadTRChjnC9kIyVrniDtveR3fSge8gGK-14i8f_gaCscPrwoNQS-jLDQ');"></div>
+</div>
+<!-- Slide 1: Lisbon European cathedral historic city watercolor/sketch -->
+<div class="slide-item absolute inset-0 w-full h-full" style="top: 100%;">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 ease-out group-hover/viewport:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBCLfftJi4Rzu0uvUafx_vx4HC8JNB7iZmj4xNp3f2JxEE-rKASdE5p4-C7MBvdPS4mc1XXYkYcJ3GFD7BYFuyueIjalT58gcXlRTt-i0majIMya4ZxtM7Hu4Q3ZXl3M3gQ4719AgyR8OTs5uimPrUWMC29cFrP4dQHIjlAbVftyenqBCdV6kDnJ3tXAvqWfrShcnZsY7dFKsALrju0cZPSrobJACzg0b5cnixQaHfNLsGEToGY4na60g');"></div>
+</div>
+<!-- Slide 2: Industrial canal harbor docks dark atmospheric illustration -->
+<div class="slide-item absolute inset-0 w-full h-full" style="top: 200%;">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 ease-out group-hover/viewport:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC8g1YRDzcQG81h5OK_iiqyflIto8D1Daw8lDGbH3s6rtNiyPuYHVVwrlc04qxTXtyBSnYrHWzT4XdPC3xI6ARa6zaJuzPbL1A21CcrRI3WKjNE0RBGCMUIxMIastJ52P0NJbY4mrV0oUui_FFvx1T70rK659bHO-BLFH3FU9PFAhnAwvR5EKv2ZH2SE4U5ahC-jcdQDEVXXP9AKLsc0s6JEzFs4SKYZHyYB__CfK0sEHKwLQatfGKKSQ');"></div>
+</div>
+<!-- Slide 3: Minimalist brutalist architectural pavilion / editorial geometry -->
+<div class="slide-item absolute inset-0 w-full h-full" style="top: 300%;">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 ease-out group-hover/viewport:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBmL2alwghBQrIBdW7cj7aEyclxnK4F-KFe69k0l8LUmEXyAI4a-l-5-F1b2nH_CsdtvsOJ-mljeiYBsDZG1xMvphPZyMC6onhy-PDXxMHAilOPm1cVdM36SKDxa2L3rR_Tc0YhdiT30FbN09ftbpVaMUvdzVLEnY4JplR7j-VsytruHfN3M3aDtGBOdfIoKDFB2pdmI-g3n9H3xX7EUdMH4Mt_z62iLp-mweoh9sbZ9yqby73FFMf0RQ');"></div>
+</div>
+<!-- Slide 4: Modern spatial installation / exhibition gallery interior -->
+<div class="slide-item absolute inset-0 w-full h-full" style="top: 400%;">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 ease-out group-hover/viewport:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD7Bm5N1vUjXtO7_i1YtHDFJs0OeFJMcg9YnckE3d_K90zrg0IqiHIjea2Rjmt903VpV5RnAbaKTXJjmQkvm5EdnFqlUCOtdSaQfdk1dQQeF1RH5q0bDI3_gr__mMLCpP9WL2yCJ4ci-2o22nVvbvf7n3Q40j1Ou4_CztyWwUi_DCOO6hX9EIQEB3PR8UwF6BxMM-R5PlXbMf64uMxPsTS5m10h9LvvZTfsWdK-iwdNOM0Y8-3KXKlcAg');"></div>
+</div>
+<!-- Slide 5: Archival graphic identity / monolithic typographic posters -->
+<div class="slide-item absolute inset-0 w-full h-full" style="top: 500%;">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 ease-out group-hover/viewport:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDmX25l9fS1P_Z2Ssex23UbV645vnw0fUQIgurOZf28cZ2P3EkaN6zE7xEPJ6JLE_3iz0DnvBBhPoXPNB7_lL-U0AMu1CgmRPS8f8xjlLvWOtMgG-ScU1nVOyeGylB8uN6u9Z5hHT9rQ_-4Q5_EMlfxOM2xhqu_hD4lM6yqd0MavcsnAbNVnkHzD65vX4PWLB6d6DH0_7m9h7JayCo_6TXBgC2gDB-HpEAzXCW7ACg1ngSqnjyqsv9T8A');"></div>
+</div>
+</div>
+<!-- Refined Dark Subtle Vignette for Overlay Legibility -->
+<div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/20 to-primary/40 pointer-events-none z-10"></div>
+<!-- Portfolio Text DIRECTLY ON the Image -->
+<div class="relative z-20 w-full h-full p-space-md sm:p-space-lg flex flex-col justify-between pointer-events-none select-none"><div class="w-full h-full flex flex-col items-center justify-center text-center"><div class="flex flex-col items-center justify-center group/card cursor-pointer pointer-events-auto" id="art-card-trigger" onclick="event.stopPropagation(); openPortfolioModal();"><h2 class="font-headline-lg sm:font-display-lg text-headline-lg sm:text-display-lg font-bold tracking-[0.12em] text-on-primary uppercase my-1 drop-shadow-sm transition-all duration-300" id="art-main-title" style="font-size: clamp(1.8rem, 3.2vw, 3rem); line-height: 1.15; letter-spacing: 0.12em; text-shadow: rgba(0, 0, 0, 0.9) 0px 4px 16px, rgba(0, 0, 0, 0.95) 0px 0px 24px; opacity: 1; transform: translateY(0px);">PORTFOLIO ITEM 02</h2><p class="font-label-md text-label-md uppercase tracking-[0.25em] text-[#e0e0e0] font-bold mt-1 mb-2" id="art-main-subtitle" style="text-shadow: rgba(0, 0, 0, 0.9) 0px 2px 8px;">DIGITAL INTERFACE &amp; HISTORIC CATHEDRAL SPACES</p><button class="mt-space-sm font-label-md text-label-md uppercase tracking-[0.2em] text-on-primary font-bold flex items-center justify-center gap-1.5 px-space-md py-1 border border-on-primary/60 bg-transparent backdrop-blur-[2px] hover:bg-primary hover:text-on-primary hover:border-primary transition-colors duration-200 cursor-pointer shadow-sm pointer-events-auto" id="click-to-view-btn" onclick="event.stopPropagation(); openPortfolioModal();" style="text-shadow: rgba(0, 0, 0, 0.9) 0px 2px 8px, rgba(0, 0, 0, 0.95) 0px 0px 16px;" type="button">CLICK TO VIEW ↳</button></div></div></div>
+<!-- In-Place Detail Overlay Modal for Portfolio Showcase Bounds (Anchored inside the central showcase) -->
+
+</div>
+</div>
+<!-- BOTTOM VISIBLE PEEK PREVIEW BAR (Directly Clickable) -->
+<div aria-label="Next portfolio item" class="w-full h-14 sm:h-20 mt-1 relative border border-border-subtle bg-surface-container-high/90 overflow-hidden cursor-pointer group transition-all duration-300 hover:border-primary flex items-center justify-center px-space-md shadow-xs" id="peek-next-bar" onclick="nextEvent()" role="button" tabindex="0"><div class="absolute inset-0 bg-cover bg-center opacity-50 group-hover:opacity-85 transition-all duration-300 filter grayscale group-hover:grayscale-0 group-hover:scale-105" id="peek-next-bg" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuC8g1YRDzcQG81h5OK_iiqyflIto8D1Daw8lDGbH3s6rtNiyPuYHVVwrlc04qxTXtyBSnYrHWzT4XdPC3xI6ARa6zaJuzPbL1A21CcrRI3WKjNE0RBGCMUIxMIastJ52P0NJbY4mrV0oUui_FFvx1T70rK659bHO-BLFH3FU9PFAhnAwvR5EKv2ZH2SE4U5ahC-jcdQDEVXXP9AKLsc0s6JEzFs4SKYZHyYB__CfK0sEHKwLQatfGKKSQ&quot;);"></div><div class="absolute inset-0 bg-primary/40 pointer-events-none transition-colors group-hover:bg-primary/20"></div><div class="relative z-10 flex items-center justify-center gap-space-xs font-label-md text-label-md tracking-widest uppercase font-bold bg-transparent border-0 shadow-none text-on-primary" style="text-shadow: rgba(0, 0, 0, 0.9) 0px 2px 6px, rgba(0, 0, 0, 0.95) 0px 0px 12px;"><span class="group-hover:translate-y-0.5 transition-transform text-xs inline-block">▼</span><span class="uppercase tracking-widest font-bold" id="peek-next-title">PORTFOLIO ITEM 03 // SPATIAL BRANDING</span></div></div>
+</div>
+</div>
+<!-- RIGHT COLUMN: DATE & DETAILS CALLOUT -->
+<div class="flex flex-col justify-between order-3 z-20 lg:col-span-2 py-1 h-full"><div class="flex items-center gap-space-xs mb-3 lg:justify-end h-5" style="white-space: nowrap;"><h2 class="font-headline-lg text-headline-lg uppercase tracking-widest text-primary font-bold leading-none" style="white-space: nowrap; font-size: calc(12.8px);">YEAR // METADATA</h2></div><div class="flex flex-col gap-2.5 font-headline-sm text-headline-sm uppercase tracking-wider my-auto" id="date-selector-list"><button class="date-item text-inactive-gray font-normal hover:text-primary transition-all duration-200 text-left lg:text-right cursor-pointer flex items-center justify-start lg:justify-end h-6 leading-none" data-index="0" onclick="selectPortfolioItem(0)" type="button"><span class="w-1.5 h-1.5 bg-transparent inline-block bullet-indicator mr-1 lg:hidden"></span>WORK 01 // 2026</button><button class="date-item text-primary font-bold transition-all duration-200 text-left lg:text-right cursor-pointer flex items-center justify-start lg:justify-end h-6 leading-none" data-index="1" onclick="selectPortfolioItem(1)" type="button"><span class="w-1.5 h-1.5 bg-active-red inline-block bullet-indicator mr-1 lg:hidden"></span>WORK 02 // 2026</button><button class="date-item text-inactive-gray font-normal hover:text-primary transition-all duration-200 text-left lg:text-right cursor-pointer flex items-center justify-start lg:justify-end h-6 leading-none" data-index="2" onclick="selectPortfolioItem(2)" type="button"><span class="w-1.5 h-1.5 bg-transparent inline-block bullet-indicator mr-1 lg:hidden"></span>WORK 03 // 2025</button><button class="date-item text-inactive-gray font-normal hover:text-primary transition-all duration-200 text-left lg:text-right cursor-pointer flex items-center justify-start lg:justify-end h-6 leading-none" data-index="3" onclick="selectPortfolioItem(3)" type="button"><span class="w-1.5 h-1.5 bg-transparent inline-block bullet-indicator mr-1 lg:hidden"></span>WORK 04 // 2025</button><button class="date-item text-inactive-gray font-normal hover:text-primary transition-all duration-200 text-left lg:text-right cursor-pointer flex items-center justify-start lg:justify-end h-6 leading-none" data-index="4" onclick="selectPortfolioItem(4)" type="button"><span class="w-1.5 h-1.5 bg-transparent inline-block bullet-indicator mr-1 lg:hidden"></span>WORK 05 // 2024</button><button class="date-item text-inactive-gray font-normal hover:text-primary transition-all duration-200 text-left lg:text-right cursor-pointer flex items-center justify-start lg:justify-end h-6 leading-none" data-index="5" onclick="selectPortfolioItem(5)" type="button"><span class="w-1.5 h-1.5 bg-transparent inline-block bullet-indicator mr-1 lg:hidden"></span>WORK 06 // 2024</button></div><div class="mt-4 pt-2 hidden lg:flex items-center justify-end gap-space-sm text-secondary font-body-md text-body-md font-bold h-6"><span class="font-body-md text-body-md font-bold text-secondary tracking-wider whitespace-nowrap">NAV: [CLICK / SCROLL]</span></div></div>
+</div>
+<div aria-label="Portfolio Item Details" class="fixed inset-0 z-50 justify-center p-4 sm:p-8 bg-primary/85 backdrop-blur-[3px] pointer-events-auto flex items-start pt-20 sm:pt-24 overflow-y-auto" id="portfolio-modal" onclick="if(event.target===this)closePortfolioModal()" role="dialog"><div class="relative w-full max-w-4xl max-h-[90vh] bg-surface-container-lowest border-2 border-primary shadow-2xl flex flex-col overflow-hidden select-text" onclick="event.stopPropagation()" style="overscroll-behavior: contain;"><div class="absolute top-1.5 left-1.5 w-3 h-3 border-t-2 border-l-2 border-primary pointer-events-none z-30"></div><div class="absolute top-1.5 right-1.5 w-3 h-3 border-t-2 border-r-2 border-primary pointer-events-none z-30"></div><div class="absolute bottom-1.5 left-1.5 w-3 h-3 border-b-2 border-l-2 border-primary pointer-events-none z-30"></div><div class="absolute bottom-1.5 right-1.5 w-3 h-3 border-b-2 border-r-2 border-primary pointer-events-none z-30"></div><div class="w-full flex items-center justify-between border-b border-primary px-space-md py-2 bg-surface-container-lowest shrink-0 z-30"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 bg-active-red inline-block"></span><span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold" id="modal-badge">WAN QING // CASE STUDY [02]</span></div><button aria-label="Close detail view" class="font-headline-sm text-headline-sm uppercase tracking-widest text-primary hover:text-active-red cursor-pointer flex items-center gap-1 transition-colors px-2 py-0.5 border border-transparent hover:border-active-red select-none" onclick="event.stopPropagation(); closePortfolioModal();" type="button">[CLOSE ✕]</button></div><div class="overflow-y-auto flex-1 p-space-md sm:p-space-lg select-text space-y-space-md custom-modal-scroll" id="case-study-scroller" style="overscroll-behavior: contain;"><div class="space-y-space-xs border-b border-border-ultra-light pb-space-sm"><div class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-secondary" id="modal-category">UI/UX SYSTEM // ARCHIVE SPEC</div><h2 class="font-headline-lg text-headline-lg uppercase tracking-wider text-primary font-bold" id="modal-title">PORTFOLIO ITEM 02</h2><p class="font-body-md text-body-md text-secondary uppercase tracking-widest" id="modal-subtitle">DIGITAL INTERFACE &amp; HISTORIC CATHEDRAL SPACES</p></div><div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm border-b border-border-ultra-light pb-space-sm text-label-sm font-label-sm uppercase tracking-wider"><div class="flex flex-col"><span class="text-secondary">CLIENT</span><span class="text-primary font-bold" id="modal-client">ATELIER WAN QING</span></div><div class="flex flex-col"><span class="text-secondary">YEAR</span><span class="text-primary font-bold" id="modal-year">2026</span></div><div class="flex flex-col"><span class="text-secondary">ROLE</span><span class="text-primary font-bold" id="modal-role">UI/UX SYSTEM</span></div><div class="flex flex-col"><span class="text-secondary">STATUS</span><span class="text-primary font-bold" id="modal-status">INDEXED</span></div></div><div class="space-y-space-xs"><div class="w-full aspect-[16/9] border border-border-subtle bg-cover bg-center overflow-hidden relative" id="modal-hero-image" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBCLfftJi4Rzu0uvUafx_vx4HC8JNB7iZmj4xNp3f2JxEE-rKASdE5p4-C7MBvdPS4mc1XXYkYcJ3GFD7BYFuyueIjalT58gcXlRTt-i0majIMya4ZxtM7Hu4Q3ZXl3M3gQ4719AgyR8OTs5uimPrUWMC29cFrP4dQHIjlAbVftyenqBCdV6kDnJ3tXAvqWfrShcnZsY7dFKsALrju0cZPSrobJACzg0b5cnixQaHfNLsGEToGY4na60g&quot;);"></div><div class="flex items-center justify-between text-label-sm font-label-sm text-secondary uppercase tracking-widest pt-1"><span class="">FIG 01. PRIMARY VIEW // HERO ARCHIVE COMPOSITION</span><span id="modal-hero-coords" class="">38.7223° N, 9.1393° W</span></div></div><div class="space-y-space-sm py-space-sm"><h3 class="font-headline-sm text-headline-sm uppercase tracking-widest text-primary font-bold flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary inline-block"></span>01 // CURATORIAL BRIEF &amp; OBJECTIVE</h3><p class="font-body-md text-body-md text-on-surface leading-relaxed" id="modal-desc-p1">Exploration into functionalist web standard frameworks, architectural Lisbon cathedral drafts, and high-contrast responsive layouts.</p><p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">The project questions standard web interfaces by deploying rigorous mono-spaced type systems, real-time positional indexing, and continuous vertical reel mechanisms derived from archival tape systems.</p></div><div class="space-y-space-xs"><div class="w-full aspect-[16/9] border border-border-subtle bg-cover bg-center overflow-hidden relative filter grayscale contrast-125" id="modal-secondary-image" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAaXuWT3UWWAcyCerSST7odk2bx3Hhrjky7WWWsEBO5t8E0CgK_wuxPRjcHDC-3Z5qoNu5uVYczBRLgSZMLM7jfQxhvd-rvfjNRdEiLAXrNkbyNDRNaYOKXn2uJFVlbw9VtOcEiGipAK-QXoT82aiP5jneIZ7bNsKNboAUSM8jEFXToGc0mcZJpZgq0i6B5oSDadTRChjnC9kIyVrniDtveR3fSge8gGK-14i8f_gaCscPrwoNQS-jLDQ&quot;);"></div><div class="flex items-center justify-between text-label-sm font-label-sm text-secondary uppercase tracking-widest pt-1"><span class="">FIG 02. PROCESS &amp; SPATIAL TYPOGRAPHIC STUDY</span><span class="">REF_ID // SPEC_2026</span></div></div><div class="space-y-space-sm py-space-sm"><h3 class="font-headline-sm text-headline-sm uppercase tracking-widest text-primary font-bold flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary inline-block"></span>02 // SYSTEM SPECIFICATIONS &amp; METHODOLOGY</h3><p class="font-body-md text-body-md text-on-surface leading-relaxed" id="modal-desc-p2">Every layout element exists strictly within a mathematical rhythm defined by calibrated margins and crosshairs. Dynamic states trigger subtle chromatic pulses in high-visibility vermilion against balanced off-white substrates.</p><div class="p-space-md border border-border-subtle bg-surface-container-low font-body-sm text-body-sm text-secondary space-y-1"><div class="text-primary font-bold uppercase tracking-wider">SPECIFICATION INDEX:</div><div class="">• TYPOGRAPHY: SPACE MONO REGULAR / BOLD (0.06em - 0.25em TRACKING)</div><div class="">• CHROMATIC CODE: CARBON #000000 / VERMILION #E02020 / PLATINUM #EEEEEE</div><div class="">• ARCHIVAL PROTOCOL: ISO-2026 ARCHIVAL COMPLIANT SYSTEM</div></div></div><div class="space-y-space-xs"><div class="w-full aspect-[16/9] border border-border-subtle bg-cover bg-center overflow-hidden relative" id="modal-tertiary-image" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuC8g1YRDzcQG81h5OK_iiqyflIto8D1Daw8lDGbH3s6rtNiyPuYHVVwrlc04qxTXtyBSnYrHWzT4XdPC3xI6ARa6zaJuzPbL1A21CcrRI3WKjNE0RBGCMUIxMIastJ52P0NJbY4mrV0oUui_FFvx1T70rK659bHO-BLFH3FU9PFAhnAwvR5EKv2ZH2SE4U5ahC-jcdQDEVXXP9AKLsc0s6JEzFs4SKYZHyYB__CfK0sEHKwLQatfGKKSQ&quot;);"></div><div class="flex items-center justify-between text-label-sm font-label-sm text-secondary uppercase tracking-widest pt-1"><span class="">FIG 03. DETAIL EXECUTION &amp; STRUCTURAL DOCUMENTATION</span><span class="">ARCHIVE CERTIFIED</span></div></div><div class="space-y-space-sm py-space-sm border-t border-border-ultra-light"><h3 class="font-headline-sm text-headline-sm uppercase tracking-widest text-primary font-bold flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary inline-block"></span>03 // PRODUCTION REFLECTION</h3><p class="font-body-md text-body-md text-on-surface-variant leading-relaxed" id="modal-desc-p3">Documented as part of Wan Qing's ongoing exploration of brutalist design languages, interactive archival structures, and contemporary digital practice.</p><div class="pt-space-sm flex items-center justify-between font-label-sm text-label-sm text-secondary uppercase tracking-widest"><span class="">LOCATION: <span class="text-primary font-bold" id="modal-coords">38.7223° N, 9.1393° W</span></span><span class="">RELEASE: ARCHIVE V2.6</span></div></div></div></div></div></section><section class="w-full px-margin py-space-xl flex flex-col gap-space-lg relative border-border-ultra-light bg-surface-container-lowest" id="archive-cards-section"><div class="w-full flex flex-col sm:flex-row items-start sm:items-center justify-between pb-space-sm border-b border-border-ultra-light gap-space-sm"><div class="flex items-center gap-space-sm font-headline-lg text-headline-lg uppercase tracking-widest text-primary font-bold"><h2 class="font-headline-lg text-headline-lg uppercase tracking-widest text-primary font-bold">EXPERIENCE //</h2></div><div class="flex items-center gap-2 font-headline-sm text-headline-sm uppercase tracking-wider"><span class="text-secondary text-label-md uppercase tracking-widest mr-2 hidden md:inline-block">[SCROLL OR CLICK TO NAVIGATE]</span><button aria-label="Scroll left" class="px-3 py-1 border border-primary text-primary hover:bg-primary hover:text-on-primary font-bold transition-colors cursor-pointer select-none" onclick="const reel=document.getElementById('cards-scroll-track');if(reel){reel.scrollBy({left:-380,behavior:'smooth'});}" type="button">[ ◄ ]</button><button aria-label="Scroll right" class="px-3 py-1 border border-primary text-primary hover:bg-primary hover:text-on-primary font-bold transition-colors cursor-pointer select-none" onclick="const reel=document.getElementById('cards-scroll-track');if(reel){reel.scrollBy({left:380,behavior:'smooth'});}" type="button">[ ► ]</button></div></div><div class="relative w-full"><div class="flex gap-space-lg overflow-x-auto pb-4 pt-1 select-none active:cursor-grabbing cursor-grab" id="cards-scroll-track" style="scrollbar-width:none;-ms-overflow-style:none;"><div class="archive-card shrink-0 w-[300px] sm:w-[350px] border border-border-subtle bg-surface-container-lowest hover:border-primary transition-all duration-300 flex flex-col justify-between p-space-md relative group cursor-pointer" data-exp-index="0" onclick="handleCardClick(0)" role="button" tabindex="0"><div class="absolute top-1.5 left-1.5 w-2 h-2 border-t border-l border-primary pointer-events-none z-20"></div><div class="absolute top-1.5 right-1.5 w-2 h-2 border-t border-r border-primary pointer-events-none z-20"></div><div class="absolute bottom-1.5 left-1.5 w-2 h-2 border-b border-l border-primary pointer-events-none z-20"></div><div class="absolute bottom-1.5 right-1.5 w-2 h-2 border-b border-r border-primary pointer-events-none z-20"></div><div class="w-full h-[420px] border border-border-subtle overflow-hidden relative"><div class="card-img w-full h-full bg-cover bg-center filter grayscale group-hover:grayscale-0 transition-all duration-300 group-hover:scale-105 pointer-events-none" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAaXuWT3UWWAcyCerSST7odk2bx3Hhrjky7WWWsEBO5t8E0CgK_wuxPRjcHDC-3Z5qoNu5uVYczBRLgSZMLM7jfQxhvd-rvfjNRdEiLAXrNkbyNDRNaYOKXn2uJFVlbw9VtOcEiGipAK-QXoT82aiP5jneIZ7bNsKNboAUSM8jEFXToGc0mcZJpZgq0i6B5oSDadTRChjnC9kIyVrniDtveR3fSge8gGK-14i8f_gaCscPrwoNQS-jLDQ&quot;);"></div><div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-primary/60 pointer-events-none z-10"></div><div class="absolute top-3 left-3 right-3 z-20 flex items-center justify-between pointer-events-none font-label-md text-label-md uppercase font-bold text-on-primary tracking-widest" style="text-shadow: rgba(0, 0, 0, 0.9) 0px 2px 6px, rgba(0, 0, 0, 0.95) 0px 0px 10px;"><span class="text-on-primary">STUDIO MONOLITH</span><span class="text-on-primary">MAR - 26</span></div></div></div><div class="archive-card shrink-0 w-[300px] sm:w-[350px] border border-border-subtle bg-surface-container-lowest hover:border-primary transition-all duration-300 flex flex-col justify-between p-space-md relative group cursor-pointer" data-exp-index="1" onclick="handleCardClick(1)" role="button" tabindex="0"><div class="absolute top-1.5 left-1.5 w-2 h-2 border-t border-l border-primary pointer-events-none z-20"></div><div class="absolute top-1.5 right-1.5 w-2 h-2 border-t border-r border-primary pointer-events-none z-20"></div><div class="absolute bottom-1.5 left-1.5 w-2 h-2 border-b border-l border-primary pointer-events-none z-20"></div><div class="absolute bottom-1.5 right-1.5 w-2 h-2 border-b border-r border-primary pointer-events-none z-20"></div><div class="w-full h-[420px] border border-border-subtle overflow-hidden relative"><div class="card-img w-full h-full bg-cover bg-center filter grayscale group-hover:grayscale-0 transition-all duration-300 group-hover:scale-105 pointer-events-none" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBCLfftJi4Rzu0uvUafx_vx4HC8JNB7iZmj4xNp3f2JxEE-rKASdE5p4-C7MBvdPS4mc1XXYkYcJ3GFD7BYFuyueIjalT58gcXlRTt-i0majIMya4ZxtM7Hu4Q3ZXl3M3gQ4719AgyR8OTs5uimPrUWMC29cFrP4dQHIjlAbVftyenqBCdV6kDnJ3tXAvqWfrShcnZsY7dFKsALrju0cZPSrobJACzg0b5cnixQaHfNLsGEToGY4na60g&quot;);"></div><div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-primary/60 pointer-events-none z-10"></div><div class="absolute top-3 left-3 right-3 z-20 flex items-center justify-between pointer-events-none font-label-md text-label-md uppercase font-bold text-on-primary tracking-widest" style="text-shadow: rgba(0, 0, 0, 0.9) 0px 2px 6px, rgba(0, 0, 0, 0.95) 0px 0px 10px;"><span class="text-on-primary">ATELIER BRUT</span><span class="text-on-primary">OCT - 25</span></div></div></div><div class="archive-card shrink-0 w-[300px] sm:w-[350px] border border-border-subtle bg-surface-container-lowest hover:border-primary transition-all duration-300 flex flex-col justify-between p-space-md relative group cursor-pointer" data-exp-index="2" onclick="handleCardClick(2)" role="button" tabindex="0"><div class="absolute top-1.5 left-1.5 w-2 h-2 border-t border-l border-primary pointer-events-none z-20"></div><div class="absolute top-1.5 right-1.5 w-2 h-2 border-t border-r border-primary pointer-events-none z-20"></div><div class="absolute bottom-1.5 left-1.5 w-2 h-2 border-b border-l border-primary pointer-events-none z-20"></div><div class="absolute bottom-1.5 right-1.5 w-2 h-2 border-b border-r border-primary pointer-events-none z-20"></div><div class="w-full h-[420px] border border-border-subtle overflow-hidden relative"><div class="card-img w-full h-full bg-cover bg-center filter grayscale group-hover:grayscale-0 transition-all duration-300 group-hover:scale-105 pointer-events-none" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuC8g1YRDzcQG81h5OK_iiqyflIto8D1Daw8lDGbH3s6rtNiyPuYHVVwrlc04qxTXtyBSnYrHWzT4XdPC3xI6ARa6zaJuzPbL1A21CcrRI3WKjNE0RBGCMUIxMIastJ52P0NJbY4mrV0oUui_FFvx1T70rK659bHO-BLFH3FU9PFAhnAwvR5EKv2ZH2SE4U5ahC-jcdQDEVXXP9AKLsc0s6JEzFs4SKYZHyYB__CfK0sEHKwLQatfGKKSQ&quot;);"></div><div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-primary/60 pointer-events-none z-10"></div><div class="absolute top-3 left-3 right-3 z-20 flex items-center justify-between pointer-events-none font-label-md text-label-md uppercase font-bold text-on-primary tracking-widest" style="text-shadow: rgba(0, 0, 0, 0.9) 0px 2px 6px, rgba(0, 0, 0, 0.95) 0px 0px 10px;"><span class="text-on-primary">HYPERFRAME LABS</span><span class="text-on-primary">JUN - 24</span></div></div></div><div class="archive-card shrink-0 w-[300px] sm:w-[350px] border border-border-subtle bg-surface-container-lowest hover:border-primary transition-all duration-300 flex flex-col justify-between p-space-md relative group cursor-pointer" data-exp-index="3" onclick="handleCardClick(3)" role="button" tabindex="0"><div class="absolute top-1.5 left-1.5 w-2 h-2 border-t border-l border-primary pointer-events-none z-20"></div><div class="absolute top-1.5 right-1.5 w-2 h-2 border-t border-r border-primary pointer-events-none z-20"></div><div class="absolute bottom-1.5 left-1.5 w-2 h-2 border-b border-l border-primary pointer-events-none z-20"></div><div class="absolute bottom-1.5 right-1.5 w-2 h-2 border-b border-r border-primary pointer-events-none z-20"></div><div class="w-full h-[420px] border border-border-subtle overflow-hidden relative"><div class="card-img w-full h-full bg-cover bg-center filter grayscale group-hover:grayscale-0 transition-all duration-300 group-hover:scale-105 pointer-events-none" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuArtsFprDdgNOLgQQbMEREiNUkmARQfJAJNMIT_tC87Fx24R60SdQ7kpkPOWofXPMw9n7kvb-wDjU2BpRF4l9_kJmjZP7zgqcuizegVWm5H4BKhFwGou094zov5POzFH6web6SsbhF0A1e6UTMiUHpgp10sBCYKlnjUmTyvhFFpPwcx7byQpgDzX37zcWDby9nyr_rp8HgErF6Vmy8R0R3Ezv0C2uQlmwh1oysIFGP3lmRJugnHlmpLOQ&quot;);"></div><div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-primary/60 pointer-events-none z-10"></div><div class="absolute top-3 left-3 right-3 z-20 flex items-center justify-between pointer-events-none font-label-md text-label-md uppercase font-bold text-on-primary tracking-widest" style="text-shadow: rgba(0, 0, 0, 0.9) 0px 2px 6px, rgba(0, 0, 0, 0.95) 0px 0px 10px;"><span class="text-on-primary">CREATIVE ENG. LAB</span><span class="text-on-primary">JAN - 23</span></div></div></div><div class="archive-card shrink-0 w-[300px] sm:w-[350px] border border-border-subtle bg-surface-container-lowest hover:border-primary transition-all duration-300 flex flex-col justify-between p-space-md relative group cursor-pointer" data-exp-index="4" onclick="handleCardClick(4)" role="button" tabindex="0"><div class="absolute top-1.5 left-1.5 w-2 h-2 border-t border-l border-primary pointer-events-none z-20"></div><div class="absolute top-1.5 right-1.5 w-2 h-2 border-t border-r border-primary pointer-events-none z-20"></div><div class="absolute bottom-1.5 left-1.5 w-2 h-2 border-b border-l border-primary pointer-events-none z-20"></div><div class="absolute bottom-1.5 right-1.5 w-2 h-2 border-b border-r border-primary pointer-events-none z-20"></div><div class="w-full h-[420px] border border-border-subtle overflow-hidden relative"><div class="card-img w-full h-full bg-cover bg-center filter grayscale group-hover:grayscale-0 transition-all duration-300 group-hover:scale-105 pointer-events-none" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBYq46yzHG6ZKpHpN0QW1y5664XouaKApO8VHjG7VZikP3SvpGeokJ-8l1JHLxmjvn_2A49-nT3I8udMf6EC4QwG8X_rlyoL6c4AYz0KF7A3eCxU5Rw0b_P10LsqSGafpFke9-L09gvydTNhE87ZBtKUTdODs24nmiL5i7F7wHvAfH2aNGPibqyHM7cO6Xi8nHkagA-1R7a5J346UHO35jVNH0UwVN_I9T2bjl_JLY_ciizKtyKPLRKhw&quot;);"></div><div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-primary/60 pointer-events-none z-10"></div><div class="absolute top-3 left-3 right-3 z-20 flex items-center justify-between pointer-events-none font-label-md text-label-md uppercase font-bold text-on-primary tracking-widest" style="text-shadow: rgba(0, 0, 0, 0.9) 0px 2px 6px, rgba(0, 0, 0, 0.95) 0px 0px 10px;"><span class="text-on-primary">OFFICE OF FORM</span><span class="text-on-primary">AUG - 22</span></div></div></div><div class="archive-card shrink-0 w-[300px] sm:w-[350px] border border-border-subtle bg-surface-container-lowest hover:border-primary transition-all duration-300 flex flex-col justify-between p-space-md relative group cursor-pointer" data-exp-index="5" onclick="handleCardClick(5)" role="button" tabindex="0"><div class="absolute top-1.5 left-1.5 w-2 h-2 border-t border-l border-primary pointer-events-none z-20"></div><div class="absolute top-1.5 right-1.5 w-2 h-2 border-t border-r border-primary pointer-events-none z-20"></div><div class="absolute bottom-1.5 left-1.5 w-2 h-2 border-b border-l border-primary pointer-events-none z-20"></div><div class="absolute bottom-1.5 right-1.5 w-2 h-2 border-b border-r border-primary pointer-events-none z-20"></div><div class="w-full h-[420px] border border-border-subtle overflow-hidden relative"><div class="card-img w-full h-full bg-cover bg-center filter grayscale group-hover:grayscale-0 transition-all duration-300 group-hover:scale-105 pointer-events-none" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuB_kFew0ykl-8-fFqR5YOVGPwMKqvalglvnPbwJ_R3BVORkSugCi6ITMrxwbzhOM_HgZYY16CK6mexuW7InwX45a1zrS-slYhN0VNNR1dhmrjnMdCxre-gyEdfv6Rny6JODU2WSYrdTFY4bxdqc56al6mD0JhVN_vpqQO93FlBfcgsrfAbaZHRDlGJvb3tjfxPl-H7QW4rHXKvtABC0V0LY0V9YTL63_Xe45u-58heRdiPHcCKXAPekrg&quot;);"></div><div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-primary/60 pointer-events-none z-10"></div><div class="absolute top-3 left-3 right-3 z-20 flex items-center justify-between pointer-events-none font-label-md text-label-md uppercase font-bold text-on-primary tracking-widest" style="text-shadow: rgba(0, 0, 0, 0.9) 0px 2px 6px, rgba(0, 0, 0, 0.95) 0px 0px 10px;"><span class="text-on-primary">ARCHIVE PROTOCOL</span><span class="text-on-primary">NOV - 21</span></div></div></div></div><!-- In-Situ Detail Overlay Modal Anchored Inside Experience Section --><div aria-label="Experience Record Details" class="fixed inset-0 z-50 items-center justify-center p-2 sm:p-4 bg-primary/85 backdrop-blur-[3px] pointer-events-auto hidden" id="experience-modal" onclick="if(event.target===this)closeExperienceModal()" role="dialog"><div class="relative w-full max-w-5xl max-h-[90vh] bg-surface-container-lowest border-2 border-primary shadow-2xl flex flex-col overflow-hidden" onclick="event.stopPropagation()" style="overscroll-behavior: contain;"><div class="absolute top-1.5 left-1.5 w-3 h-3 border-t-2 border-l-2 border-primary pointer-events-none z-30"></div><div class="absolute top-1.5 right-1.5 w-3 h-3 border-t-2 border-r-2 border-primary pointer-events-none z-30"></div><div class="absolute bottom-1.5 left-1.5 w-3 h-3 border-b-2 border-l-2 border-primary pointer-events-none z-30"></div><div class="absolute bottom-1.5 right-1.5 w-3 h-3 border-b-2 border-r-2 border-primary pointer-events-none z-30"></div><div class="w-full flex items-center justify-between border-b border-primary px-space-md py-2 bg-surface-container-lowest shrink-0 z-20"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 bg-active-red inline-block"></span><span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold" id="exp-modal-badge">WAN QING // EXPERIENCE RECORD [02]</span></div><button aria-label="Close detail view" class="font-headline-sm text-headline-sm uppercase tracking-widest text-primary hover:text-active-red cursor-pointer flex items-center gap-1 transition-colors px-2 py-0.5 border border-transparent hover:border-active-red select-none" onclick="closeExperienceModal()" type="button">[CLOSE ✕]</button></div><div class="overflow-y-auto flex-1 p-space-md sm:p-space-lg select-text space-y-space-md custom-modal-scroll" id="experience-scroller" style="overscroll-behavior: contain;"><div class="space-y-space-xs border-b border-border-ultra-light pb-space-sm"><div class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-secondary" id="exp-modal-category">EXPERIENCE ARCHIVE // DOSSIER</div><h2 class="font-headline-lg text-headline-lg uppercase tracking-wider text-primary font-bold" id="exp-modal-title">ATELIER BRUT</h2><p class="font-body-md text-body-md text-secondary uppercase tracking-widest" id="exp-modal-role">SENIOR SPATIAL &amp; INTERACTION DESIGNER</p></div><div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm border-b border-border-ultra-light pb-space-sm text-label-sm font-label-sm uppercase tracking-wider"><div class="flex flex-col"><span class="text-secondary">TENURE</span><span class="text-primary font-bold" id="exp-modal-period">2024 – 2025</span></div><div class="flex flex-col"><span class="text-secondary">LOCATION</span><span class="text-primary font-bold" id="exp-modal-location">BERLIN / TOKYO</span></div><div class="flex flex-col"><span class="text-secondary">CATEGORY</span><span class="text-primary font-bold" id="exp-modal-domain">SPATIAL &amp; INTERACTIVE</span></div><div class="flex flex-col"><span class="text-secondary">STATUS</span><span class="text-primary font-bold" id="exp-modal-status">COMPLETED ARCHIVE</span></div></div><div class="space-y-space-xs"><div class="w-full aspect-[16/9] max-h-56 border border-border-subtle bg-cover bg-center overflow-hidden relative" id="exp-modal-image" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBCLfftJi4Rzu0uvUafx_vx4HC8JNB7iZmj4xNp3f2JxEE-rKASdE5p4-C7MBvdPS4mc1XXYkYcJ3GFD7BYFuyueIjalT58gcXlRTt-i0majIMya4ZxtM7Hu4Q3ZXl3M3gQ4719AgyR8OTs5uimPrUWMC29cFrP4dQHIjlAbVftyenqBCdV6kDnJ3tXAvqWfrShcnZsY7dFKsALrju0cZPSrobJACzg0b5cnixQaHfNLsGEToGY4na60g&quot;);"></div><div class="flex items-center justify-between text-label-sm font-label-sm text-secondary uppercase tracking-widest pt-1"><span class="">FIG 01. ARCHIVE ARTIFACT &amp; ENVIRONMENT DOSSIER</span><span id="exp-modal-ref" class="">REF_ID // EXP-2026-02</span></div></div><div class="space-y-space-sm py-space-sm"><h3 class="font-headline-sm text-headline-sm uppercase tracking-widest text-primary font-bold flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary inline-block"></span>ROLE RESPONSIBILITIES &amp; SCOPE</h3><p class="font-body-md text-body-md text-on-surface leading-relaxed" id="exp-modal-desc">Bridged interactive kinetic interfaces with tangible gallery surfaces. Built bespoke exhibition navigation and interactive kinetic installations.</p></div><div class="p-space-md border border-border-subtle bg-surface-container-low font-body-sm text-body-sm text-secondary space-y-1"><div class="text-primary font-bold uppercase tracking-wider">KEY DELIVERABLES:</div><div id="exp-modal-bullet1" class="">• Spatial interactive installations with responsive sound-reactive sensors.</div><div id="exp-modal-bullet2" class="">• Exhibition catalog and visual collateral for 12,000+ visitors.</div><div id="exp-modal-bullet3" class="">• Digital archive portal engineered for long-term collection preservation.</div></div></div></div></div></div></section><section class="w-full px-margin py-space-xl flex flex-col gap-space-lg relative border-border-ultra-light bg-surface-container-lowest" id="about"><div class="w-full flex flex-col sm:flex-row items-start sm:items-center justify-between pb-space-sm border-b border-border-ultra-light gap-space-sm"><div class="flex items-center gap-space-sm font-headline-lg text-headline-lg uppercase tracking-widest text-primary font-bold"><h2 class="font-headline-lg text-headline-lg uppercase tracking-widest text-primary font-bold">ABOUT ME //&nbsp;</h2></div><div class="flex items-center gap-2 font-headline-sm text-headline-sm uppercase tracking-wider text-secondary"><span class="text-secondary text-label-md uppercase tracking-widest">[PROFILE // 01-WQ-2026] SINGAPORE // UTC+8</span></div></div><div class="w-full relative"><div class="relative w-full p-2.5 bg-surface-container-lowest border border-border-subtle group"><div class="absolute top-0 left-0 w-3.5 h-3.5 border-t-2 border-l-2 border-primary pointer-events-none z-30"></div><div class="absolute top-0 right-0 w-3.5 h-3.5 border-t-2 border-r-2 border-primary pointer-events-none z-30"></div><div class="absolute bottom-0 left-0 w-3.5 h-3.5 border-b-2 border-l-2 border-primary pointer-events-none z-30"></div><div class="absolute bottom-0 right-0 w-3.5 h-3.5 border-b-2 border-r-2 border-primary pointer-events-none z-30"></div><div class="relative w-full h-[380px] sm:h-[480px] lg:h-[540px] overflow-hidden border border-border-subtle bg-surface-container-low" style="min-height: 480px; max-height: 620px;"><img alt="Wan Qing Portrait" class="w-full h-full object-cover filter grayscale contrast-125 transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbVWIbtzR5nWpdZkm8BNSB9Th9p9e9LcwJt9rvmlXOMTmx8iDVuzxJDRuGAP7Il6pl9I5psdJjkjNVkl7aPjvIuOJ5bOcwlCKsAAAc8pBiFQHBwpYbmh3zWG3n3VI706E_qRt6xk2ftpy669aoelStbmUs6DQDd4vhEbG9Mr6oKPXyY8TwNb-iTLB7a_8HYnR6-yaSczLbY0I7ZG-OfqgK9zWBELurYo2XUOyWpAflZ-IUak5SuVKvgFCNr-UilZdpa70" style="object-position: center 36%;"><div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-primary/40 pointer-events-none z-10"></div><div class="absolute inset-0 z-20 pointer-events-none select-none flex items-center justify-center"><svg class="w-full h-full" fill="none" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1000 540" xmlns="http://www.w3.org/2000/svg"><defs><filter height="140%" id="handwriting-shadow" width="140%" x="-20%" y="-20%"><feDropShadow dx="0" dy="3" flood-color="#000000" flood-opacity="0.9" stdDeviation="6"></feDropShadow><feDropShadow dx="0" dy="1" flood-color="#000000" flood-opacity="0.95" stdDeviation="2"></feDropShadow></filter><path d="M 260 410 C 270 300, 310 180, 410 135 C 470 108, 550 105, 660 145" fill="none" id="portrait-text-curve"></path></defs><text fill="#ffffff" filter="url(#handwriting-shadow)" style="font-family: 'Caveat', 'Reenie Beanie', cursive; font-size: 64px; font-weight: 700; letter-spacing: 0.04em;"><textPath href="#portrait-text-curve" startOffset="2%" text-anchor="start">Hi I'm Wan Qing</textPath></text></svg></div><div class="absolute top-3 left-3 z-20 flex items-center gap-1.5 bg-primary/80 text-on-primary font-label-sm uppercase px-2 py-0.5 tracking-wider font-bold"><span class="w-1.5 h-1.5 bg-active-red inline-block animate-pulse"></span><span class=""><br></span></div><div class="absolute top-3 right-3 z-20 hidden sm:flex items-center gap-1.5 bg-primary/80 text-on-primary font-label-sm uppercase px-2 py-0.5 tracking-wider font-bold"><span class="">1.3521° N, 103.8198° E</span></div><div class="absolute bottom-3 left-3 right-3 z-20 flex items-center justify-between font-label-sm text-label-sm uppercase tracking-widest text-on-primary"></div></div></div></div><div class="w-full grid grid-cols-1 lg:grid-cols-12 gap-space-lg pt-space-sm"><div class="lg:col-span-7 flex flex-col justify-between space-y-space-md border border-border-subtle p-space-md sm:p-space-lg bg-surface-container-lowest"><div class="space-y-space-sm"><h3 class="font-headline-lg text-headline-lg uppercase tracking-wider text-primary font-bold">wan qing in a nutshell //</h3><p class="font-body-md text-body-md text-on-surface leading-relaxed"></p><p class="isSelectedEnd">I’m a curious and entrepreneurial person who loves turning ideas into something real. I’m known for being warm, funny, and always up for trying something new. I enjoy meeting interesting people, exploring new perspectives, and bringing a little creativity into whatever I do.</p><p></p></div><div class="pt-space-sm border-t border-border-ultra-light flex flex-wrap items-center justify-between gap-space-sm font-label-sm text-label-sm text-secondary uppercase tracking-widest"><span class="">BASE: SINGAPORE [SG]</span><span class="">COLLABORATIONS: GLOBAL</span><span class="">INDEX CODE: ISO-2026-WQ</span></div></div><div class="lg:col-span-5 flex flex-col justify-between space-y-space-md border border-border-subtle p-space-md sm:p-space-lg bg-surface-container-lowest"><div class="space-y-space-sm"><div class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-secondary">Education</div><div class="grid grid-cols-2 gap-space-sm text-label-sm font-label-sm uppercase tracking-wider border-b border-border-ultra-light pb-space-sm"><div class="flex flex-col col-span-2"><span class="text-secondary">Bachelors in business</span><span class="text-primary font-bold">relevant modules: U<span class="a_GcMg font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none" style="color: rgba(30,30,30,var(--O42jJQ,1)); caret-color: rgb(30, 30, 30); --Ys-XuQ: none; font-weight: 400; font-kerning: none;">ser Interface &amp; User Experience, Consumer Behaviour, Design Communication &amp; Behavioural Change, Digital Marketing, Strategy</span></span></div><div class="flex flex-col pt-2"><span class="text-secondary">LOCATION</span><span class="text-primary font-bold">SINGAPORE [UTC+8]</span></div><div class="flex flex-col pt-2"><span class="text-secondary">STATUS</span><span class="text-primary font-bold flex items-center gap-1"><span class="w-1.5 h-1.5 bg-[#00C853] inline-block animate-pulse"></span>AVAILABLE</span></div></div><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed pt-1">Fresh Graduate from Singapore Management University</p></div><div class="pt-space-sm"><a class="w-full py-2 px-space-md border-2 border-primary text-primary hover:bg-primary hover:text-on-primary font-label-md font-bold uppercase tracking-widest transition-colors flex items-center justify-between group" href="mailto:WANQING0303@GMAIL.COM"><span class="">GET IN TOUCH</span><span class="group-hover:translate-x-1 transition-transform">↳</span></a></div></div></div></section>
+<!-- Interactive Engine for Vertical Scroll Reel & Synchronized Navigation -->
+<script>
+const portfolioData = [
+  {
+    id: '01',
+    title: 'PORTFOLIO ITEM 01',
+    subtitle: 'IBIZA FESTIVAL STAGE & LIVE CROWD VISUALS',
+    client: 'WAN QING STUDIO',
+    year: '2026',
+    role: 'ART DIRECTION',
+    status: 'ACTIVE',
+    coords: '38.9067° N, 1.4206° E',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAaXuWT3UWWAcyCerSST7odk2bx3Hhrjky7WWWsEBO5t8E0CgK_wuxPRjcHDC-3Z5qoNu5uVYczBRLgSZMLM7jfQxhvd-rvfjNRdEiLAXrNkbyNDRNaYOKXn2uJFVlbw9VtOcEiGipAK-QXoT82aiP5jneIZ7bNsKNboAUSM8jEFXToGc0mcZJpZgq0i6B5oSDadTRChjnC9kIyVrniDtveR3fSge8gGK-14i8f_gaCscPrwoNQS-jLDQ',
+    desc: 'Monumental live event stage architecture, generative lighting systems, and dynamic crowd scenography engineered for Ibiza open-air pavilions.'
+  },
+  {
+    id: '02',
+    title: 'PORTFOLIO ITEM 02',
+    subtitle: 'DIGITAL INTERFACE & HISTORIC CATHEDRAL SPACES',
+    client: 'ATELIER WAN QING',
+    year: '2026',
+    role: 'UI/UX SYSTEM',
+    status: 'INDEXED',
+    coords: '38.7223° N, 9.1393° W',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBCLfftJi4Rzu0uvUafx_vx4HC8JNB7iZmj4xNp3f2JxEE-rKASdE5p4-C7MBvdPS4mc1XXYkYcJ3GFD7BYFuyueIjalT58gcXlRTt-i0majIMya4ZxtM7Hu4Q3ZXl3M3gQ4719AgyR8OTs5uimPrUWMC29cFrP4dQHIjlAbVftyenqBCdV6kDnJ3tXAvqWfrShcnZsY7dFKsALrju0cZPSrobJACzg0b5cnixQaHfNLsGEToGY4na60g',
+    desc: 'Exploration into functionalist web standard frameworks, architectural Lisbon cathedral drafts, and high-contrast responsive layouts.'
+  },
+  {
+    id: '03',
+    title: 'PORTFOLIO ITEM 03',
+    subtitle: 'INDUSTRIAL CANAL HARBOR & CELESTIAL DOCKS',
+    client: 'FESTIVAL ARCHIVE',
+    year: '2025',
+    role: 'SPATIAL BRANDING',
+    status: 'CATALOGUED',
+    coords: '52.3676° N, 4.9041° E',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC8g1YRDzcQG81h5OK_iiqyflIto8D1Daw8lDGbH3s6rtNiyPuYHVVwrlc04qxTXtyBSnYrHWzT4XdPC3xI6ARa6zaJuzPbL1A21CcrRI3WKjNE0RBGCMUIxMIastJ52P0NJbY4mrV0oUui_FFvx1T70rK659bHO-BLFH3FU9PFAhnAwvR5EKv2ZH2SE4U5ahC-jcdQDEVXXP9AKLsc0s6JEzFs4SKYZHyYB__CfK0sEHKwLQatfGKKSQ',
+    desc: 'Atmospheric canal dockscapes and celestial astronomical line work deployed across structural signage and physical urban installations.'
+  },
+  {
+    id: '04',
+    title: 'PORTFOLIO ITEM 04',
+    subtitle: 'BRUTALIST ARCHITECTURAL PAVILION GEOMETRY',
+    client: 'CULTURE FOUNDATION',
+    year: '2025',
+    role: 'EDITORIAL DESIGN',
+    status: 'PUBLISHED',
+    coords: '52.3792° N, 4.8994° E',
+    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=85',
+    desc: 'Monochrome spatial monograph studying raw concrete brutalism, rectilinear cantilevers, and high-density editorial grid typologies.'
+  },
+  {
+    id: '05',
+    title: 'PORTFOLIO ITEM 05',
+    subtitle: 'MODERN SPATIAL INSTALLATION & GALLERY INTERIOR',
+    client: 'WAN QING LAB',
+    year: '2024',
+    role: 'PACKAGING & CMF',
+    status: 'PROTOTYPED',
+    coords: '19.0760° N, 72.8777° E',
+    image: 'https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&w=1800&q=85',
+    desc: 'Atmospheric gallery environments, luminous spatial reflections, and tactile packaging hardware prototypes designed for contemporary craft.'
+  },
+  {
+    id: '06',
+    title: 'PORTFOLIO ITEM 06',
+    subtitle: 'MONOGRAPHIC ARCHIVE & MONOLITHIC TYPOGRAPHY',
+    client: 'WAN QING PRIVATE COLL.',
+    year: '2024',
+    role: 'ARCHIVAL DIRECTION',
+    status: 'ARCHIVED',
+    coords: '34.6037° S, 58.3816° W',
+    image: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1800&q=85',
+    desc: 'High-contrast graphic poster archive, computational typography catalog, and permanent specimen preservation over a multi-year cycle.'
+  }
+];
+
+// Experience / Career Archive Data
+const experienceData = [
+  {
+    id: '01',
+    company: 'STUDIO MONOLITH',
+    role: 'LEAD ART DIRECTOR & PRINCIPAL DESIGNER',
+    period: '2025 – PRESENT',
+    location: 'SINGAPORE',
+    domain: 'IDENTITY & SPATIAL',
+    status: 'ACTIVE ENGAGEMENT',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAaXuWT3UWWAcyCerSST7odk2bx3Hhrjky7WWWsEBO5t8E0CgK_wuxPRjcHDC-3Z5qoNu5uVYczBRLgSZMLM7jfQxhvd-rvfjNRdEiLAXrNkbyNDRNaYOKXn2uJFVlbw9VtOcEiGipAK-QXoT82aiP5jneIZ7bNsKNboAUSM8jEFXToGc0mcZJpZgq0i6B5oSDadTRChjnC9kIyVrniDtveR3fSge8gGK-14i8f_gaCscPrwoNQS-jLDQ',
+    desc: 'Directing overarching creative strategy and spatial typography for international architecture practices and contemporary galleries across Asia-Pacific.',
+    b1: '• Full identity redesign and physical environmental wayfinding systems.',
+    b2: '• Archival publication series and limited-edition monographs.',
+    b3: '• Cross-functional system stewardship with engineering teams.'
+  },
+  {
+    id: '02',
+    company: 'ATELIER BRUT',
+    role: 'SENIOR SPATIAL & INTERACTION DESIGNER',
+    period: '2024 – 2025',
+    location: 'BERLIN / TOKYO',
+    domain: 'SPATIAL & INTERACTIVE',
+    status: 'COMPLETED ARCHIVE',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBCLfftJi4Rzu0uvUafx_vx4HC8JNB7iZmj4xNp3f2JxEE-rKASdE5p4-C7MBvdPS4mc1XXYkYcJ3GFD7BYFuyueIjalT58gcXlRTt-i0majIMya4ZxtM7Hu4Q3ZXl3M3gQ4719AgyR8OTs5uimPrUWMC29cFrP4dQHIjlAbVftyenqBCdV6kDnJ3tXAvqWfrShcnZsY7dFKsALrju0cZPSrobJACzg0b5cnixQaHfNLsGEToGY4na60g',
+    desc: 'Bridged interactive kinetic interfaces with tangible gallery surfaces. Built bespoke exhibition navigation and interactive kinetic installations.',
+    b1: '• Spatial interactive installations with responsive sound-reactive sensors.',
+    b2: '• Exhibition catalog and visual collateral for 12,000+ visitors.',
+    b3: '• Digital archive portal engineered for long-term collection preservation.'
+  },
+  {
+    id: '03',
+    company: 'HYPERFRAME LABS',
+    role: 'UI/UX SYSTEM ARCHITECT',
+    period: '2023 – 2024',
+    location: 'AMSTERDAM',
+    domain: 'DIGITAL FRAMEWORKS',
+    status: 'COMPLETED ARCHIVE',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC8g1YRDzcQG81h5OK_iiqyflIto8D1Daw8lDGbH3s6rtNiyPuYHVVwrlc04qxTXtyBSnYrHWzT4XdPC3xI6ARa6zaJuzPbL1A21CcrRI3WKjNE0RBGCMUIxMIastJ52P0NJbY4mrV0oUui_FFvx1T70rK659bHO-BLFH3FU9PFAhnAwvR5EKv2ZH2SE4U5ahC-jcdQDEVXXP9AKLsc0s6JEzFs4SKYZHyYB__CfK0sEHKwLQatfGKKSQ',
+    desc: 'Researched and constructed scalable design systems, token architectures, and brutalist UI component standards deployed across desktop & mobile.',
+    b1: '• Multi-brand token architecture with mathematical spacing systems.',
+    b2: '• Micro-interaction animation library with 60fps performance benchmarks.',
+    b3: '• Technical documentation for 40+ engineering contributors.'
+  },
+  {
+    id: '04',
+    company: 'CREATIVE ENGINEERING LAB',
+    role: 'RESEARCH FELLOW',
+    period: '2022 – 2023',
+    location: 'LONDON',
+    domain: 'TYPOGRAPHY & CODE',
+    status: 'FELLOWSHIP RECORD',
+    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80',
+    desc: 'Interdisciplinary fellowship investigating generative grid systems, early web archival aesthetics, and functionalist editorial structures.',
+    b1: '• Published papers on generative layout matrices and variable typography.',
+    b2: '• Exhibited open-source typographic specimens at London Design Week.',
+    b3: '• Co-founded the Monospaced Web Standard working initiative.'
+  },
+  {
+    id: '05',
+    company: 'OFFICE OF FORM',
+    role: 'COMMUNICATION DESIGNER',
+    period: '2021 – 2022',
+    location: 'SINGAPORE',
+    domain: 'EDITORIAL & PRINT',
+    status: 'COMPLETED ARCHIVE',
+    image: 'https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&w=600&q=80',
+    desc: 'Editorial design, custom typography, and physical publication bindings produced for visual arts institutions and independent publishers.',
+    b1: '• Designed 6 hardbound artist monographs and catalog raisonnés.',
+    b2: '• CMF specification and paper selection with European master printers.',
+    b3: '• Identity guidelines for contemporary craft and ceramics studios.'
+  },
+  {
+    id: '06',
+    company: 'ARCHIVE PROTOCOL',
+    role: 'FOUNDING INITIATOR',
+    period: '2020 – 2021',
+    location: 'REMOTE',
+    domain: 'ARCHIVAL THEORY',
+    status: 'PERMANENT ARCHIVE',
+    image: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=600&q=80',
+    desc: 'Self-initiated experimental research repository recording physical ephemera into immutable semantic markdown and monochrome vector schemas.',
+    b1: '• Digital preservation of over 300 industrial design artifacts.',
+    b2: '• Open-source archival metadata framework compliant with ISO standards.',
+    b3: '• Foundation repository for the current Wan Qing Archive 2026.'
+  }
+];
+
+let currentPortfolioIndex = 2;
+
+function selectPortfolioItem(index) {
+  if (index < 0) index = portfolioData.length - 1;
+  if (index >= portfolioData.length) index = 0;
+  currentPortfolioIndex = index;
+  const current = portfolioData[currentPortfolioIndex];
+
+  // Calculate Previous and Next Indices for visible peek previews
+  const prevIdx = (currentPortfolioIndex - 1 + portfolioData.length) % portfolioData.length;
+  const nextIdx = (currentPortfolioIndex + 1) % portfolioData.length;
+  const prevItem = portfolioData[prevIdx];
+  const nextItem = portfolioData[nextIdx];
+
+  // 1. Move the Vertical Slider Reel
+  const track = document.getElementById('vertical-slides-track');
+  if (track) {
+    track.style.transform = `translateY(-${currentPortfolioIndex * 100}%)`;
+  }
+
+  // 2. Update Visible Peek Preview Bars (Top & Bottom)
+  const peekPrevBg = document.getElementById('peek-prev-bg');
+  if (peekPrevBg) peekPrevBg.style.backgroundImage = `url('${prevItem.image}')`;
+  const peekPrevTitle = document.getElementById('peek-prev-title');
+  if (peekPrevTitle) peekPrevTitle.innerText = `${prevItem.title} // ${prevItem.role}`;
+
+  const peekNextBg = document.getElementById('peek-next-bg');
+  if (peekNextBg) peekNextBg.style.backgroundImage = `url('${nextItem.image}')`;
+  const peekNextTitle = document.getElementById('peek-next-title');
+  if (peekNextTitle) peekNextTitle.innerText = `${nextItem.title} // ${nextItem.role}`;
+
+  // 3. Update Left List
+  document.querySelectorAll('#event-selector-list .event-item').forEach((btn, idx) => {
+    const bullet = btn.querySelector('.bullet-indicator');
+    if (idx === currentPortfolioIndex) {
+      btn.className = 'event-item text-left flex items-center gap-space-sm transition-all duration-200 group text-primary font-bold cursor-pointer h-6';
+      if (bullet) bullet.className = 'w-1.5 h-1.5 bg-active-red inline-block bullet-indicator';
+    } else {
+      btn.className = 'event-item text-left flex items-center gap-space-sm transition-all duration-200 group text-inactive-gray font-normal hover:text-primary cursor-pointer h-6';
+      if (bullet) bullet.className = 'w-1.5 h-1.5 bg-transparent inline-block bullet-indicator';
+    }
+  });
+
+  // 4. Update Right List
+  document.querySelectorAll('#date-selector-list .date-item').forEach((btn, idx) => {
+    const bullet = btn.querySelector('.bullet-indicator');
+    if (idx === currentPortfolioIndex) {
+      btn.className = 'date-item text-primary font-bold transition-all duration-200 text-left lg:text-right cursor-pointer flex items-center justify-start lg:justify-end h-6 leading-none';
+      if (bullet) bullet.className = 'w-1.5 h-1.5 bg-active-red inline-block bullet-indicator mr-1 lg:hidden';
+    } else {
+      btn.className = 'date-item text-inactive-gray font-normal hover:text-primary transition-all duration-200 text-left lg:text-right cursor-pointer flex items-center justify-start lg:justify-end h-6 leading-none';
+      if (bullet) bullet.className = 'w-1.5 h-1.5 bg-transparent inline-block bullet-indicator mr-1 lg:hidden';
+    }
+  });
+
+  // 5. Update Center In-Image Overlay Card Content with subtle quick crossfade
+  const mainTitle = document.getElementById('art-main-title');
+  const mainSubtitle = document.getElementById('art-main-subtitle');
+  if (mainTitle) {
+    mainTitle.style.opacity = '0';
+    mainTitle.style.transform = 'translateY(4px)';
+    setTimeout(() => {
+      mainTitle.innerText = current.title;
+      if (mainSubtitle) mainSubtitle.innerText = current.subtitle;
+      mainTitle.style.opacity = '1';
+      mainTitle.style.transform = 'translateY(0)';
+    }, 150);
+  }
+}
+
+function prevEvent() {
+  selectPortfolioItem(currentPortfolioIndex - 1);
+}
+
+function nextEvent() {
+  selectPortfolioItem(currentPortfolioIndex + 1);
+}
+
+// Experience Reel Modal Handler (Anchored inside Experience Section)
+function openExperienceModal(index) {
+  const item = experienceData[index] || experienceData[0];
+  const modal = document.getElementById('experience-modal');
+  if (!modal) return;
+
+  const badge = document.getElementById('exp-modal-badge');
+  if (badge) badge.innerText = `WAN QING // EXPERIENCE RECORD [${item.id}]`;
+
+  const title = document.getElementById('exp-modal-title');
+  if (title) title.innerText = item.company;
+
+  const role = document.getElementById('exp-modal-role');
+  if (role) role.innerText = item.role;
+
+  const period = document.getElementById('exp-modal-period');
+  if (period) period.innerText = item.period;
+
+  const loc = document.getElementById('exp-modal-location');
+  if (loc) loc.innerText = item.location;
+
+  const domain = document.getElementById('exp-modal-domain');
+  if (domain) domain.innerText = item.domain;
+
+  const status = document.getElementById('exp-modal-status');
+  if (status) status.innerText = item.status;
+
+  const img = document.getElementById('exp-modal-image');
+  if (img) img.style.backgroundImage = `url('${item.image}')`;
+
+  const ref = document.getElementById('exp-modal-ref');
+  if (ref) ref.innerText = `REF_ID // EXP-2026-${item.id}`;
+
+  const desc = document.getElementById('exp-modal-desc');
+  if (desc) desc.innerText = item.desc;
+
+  const b1 = document.getElementById('exp-modal-bullet1');
+  if (b1) b1.innerText = item.b1;
+
+  const b2 = document.getElementById('exp-modal-bullet2');
+  if (b2) b2.innerText = item.b2;
+
+  const b3 = document.getElementById('exp-modal-bullet3');
+  if (b3) b3.innerText = item.b3;
+
+  const scroller = document.getElementById('experience-scroller');
+  if (scroller) scroller.scrollTop = 0;
+
+  modal.classList.remove('hidden');
+  modal.classList.add('flex');
+
+  // Smooth scroll so the experience section modal is fully visible in user viewport
+  const expSec = document.getElementById('archive-cards-section');
+  if (expSec) {
+    const rect = expSec.getBoundingClientRect();
+    if (rect.top < 80 || rect.bottom > window.innerHeight) {
+      expSec.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+}
+
+function closeExperienceModal() {
+  const modal = document.getElementById('experience-modal');
+  if (modal) {
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+}
+
+// Keyboard Arrow & Esc Navigation
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    closePortfolioModal();
+    closeExperienceModal();
+  } else {
+    const pModal = document.getElementById('portfolio-modal');
+    const eModal = document.getElementById('experience-modal');
+    if ((pModal && !pModal.classList.contains('hidden')) || (eModal && !eModal.classList.contains('hidden'))) return;
+    if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+      prevEvent();
+    } else if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+      nextEvent();
+    } else if (e.key === 'Enter') {
+      openPortfolioModal();
+    }
+  }
+});
+
+function openPortfolioModal() {
+  const item = portfolioData[currentPortfolioIndex];
+  const modal = document.getElementById('portfolio-modal');
+  if (!modal) return;
+  
+  const badgeEl = document.getElementById('modal-badge');
+  if (badgeEl) badgeEl.innerText = `WAN QING // CASE STUDY [${item.id}]`;
+  
+  const categoryEl = document.getElementById('modal-category');
+  if (categoryEl) categoryEl.innerText = `${item.role} // ARCHIVE SPEC`;
+
+  const titleEl = document.getElementById('modal-title');
+  if (titleEl) titleEl.innerText = item.title;
+
+  const subtitleEl = document.getElementById('modal-subtitle');
+  if (subtitleEl) subtitleEl.innerText = item.subtitle;
+
+  const clientEl = document.getElementById('modal-client');
+  if (clientEl) clientEl.innerText = item.client;
+
+  const yearEl = document.getElementById('modal-year');
+  if (yearEl) yearEl.innerText = item.year;
+
+  const roleEl = document.getElementById('modal-role');
+  if (roleEl) roleEl.innerText = item.role;
+
+  const statusEl = document.getElementById('modal-status');
+  if (statusEl) statusEl.innerText = item.status;
+
+  const coordsEl = document.getElementById('modal-coords');
+  if (coordsEl) coordsEl.innerText = item.coords;
+
+  const heroCoordsEl = document.getElementById('modal-hero-coords');
+  if (heroCoordsEl) heroCoordsEl.innerText = item.coords;
+
+  const descP1 = document.getElementById('modal-desc-p1');
+  if (descP1) descP1.innerText = item.desc;
+
+  const heroImg = document.getElementById('modal-hero-image');
+  if (heroImg) heroImg.style.backgroundImage = `url('${item.image}')`;
+
+  const prevIdx = (currentPortfolioIndex - 1 + portfolioData.length) % portfolioData.length;
+  const nextIdx = (currentPortfolioIndex + 1) % portfolioData.length;
+  
+  const secImg = document.getElementById('modal-secondary-image');
+  if (secImg) secImg.style.backgroundImage = `url('${portfolioData[prevIdx].image}')`;
+
+  const tertImg = document.getElementById('modal-tertiary-image');
+  if (tertImg) tertImg.style.backgroundImage = `url('${portfolioData[nextIdx].image}')`;
+
+  const scroller = document.getElementById('case-study-scroller');
+  if (scroller) scroller.scrollTop = 0;
+
+  modal.classList.remove('hidden');
+  modal.classList.add('flex');
+
+  // Ensure viewport is aligned if viewing from off-screen
+  const viewport = document.getElementById('interactive-artwork-viewport');
+  if (viewport) {
+    const rect = viewport.getBoundingClientRect();
+    if (rect.top < 80 || rect.bottom > window.innerHeight) {
+      viewport.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+}
+
+function closePortfolioModal() {
+  const modal = document.getElementById('portfolio-modal');
+  if (modal) {
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+}
+
+// Active Nav highlight on scroll
+window.addEventListener('scroll', () => {
+  const sections = ['portfolio', 'archive-cards-section', 'footer-contact'];
+  const scrollPos = window.scrollY + 160;
+
+  sections.forEach((secId) => {
+    const el = document.getElementById(secId);
+    if (!el) return;
+    const top = el.offsetTop;
+    const height = el.offsetHeight;
+    if (scrollPos >= top && scrollPos < top + height) {
+      document.querySelectorAll('#main-nav .nav-link').forEach((link) => {
+        const bullet = link.querySelector('.bullet');
+        if (link.getAttribute('data-target') === secId) {
+          link.className = 'nav-link flex items-center gap-space-xs transition-colors group text-primary font-bold';
+          if (bullet) bullet.className = 'bullet w-2 h-2 bg-active-red transition-colors inline-block';
+        } else {
+          link.className = 'nav-link flex items-center gap-space-xs text-on-surface hover:text-primary transition-colors group font-bold';
+          if (bullet) bullet.className = 'bullet w-2 h-2 bg-primary group-hover:bg-active-red transition-colors inline-block';
+        }
+      });
+    }
+  });
+});
+
+// Card click discriminator to prevent triggering modal after dragging
+let dragMoved = false;
+function handleCardClick(index) {
+  if (dragMoved) return;
+  openExperienceModal(index);
+}
+
+// Initial activation sync & Wheel/Touch + Drag-to-Scroll Setup
+document.addEventListener('DOMContentLoaded', () => {
+  selectPortfolioItem(2);
+
+  // Wheel listener on central artwork viewport for trackpad / mousewheel scrolling between items
+  const viewport = document.getElementById('interactive-artwork-viewport');
+  let wheelTimeout = null;
+  if (viewport) {
+    viewport.addEventListener('wheel', (e) => {
+      const pModal = document.getElementById('portfolio-modal');
+      if (pModal && !pModal.classList.contains('hidden')) return;
+      e.preventDefault();
+      if (wheelTimeout) return;
+      if (e.deltaY > 15) {
+        nextEvent();
+      } else if (e.deltaY < -15) {
+        prevEvent();
+      }
+      wheelTimeout = setTimeout(() => {
+        wheelTimeout = null;
+      }, 350);
+    }, { passive: false });
+  }
+
+  // Setup click-and-drag horizontal scrolling for Experience cards container
+  const reel = document.getElementById('cards-scroll-track');
+  if (reel) {
+    let isDown = false;
+    let startX = 0;
+    let scrollLeft = 0;
+
+    reel.addEventListener('mousedown', (e) => {
+      if (e.button !== 0) return;
+      isDown = true;
+      dragMoved = false;
+      reel.classList.remove('cursor-grab');
+      reel.classList.add('cursor-grabbing');
+      startX = e.pageX - reel.offsetLeft;
+      scrollLeft = reel.scrollLeft;
+    });
+
+    reel.addEventListener('mouseleave', () => {
+      isDown = false;
+      reel.classList.remove('cursor-grabbing');
+      reel.classList.add('cursor-grab');
+    });
+
+    reel.addEventListener('mouseup', () => {
+      isDown = false;
+      reel.classList.remove('cursor-grabbing');
+      reel.classList.add('cursor-grab');
+      setTimeout(() => { dragMoved = false; }, 50);
+    });
+
+    reel.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - reel.offsetLeft;
+      const walk = (x - startX) * 1.5;
+      if (Math.abs(walk) > 4) {
+        dragMoved = true;
+      }
+      reel.scrollLeft = scrollLeft - walk;
+    });
+
+    reel.addEventListener('dragstart', (e) => {
+      e.preventDefault();
+    });
+  }
+});
+</script>
+</div></main><footer class="w-full bg-surface-container-lowest pb-margin pt-space-xl border-border-ultra-light" id="footer-contact"><div class="w-full px-margin flex flex-col md:flex-row items-start md:items-end justify-between gap-space-lg"><div class="flex flex-col gap-space-xs font-body-md text-body-md uppercase tracking-widest text-secondary font-bold"><div class="">WAN QING B.V. © 2026 ALL RIGHTS RESERVED</div><div class="">DESIGN EXPERIENCES // CATALOGUE ARCHIVE</div></div><div class="flex flex-wrap items-center gap-space-lg font-headline-sm text-headline-sm uppercase tracking-wider text-on-surface font-bold"><a class="hover:text-active-red transition-colors text-primary" href="mailto:wanqing0303@gmail.com">WANQING0303@GMAIL.COM ↵</a><a class="hover:text-active-red transition-colors text-primary" href="tel:+6598873940">+65 98873940 ↵</a></div></div></footer>
+
+
+
+
+</body></html>
