@@ -48,7 +48,7 @@ const projects = [
     title: "L'oreal",
     subtitle: "The future of Luxury Fragrances",
     client: "L'oreal",
-    role: "P",
+    role: "Product ",
     status: "PUBLISHED",
     coords: "52.3792° N, 4.8994° E",
     description:
