@@ -435,7 +435,7 @@ export default function App() {
           aria-label="Portfolio item details"
           onClick={() => setModalOpen(false)}
         >
-          <article className="case-modal" onClick={(event) => event.stopPropagation()}>
+          <article className="case-modal portfolio-modal" onClick={(event) => event.stopPropagation()}>
             <header>
               <span><i /> WAN QING // CASE STUDY [{current.number}]</span>
               <button onClick={() => setModalOpen(false)}>[CLOSE ✕]</button>

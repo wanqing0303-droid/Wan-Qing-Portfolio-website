@@ -775,6 +775,11 @@ main {
   background: #fff;
 }
 
+.portfolio-modal {
+  width: min(762px, 100%);
+  height: 612px;
+}
+
 .case-modal > header {
   position: relative;
   z-index: 3;
