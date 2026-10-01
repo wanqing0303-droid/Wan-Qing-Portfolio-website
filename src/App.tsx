@@ -20,7 +20,7 @@ const projects = [
     number: "02",
     year: "2026",
     title: "ION",
-    subtitle: "How to improve IOnSEO",
+    subtitle: "How to improve ION'SEO",
     client: "ATELIER WAN QING",
     role: "UI/UX SYSTEM",
     status: "INDEXED",
