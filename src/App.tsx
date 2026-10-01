@@ -9,7 +9,7 @@ const projects = [
     title: "Seijo",
     subtitle: "Product & Branding",
     client: "WAN QING STUDIO",
-    role: "ART DIRECTION",
+    role: "Creati DIRECTION",
     status: "ACTIVE",
     coords: "38.9067° N, 1.4206° E",
     description:
