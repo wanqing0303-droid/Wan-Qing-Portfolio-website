@@ -570,7 +570,13 @@ export default function App() {
                 {current.number !== "02" &&
                   detailImages.slice(3).map((image, index) => (
                     <figure key={image}>
-                      <img src={image} alt={`${current.title} content ${index + 4}`} />
+                      <img
+                        className={
+                          current.number === "03" && index === 1 ? "chateraise-figure-five" : ""
+                        }
+                        src={image}
+                        alt={`${current.title} content ${index + 4}`}
+                      />
                       <figcaption>
                         <span>
                           FIG {String(index + 4).padStart(2, "0")}. {current.title} CONTENT STUDY

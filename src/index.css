@@ -946,6 +946,10 @@ main {
   object-fit: cover;
 }
 
+.case-modal figure img.chateraise-figure-five {
+  object-position: center 70%;
+}
+
 .case-modal figcaption {
   display: flex;
   justify-content: space-between;
