@@ -449,7 +449,7 @@ export default function App() {
           </SectionTitle>
 
           <div className="portrait-frame">
-            <img src={asset("a29fb.png")} alt="Wan Qing portrait" />
+            <img src={asset("About_me_picture.png")} alt="Wan Qing portrait" />
             <span className="shade" />
             <span className="portrait-dot"><i /></span>
             <span className="coordinates">1.3521° N, 103.8198° E</span>
