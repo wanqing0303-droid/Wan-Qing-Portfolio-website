@@ -517,7 +517,7 @@ export default function App() {
                 <section>
                   <h3>02 // COMPETITOR ANALYSIS </h3>
                   <p>
-                    Conducted competitor analysis to benchmark existing pre-order experiences and identify gaps in Chateraise’s digital journey. Compared key features, user flows and usability to uncover opportunities for improvement.
+                    Conducted competitor analysis to benchmark existing experiences and identify gaps in Chateraise’s digital journey. Compared key features, user flows and usability to uncover opportunities for improvement.
                   </p>
                   <h4>SPECIFICATION INDEX:</h4>
                   <ul>
