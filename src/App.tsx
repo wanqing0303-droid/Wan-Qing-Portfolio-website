@@ -557,21 +557,30 @@ export default function App() {
                 </section>
                 {current.number !== "02" &&
                   detailImages.slice(3).map((image, index) => (
-                    <figure key={image}>
-                      <img
-                        className={
-                          current.number === "03" && index === 1 ? "chateraise-figure-five" : ""
-                        }
-                        src={image}
-                        alt={`${current.title} content ${index + 4}`}
-                      />
-                      <figcaption>
-                        <span>
-                          FIG {String(index + 4).padStart(2, "0")}. {current.title} CONTENT STUDY
-                        </span>
-                        <span>ARCHIVE // {current.number}-{String(index + 4).padStart(2, "0")}</span>
-                      </figcaption>
-                    </figure>
+                    <div className="additional-study" key={image}>
+                      <figure>
+                        <img
+                          className={
+                            current.number === "03" && index === 1 ? "chateraise-figure-five" : ""
+                          }
+                          src={image}
+                          alt={`${current.title} content ${index + 4}`}
+                        />
+                        <figcaption>
+                          <span>
+                            FIG {String(index + 4).padStart(2, "0")}. {current.title} CONTENT STUDY
+                          </span>
+                          <span>ARCHIVE // {current.number}-{String(index + 4).padStart(2, "0")}</span>
+                        </figcaption>
+                      </figure>
+                      <section>
+                        <h3>{String(index + 4).padStart(2, "0")} // CONTENT STUDY</h3>
+                        <p>
+                          Supporting {current.title} research and design development documenting the
+                          project&apos;s process, findings, and final experience direction.
+                        </p>
+                      </section>
+                    </div>
                   ))}
               </div>
             </div>
