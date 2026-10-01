@@ -33,6 +33,11 @@ const projects = [
     description:
       "Exploration into functionalist web standard frameworks, architectural Lisbon cathedral drafts, and high-contrast responsive layouts.",
     image: asset("ION front pic.jpg"),
+    detailImages: [
+      asset("ION Content 1.png"),
+      asset("ION content 2.png"),
+      asset("ION Content 3.png"),
+    ],
   },
   {
     number: "03",
