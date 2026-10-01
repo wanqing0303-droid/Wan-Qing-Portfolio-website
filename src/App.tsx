@@ -459,7 +459,7 @@ export default function App() {
                 <span><label>STATUS</label>{current.status}</span>
               </div>
               <figure>
-                <img src={current.image} alt={current.subtitle} />
+                <img src={current.popupimage} alt={current.subtitle} />
                 <figcaption>
                   <span>FIG 01. PRIMARY VIEW // HERO ARCHIVE COMPOSITION</span>
                   <span>{current.coords}</span>
