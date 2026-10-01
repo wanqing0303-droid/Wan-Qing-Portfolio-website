@@ -220,7 +220,7 @@ main {
   align-items: center;
   justify-content: center;
   gap: 16px;
-  margin: 64px 0 0;
+  margin: 56px 0 0;
   padding-bottom: 16px;
   font-family: "Space Mono:Bold", monospace;
   font-size: 20px;
@@ -444,6 +444,10 @@ main {
 .experience,
 .about {
   padding: 48px 32px;
+}
+
+.experience {
+  padding-top: 40px;
 }
 
 .section-title {
