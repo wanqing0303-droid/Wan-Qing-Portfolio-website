@@ -504,9 +504,8 @@ export default function App() {
                   <h3>01 // PROJECT OBJECTIVE </h3>
                   <p>{current.description}</p>
                   <p>
-                    The project questions standard web interfaces by deploying rigorous mono-spaced type
-                    systems, real-time positional indexing, and continuous reel mechanisms derived from
-                    archival systems.
+                    To identify pain points in Chateraise’s existing pre-order experience and understand user needs, then develop a more intuitive and seamless digital experience that improves usability and the overall customer journey.
+
                   </p>
                 </section>
                 <figure>
