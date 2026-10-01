@@ -254,7 +254,7 @@ export default function App() {
             <span /> PORTFOLIO [5]
           </a>
           <a href="#experience">
-            <span /> PROFESSIONAL EXPERIENCE
+            <span /> EXPERIENCE
           </a>
           <a href="#about">
             <span /> ABOUT ME
