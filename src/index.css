@@ -50,9 +50,18 @@
 }
 
 :root {
+  --archive-black: #000;
+  --archive-white: #fff;
+  --archive-red: #e02020;
+  --archive-green: #00c853;
+  --archive-gray: #5e5e5e;
+  --archive-inactive: #ccc;
+  --archive-border: #e5e5e5;
+  --archive-rule: #f0f0f0;
+  --archive-surface: #f3f3f4;
   font-family: "Space Mono:Regular", monospace;
-  color: #000;
-  background: #fff;
+  color: var(--archive-black);
+  background: var(--archive-white);
   font-synthesis: none;
 }
 
@@ -493,6 +502,9 @@ main {
   height: 454px;
   padding: 17px;
   border: 1px solid #e5e5e5;
+  color: var(--archive-black);
+  background: var(--archive-white);
+  text-align: left;
   scroll-snap-align: start;
 }
 
@@ -746,17 +758,17 @@ main {
   padding: 96px 32px 32px;
   overflow: auto;
   background: rgba(0, 0, 0, .85);
-  backdrop-filter: blur(1.5px);
 }
 
 .case-modal {
   position: relative;
+  display: flex;
+  flex-direction: column;
   width: min(896px, 100%);
   height: 720px;
   overflow: hidden;
   border: 2px solid #000;
   background: #fff;
-  box-shadow: 0 25px 25px rgba(0, 0, 0, .25);
 }
 
 .case-modal > header {
@@ -795,7 +807,30 @@ main {
 }
 
 .case-content {
+  min-height: 0;
+  overflow-y: auto;
   padding: 24px;
+}
+
+.custom-modal-scroll {
+  scrollbar-color: var(--archive-black) #eee;
+  scrollbar-width: thin;
+}
+
+.custom-modal-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-modal-scroll::-webkit-scrollbar-track {
+  background: #eee;
+}
+
+.custom-modal-scroll::-webkit-scrollbar-thumb {
+  background: var(--archive-black);
+}
+
+.custom-modal-scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--archive-red);
 }
 
 .case-heading {
@@ -867,6 +902,73 @@ main {
   font-family: "Space Mono:Bold", monospace;
   font-size: 9px;
   letter-spacing: .9px;
+}
+
+.case-notes {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px 0 12px;
+}
+
+.case-notes section {
+  padding: 24px;
+  border: 1px solid var(--archive-border);
+}
+
+.case-notes h3,
+.case-notes h4 {
+  margin: 0 0 12px;
+  font-family: "Space Mono:Bold", monospace;
+}
+
+.case-notes h3 {
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: .78px;
+}
+
+.case-notes h4 {
+  margin-top: 18px;
+  color: var(--archive-gray);
+  font-size: 9px;
+  line-height: 12px;
+  letter-spacing: .9px;
+}
+
+.case-notes p,
+.case-notes li {
+  color: var(--archive-gray);
+  font-size: 11px;
+  line-height: 18px;
+  letter-spacing: .44px;
+}
+
+.case-notes p {
+  margin: 0 0 12px;
+}
+
+.case-notes p:last-child {
+  margin-bottom: 0;
+}
+
+.case-notes ul {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.case-notes li::before {
+  content: "• ";
+  color: var(--archive-black);
+}
+
+.experience-modal figure img {
+  height: 360px;
+  aspect-ratio: auto;
+  filter: saturate(0);
 }
 
 .case-modal > .corner {
