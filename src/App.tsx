@@ -501,7 +501,7 @@ export default function App() {
               </figure>
               <div className="case-notes">
                 <section>
-                  <h3>01 // PROJECT OBJECTIVE</h3>
+                  <h3>01 // PROJECT OBJECTIVE </h3>
                   <p>{current.description}</p>
                   <p>
                     The project questions standard web interfaces by deploying rigorous mono-spaced type
