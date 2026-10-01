@@ -495,7 +495,7 @@ export default function App() {
               <figure>
                 <img src={detailImages[0]} alt={current.subtitle} />
                 <figcaption>
-                  <span>FIG 01. CHOSEN</span>
+                  <span>FIG 01. CHOSEN BRAND </span>
                   <span>{current.coords}</span>
                 </figcaption>
               </figure>
