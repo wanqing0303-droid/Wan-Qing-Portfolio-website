@@ -764,6 +764,11 @@ main {
   background: rgba(0, 0, 0, .85);
 }
 
+.portfolio-backdrop {
+  align-items: center;
+  padding-top: 32px;
+}
+
 .case-modal {
   position: relative;
   display: flex;
