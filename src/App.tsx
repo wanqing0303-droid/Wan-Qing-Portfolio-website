@@ -52,11 +52,7 @@ const projects = [
     description:
       "Atmospheric canal dockscapes and celestial astronomical line work deployed across structural signage and physical urban installations.",
     image: asset("Chateraise front pic.png"),
-    detailImages: [
-      asset("ION Content 1.png"),
-      asset("ION content 2.png"),
-      asset("ION Content 3.png"),
-      asset("ION content 2 (2).png"),
+
   },
   {
     number: "04",
