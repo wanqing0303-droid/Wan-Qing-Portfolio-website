@@ -49,7 +49,7 @@ const projects = [
     subtitle: "The future of Luxury Fragrances",
     client: "L'oreal",
     role: "Product brainstorm",
-    status: "PUBLISHED",
+    status: "index",
     coords: "52.3792° N, 4.8994° E",
     description:
       "Monochrome spatial monograph studying raw concrete brutalism, rectilinear cantilevers, and high-density editorial grid typologies.",
