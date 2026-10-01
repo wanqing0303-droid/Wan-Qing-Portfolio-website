@@ -495,7 +495,7 @@ export default function App() {
               <figure>
                 <img src={detailImages[0]} alt={current.subtitle} />
                 <figcaption>
-                  <span>FIG 01. CHOSEN PAIN </span>
+                  <span>FIG 01. CHOSEN PAIN POINT </span>
                   <span>{current.coords}</span>
                 </figcaption>
               </figure>
