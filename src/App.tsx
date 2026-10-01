@@ -517,9 +517,8 @@ export default function App() {
                 <section>
                   <h3>02 // COMPETITOR ANALYSIS </h3>
                   <p>
-                    Every layout element exists within a mathematical rhythm defined by calibrated margins
-                    and crosshairs. Dynamic states trigger subtle chromatic pulses in high-visibility
-                    vermilion against balanced off-white substrates.
+                    Conducted competitor analysis to benchmark existing pre-order experiences and identify gaps in Chateraise’s digital journey. Compared key features, user flows and usability to uncover opportunities for improvement.
+.
                   </p>
                   <h4>SPECIFICATION INDEX:</h4>
                   <ul>
