@@ -34,7 +34,7 @@ const projects = [
     year: "2025",
     title: "Chateraise",
     subtitle: "Research & UI/UX Heuristics",
-    client: "FESTIVAL ARCHIVE",
+    client: "-",
     role: "SPATIAL BRANDING",
     status: "INDEXED",
     coords: "52.3676° N, 4.9041° E",
