@@ -68,19 +68,6 @@ const projects = [
       "Atmospheric gallery environments, luminous spatial reflections, and tactile packaging hardware prototypes designed for contemporary craft.",
     image: asset("8d6a6.png"),
   },
-  {
-    number: "06",
-    year: "2024",
-    title: "PORTFOLIO ITEM 06",
-    subtitle: "MONOGRAPHIC ARCHIVE & MONOLITHIC TYPOGRAPHY",
-    client: "WAN QING PRIVATE COLL.",
-    role: "ARCHIVAL DIRECTION",
-    status: "ARCHIVED",
-    coords: "34.6037° S, 58.3816° W",
-    description:
-      "High-contrast graphic poster archive, computational typography catalog, and permanent specimen preservation over a multi-year cycle.",
-    image: asset("f0196.png"),
-  },
 ];
 
 const experience = [
@@ -238,7 +225,7 @@ export default function App() {
         </a>
         <nav aria-label="Primary navigation">
           <a className="active-link" href="#portfolio">
-            <span /> PORTFOLIO [6]
+            <span /> PORTFOLIO [5]
           </a>
           <a href="#experience">
             <span /> EXPERIENCE
@@ -283,13 +270,13 @@ export default function App() {
                   </button>
                 ))}
               </div>
-              <p>NAV: [CLICK / SCROLL]</p>
+              <p>NAV: [CLICK]</p>
             </aside>
 
             <div className="project-reel">
               <button className="peek" onClick={() => moveProject(-1)}>
-                <img src={projects[(active + 5) % 6].image} alt="" />
-                <span>▲ {projects[(active + 5) % 6].number} // PREVIOUS WORK</span>
+                <img src={projects[(active + projects.length - 1) % projects.length].image} alt="" />
+                <span>▲ {projects[(active + projects.length - 1) % projects.length].number} // PREVIOUS WORK</span>
               </button>
               <button className="featured-project" onClick={() => setModalOpen(true)}>
                 <img src={current.image} alt={current.subtitle} />
@@ -302,8 +289,8 @@ export default function App() {
                 <Corners />
               </button>
               <button className="peek" onClick={() => moveProject(1)}>
-                <img src={projects[(active + 1) % 6].image} alt="" />
-                <span>▼ {projects[(active + 1) % 6].number} // NEXT WORK</span>
+                <img src={projects[(active + 1) % projects.length].image} alt="" />
+                <span>▼ {projects[(active + 1) % projects.length].number} // NEXT WORK</span>
               </button>
             </div>
 
@@ -320,7 +307,7 @@ export default function App() {
                   </button>
                 ))}
               </div>
-              <p>NAV: [CLICK / SCROLL]</p>
+              <p>NAV: [CLICK]</p>
             </aside>
           </div>
         </section>
