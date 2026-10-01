@@ -392,6 +392,10 @@ main {
   transform: translateX(3%) scale(1.08);
 }
 
+.featured-project > .chateraise-slide-image {
+  object-position: center 30%;
+}
+
 .shade {
   position: absolute;
   inset: 0;

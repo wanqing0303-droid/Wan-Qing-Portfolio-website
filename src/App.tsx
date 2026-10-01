@@ -299,7 +299,9 @@ export default function App() {
               </button>
               <button className="featured-project" onClick={() => setModalOpen(true)}>
                 <img
-                  className={active === 0 ? "seijo-slide-image" : ""}
+                  className={
+                    active === 0 ? "seijo-slide-image" : active === 2 ? "chateraise-slide-image" : ""
+                  }
                   src={current.image}
                   alt={current.subtitle}
                 />
