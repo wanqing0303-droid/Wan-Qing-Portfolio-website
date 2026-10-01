@@ -35,7 +35,7 @@ const projects = [
     title: "Chateraise",
     subtitle: "Research & UI/UX Heuristics",
     client: "-",
-    role: "Product Develo",
+    role: "Product Developmen",
     status: "INDEXED",
     coords: "52.3676° N, 4.9041° E",
     description:
