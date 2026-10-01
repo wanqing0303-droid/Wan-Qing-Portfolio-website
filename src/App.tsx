@@ -46,7 +46,7 @@ const projects = [
     number: "04",
     year: "2026",
     title: "L'oreal",
-    subtitle: "The future of Luxury Fragran",
+    subtitle: "The future of Luxury Fragrances",
     client: "CULTURE FOUNDATION",
     role: "EDITORIAL DESIGN",
     status: "PUBLISHED",
