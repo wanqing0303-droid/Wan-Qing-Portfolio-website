@@ -279,7 +279,7 @@ export default function App() {
                     key={project.number}
                     onClick={() => setActive(index)}
                   >
-                    <i /> PORTFOLIO ITEM {project.number}
+                    <i /> PORTFOLIO ITEM {project.t}
                   </button>
                 ))}
               </div>
