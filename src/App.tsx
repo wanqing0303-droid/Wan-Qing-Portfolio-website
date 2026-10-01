@@ -7,7 +7,7 @@ const projects = [
     number: "01",
     year: "2025",
     title: "SEIJO",
-    subtitle: "Entrepreneurshi",
+    subtitle: "Entrepreneurship",
     client: "WAN QING STUDIO",
     role: "Creative Director",
     status: "INACTIVE",
