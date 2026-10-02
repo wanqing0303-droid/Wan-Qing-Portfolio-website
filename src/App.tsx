@@ -209,6 +209,27 @@ const projects = [
       },
     ],
   },
+  {
+    number: "06",
+    year: "2026",
+    title: "ELEVER",
+    subtitle: "Project Coming Soon",
+    client: "ELEVER",
+    role: "Research / Strategy / Design",
+    status: "IN DEVELOPMENT",
+    coords: "1.3521° N, 103.8198° E",
+    description:
+      "Elever is currently in development. Project details, process documentation, and final outcomes will be added to the archive soon.",
+    image: asset("Elever placeholder.svg"),
+    detailImages: [asset("Elever placeholder.svg")],
+    detailSections: [
+      {
+        heading: "01 // PROJECT IN DEVELOPMENT",
+        caption: "ELEVER // PREVIEW",
+        text: "This case study is currently being prepared. Project imagery and full details will be added soon.",
+      },
+    ],
+  },
 ];
 
 function preloadProject(index: number) {
@@ -394,7 +415,7 @@ export default function App() {
         </a>
         <nav aria-label="Primary navigation">
           <a className="active-link" href="#portfolio">
-            <span /> PORTFOLIO [5]
+            <span /> PORTFOLIO [{projects.length}]
           </a>
           <a href="#experience">
             <span /> EXPERIENCE

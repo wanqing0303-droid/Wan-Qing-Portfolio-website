@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title description">
+  <title id="title">Elever project placeholder</title>
+  <desc id="description">Technical grid placeholder for the upcoming Elever portfolio project.</desc>
+  <rect width="1600" height="900" fill="#101010"/>
+  <g stroke="#343434" stroke-width="1">
+    <path d="M0 150H1600M0 300H1600M0 450H1600M0 600H1600M0 750H1600"/>
+    <path d="M200 0V900M400 0V900M600 0V900M800 0V900M1000 0V900M1200 0V900M1400 0V900"/>
+  </g>
+  <g fill="none" stroke="#f1eee7" stroke-width="3">
+    <path d="M64 64h72M64 64v72M1536 64h-72M1536 64v72M64 836h72M64 836v-72M1536 836h-72M1536 836v-72"/>
+    <path d="M570 245h460v410H570z"/>
+    <path d="M680 355h240M680 450h190M680 545h240"/>
+  </g>
+  <g fill="#f1eee7" font-family="'Space Mono', monospace">
+    <text x="64" y="48" font-size="18">WORK 06 // IN DEVELOPMENT</text>
+    <text x="800" y="435" font-size="104" font-weight="700" text-anchor="middle">ELEVER</text>
+    <text x="800" y="492" font-size="20" letter-spacing="8" text-anchor="middle">PROJECT ARCHIVE</text>
+    <text x="64" y="872" font-size="18">ASSETS PENDING // 2026</text>
+    <text x="1536" y="872" font-size="18" text-anchor="end">STATUS: COMING SOON</text>
+  </g>
+</svg>
