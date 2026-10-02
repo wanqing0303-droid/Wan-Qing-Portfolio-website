@@ -139,6 +139,23 @@ const projects = [
       asset("Sony content 2.png"),
       asset("Sony content 3.png"),
     ],
+    detailSections: [
+      {
+        heading: "01 // RESEARCH OBJECTIVE",
+        caption: "RESEARCH OBJECTIVE",
+        text: "Understanding Sony’s current brand perception, its enduring popularity, and the factors influencing consumer behaviour.",
+      },
+      {
+        heading: "02 // MARKET RESEARCH",
+        caption: "MARKET RESEARCH",
+        text: "Exploring market trends, consumer behaviours, and competitive dynamics shaping the industry.",
+      },
+      {
+        heading: "03 // SONY'S BRAND POSITIONING",
+        caption: "SONY'S BRAND POSITIONING",
+        text: "Examining how Sony differentiates itself and how its brand is perceived within the competitive landscape.",
+      },
+    ],
   },
 ];
 
