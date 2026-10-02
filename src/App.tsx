@@ -121,6 +121,11 @@ const projects = [
     description:
       "Monochrome spatial monograph studying raw concrete brutalism, rectilinear cantilevers, and high-density editorial grid typologies.",
     image: asset("Loreal_front_pic.jpg"),
+    detailImages: [
+      asset("Loreal content 1.png"),
+      asset("Loreal content 2.png"),
+      asset("Loreal content 3.mp4"),
+    ],
   },
   {
     number: "05",
@@ -603,18 +608,29 @@ export default function App() {
               <div className="case-notes">
                 {detailImages.map((image, index) => {
                   const section = detailSections[index];
+                  const isVideo = image.toLowerCase().endsWith(".mp4");
                   return (
                     <div className="additional-study" key={image}>
                       <figure>
-                        <img
-                          className={
-                            current.number === "03" && index === 4 ? "chateraise-figure-five" : ""
-                          }
-                          src={image}
-                          alt={`${current.title} content ${index + 1}`}
-                          loading={index === 0 ? "eager" : "lazy"}
-                          decoding="async"
-                        />
+                        {isVideo ? (
+                          <video
+                            src={image}
+                            controls
+                            playsInline
+                            preload="metadata"
+                            aria-label={`${current.title} content ${index + 1}`}
+                          />
+                        ) : (
+                          <img
+                            className={
+                              current.number === "03" && index === 4 ? "chateraise-figure-five" : ""
+                            }
+                            src={image}
+                            alt={`${current.title} content ${index + 1}`}
+                            loading={index === 0 ? "eager" : "lazy"}
+                            decoding="async"
+                          />
+                        )}
                         <figcaption>
                           <span>
                             FIG {String(index + 1).padStart(2, "0")}.{" "}

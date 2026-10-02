@@ -938,12 +938,17 @@ main {
   margin: 16px 0 0;
 }
 
-.case-modal figure img {
+.case-modal figure img,
+.case-modal figure video {
   display: block;
   width: 100%;
   aspect-ratio: 1.835;
   border: 1px solid #e5e5e5;
   object-fit: cover;
+}
+
+.case-modal figure video {
+  background: #000;
 }
 
 .case-modal figure img.chateraise-figure-five {
