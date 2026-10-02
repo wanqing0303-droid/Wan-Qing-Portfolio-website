@@ -615,6 +615,8 @@ export default function App() {
                         {isVideo ? (
                           <video
                             src={image}
+                            autoPlay
+                            muted
                             controls
                             playsInline
                             preload="metadata"
