@@ -103,9 +103,9 @@ const projects = [
         text: "Targeting on the pain points we have identified, we created a user friendly prototype that is compliance with the heuristic evaluations. We also did usability testing with our interviewees to compare data between the existing and new interface.",
       },
       {
-        heading: "05 // CONTENT STUDY",
-        caption: "FINAL EXPERIENCE DIRECTION",
-        text: "Final design exploration connecting the research findings to a clearer, more intuitive pre-order experience and customer journey.",
+        heading: "05 // BEHIND THE SCENES",
+        caption: "BEHIND THE SCENES",
+        text: "A look into our Figma workspace, where we mapped out the user flow, designed the experience, and refined each interaction.",
       },
     ],
   },
