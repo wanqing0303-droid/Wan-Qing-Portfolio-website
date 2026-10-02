@@ -47,17 +47,17 @@ const projects = [
       },
       {
         heading: "02 // RESEARCH",
-        caption: "RESEARCH",
+        caption: "SAMPLE PRIMARY RESEARCH SLIDE",
         text: "We conducted primary research and competitor analysis to understand user behaviours, identify pain points, and uncover opportunities to improve the ION Orchard website experience.",
       },
       {
         heading: "03 // UI/UX REDESIGN",
-        caption: "UI/UX REDESIGN",
+        caption: "REDESIGNED HOME PAGE DESIGN",
         text: "Based on our research and competitor analysis, we redesigned the website to strengthen ION Orchard’s brand identity by featuring its iconic architecture on the homepage, while making the experience more relevant, intuitive, and easier to navigate.",
       },
       {
         heading: "04 // RECOMMENDATIONS",
-        caption: "RECOMMENDATIONS",
+        caption: "CONCISED KEY FINDINGS",
         text: "We translated our research into simple, easy-to-digest findings and developed concrete recommendations, supported by examples, to address the key pain points identified.",
       },
     ],
