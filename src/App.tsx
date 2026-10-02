@@ -506,6 +506,8 @@ export default function App() {
                         ? "chateraise-slide-image"
                         : active === 3
                           ? "loreal-slide-image"
+                          : active === 5
+                            ? "elever-slide-image"
                           : ""
                   }
                   src={current.image}

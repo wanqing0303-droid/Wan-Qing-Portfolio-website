@@ -400,6 +400,10 @@ main {
   object-position: center 10%;
 }
 
+.featured-project > .elever-slide-image {
+  transform: scale(1.18);
+}
+
 .shade {
   position: absolute;
   inset: 0;
