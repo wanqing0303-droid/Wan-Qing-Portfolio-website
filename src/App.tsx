@@ -2,6 +2,30 @@ import { useEffect, useRef, useState } from "react";
 
 const asset = (name: string) => `/assets/${name}`;
 
+const preloadedMedia = new Set<string>();
+const mediaPreloaders: Array<HTMLImageElement | HTMLVideoElement> = [];
+
+function preloadMedia(source: string) {
+  if (preloadedMedia.has(source)) return;
+
+  preloadedMedia.add(source);
+
+  if (source.toLowerCase().endsWith(".mp4")) {
+    const video = document.createElement("video");
+    video.preload = "auto";
+    video.muted = true;
+    video.src = source;
+    video.load();
+    mediaPreloaders.push(video);
+    return;
+  }
+
+  const image = new Image();
+  image.decoding = "async";
+  image.src = source;
+  mediaPreloaders.push(image);
+}
+
 const projects = [
   {
     number: "01",
@@ -323,16 +347,18 @@ export default function App() {
         }));
 
   useEffect(() => {
+    [current.image, ...detailImages].forEach(preloadMedia);
+  }, [active]);
+
+  useEffect(() => {
     const timer = window.setTimeout(() => {
-      [current.image, detailImages[0]].forEach((source) => {
-        const image = new Image();
-        image.decoding = "async";
-        image.src = source;
+      projects.forEach((project) => {
+        [project.image, ...project.detailImages].forEach(preloadMedia);
       });
-    }, 150);
+    }, 300);
 
     return () => window.clearTimeout(timer);
-  }, [active, current.image, detailImages[0]]);
+  }, []);
 
   const moveProject = (direction: number) => {
     setActive((value) => (value + direction + projects.length) % projects.length);
@@ -620,7 +646,7 @@ export default function App() {
                             muted
                             controls
                             playsInline
-                            preload="metadata"
+                            preload="auto"
                             aria-label={`${current.title} content ${index + 1}`}
                           />
                         ) : (
@@ -630,7 +656,7 @@ export default function App() {
                             }
                             src={image}
                             alt={`${current.title} content ${index + 1}`}
-                            loading={index === 0 ? "eager" : "lazy"}
+                            loading="eager"
                             decoding="async"
                           />
                         )}
