@@ -134,6 +134,11 @@ const projects = [
     description:
       "Atmospheric gallery environments, luminous spatial reflections, and tactile packaging hardware prototypes designed for contemporary craft.",
     image: asset("Sony content 1.png"),
+    detailImages: [
+      asset("Sony content 1.png"),
+      asset("Sony content 2.png"),
+      asset("Sony content 3.png"),
+    ],
   },
 ];
 
