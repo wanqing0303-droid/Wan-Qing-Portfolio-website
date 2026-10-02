@@ -220,7 +220,7 @@ const projects = [
     coords: "1.3521° N, 103.8198° E",
     description:
       "A streamlined digital operations platform designed to help Elever manage badminton classes, students, and coaches from one connected admin experience.",
-    image: asset("elever front pic.jpg"),
+    image: asset("Elever front pic.webp"),
     detailImages: [
       asset("Elever content 1.webp"),
       asset("Elever content 2.webp"),
