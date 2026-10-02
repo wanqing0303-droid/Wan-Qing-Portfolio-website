@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const asset = (name: string) => `/assets/${name}`;
 
@@ -316,6 +316,18 @@ export default function App() {
               : `Supporting ${current.title} research and design development documenting the project's process, findings, and final experience direction.`,
         }));
 
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      [current.image, detailImages[0]].forEach((source) => {
+        const image = new Image();
+        image.decoding = "async";
+        image.src = source;
+      });
+    }, 150);
+
+    return () => window.clearTimeout(timer);
+  }, [active, current.image, detailImages[0]]);
+
   const moveProject = (direction: number) => {
     setActive((value) => (value + direction + projects.length) % projects.length);
   };
@@ -383,7 +395,11 @@ export default function App() {
 
             <div className="project-reel">
               <button className="peek" onClick={() => moveProject(-1)}>
-                <img src={projects[(active + projects.length - 1) % projects.length].image} alt="" />
+                <img
+                  src={projects[(active + projects.length - 1) % projects.length].image}
+                  alt=""
+                  decoding="async"
+                />
                 <span>▲ {projects[(active + projects.length - 1) % projects.length].number} // PREVIOUS WORK</span>
               </button>
               <button className="featured-project" onClick={() => setModalOpen(true)}>
@@ -399,6 +415,7 @@ export default function App() {
                   }
                   src={current.image}
                   alt={current.subtitle}
+                  decoding="async"
                 />
                 <span className="shade" />
                 <span className="featured-copy">
@@ -409,7 +426,11 @@ export default function App() {
                 <Corners />
               </button>
               <button className="peek" onClick={() => moveProject(1)}>
-                <img src={projects[(active + 1) % projects.length].image} alt="" />
+                <img
+                  src={projects[(active + 1) % projects.length].image}
+                  alt=""
+                  decoding="async"
+                />
                 <span>▼ {projects[(active + 1) % projects.length].number} // NEXT WORK</span>
               </button>
             </div>
@@ -452,7 +473,7 @@ export default function App() {
                 onClick={() => setSelectedExperience(index)}
               >
                 <div>
-                  <img src={asset(item.image)} alt="" />
+                  <img src={asset(item.image)} alt="" loading="lazy" decoding="async" />
                   <span className="shade" />
                   <p>
                     <strong>{item.company}</strong>
@@ -471,7 +492,12 @@ export default function App() {
           </SectionTitle>
 
           <div className="portrait-frame">
-            <img src={asset("About_me_picture.png")} alt="Wan Qing portrait" />
+            <img
+              src={asset("About_me_picture.png")}
+              alt="Wan Qing portrait"
+              loading="lazy"
+              decoding="async"
+            />
             <span className="shade" />
             <span className="portrait-dot"><i /></span>
             <span className="coordinates">1.3521° N, 103.8198° E</span>
@@ -586,6 +612,8 @@ export default function App() {
                           }
                           src={image}
                           alt={`${current.title} content ${index + 1}`}
+                          loading={index === 0 ? "eager" : "lazy"}
+                          decoding="async"
                         />
                         <figcaption>
                           <span>
@@ -645,6 +673,7 @@ export default function App() {
                 <img
                   src={asset(experience[selectedExperience].image)}
                   alt={`${experience[selectedExperience].company} archive`}
+                  decoding="async"
                 />
                 <figcaption>
                   <span>FIG 01. ARCHIVE ARTIFACT &amp; ENVIRONMENT DOSSIER</span>
