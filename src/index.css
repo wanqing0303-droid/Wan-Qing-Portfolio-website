@@ -401,6 +401,7 @@ main {
 }
 
 .featured-project > .elever-slide-image {
+  object-position: center 40%;
   transform: scale(1.18);
 }
 
