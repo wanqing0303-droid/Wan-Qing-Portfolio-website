@@ -98,9 +98,9 @@ const projects = [
         text: "Mapped the end-to-end Chateraise pre-order journey to understand how users interact with the existing experience at each stage. Documented key user actions, touchpoints and friction points to identify pain points and opportunities for improvement.",
       },
       {
-        heading: "04 // CONTENT STUDY",
-        caption: "DESIGN DEVELOPMENT",
-        text: "Supporting Chateraise research and design development documenting the project’s process, findings, and evolving experience direction.",
+        heading: "04 // UI/UX REDESIGN",
+        caption: "UI/UX REDESIGN",
+        text: "Targeting on the pain points we have identified, we created a user friendly prototype that is compliance with the heuristic evaluations. We also did usability testing with our interviewees to compare data between the existing and new interface.",
       },
       {
         heading: "05 // CONTENT STUDY",
