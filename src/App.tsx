@@ -58,10 +58,10 @@ const projects = [
       "",
     image: asset("ION front pic.jpg"),
     detailImages: [
-      asset("ION Content 1.png"),
-      asset("ION content 2.png"),
-      asset("ION Content 3.png"),
-      asset("ION content 2 (2).png"),
+      asset("ION Content 1.webp"),
+      asset("ION content 2.webp"),
+      asset("ION Content 3.webp"),
+      asset("ION content 2 (2).webp"),
     ],
     detailSections: [
       {
@@ -99,10 +99,10 @@ const projects = [
       "",
     image: asset("Chateraise front pic.jpg"),
     detailImages: [
-      asset("Chateraise content 1.png"),
-      asset("Chateraise content 2.png"),
-      asset("Chateraise content 3.png"),
-      asset("Chateraise content 4.png"),
+      asset("Chateraise content 1.webp"),
+      asset("Chateraise content 2.webp"),
+      asset("Chateraise content 3.webp"),
+      asset("Chateraise content 4.webp"),
       asset("Chateraise content 5.jpg"),
     ],
     detailSections: [
@@ -146,10 +146,10 @@ const projects = [
       "Monochrome spatial monograph studying raw concrete brutalism, rectilinear cantilevers, and high-density editorial grid typologies.",
     image: asset("Loreal_front_pic.jpg"),
     detailImages: [
-      asset("Loreal content 1.png"),
-      asset("Loreal content 2.png"),
+      asset("Loreal content 1.webp"),
+      asset("Loreal content 2.webp"),
       asset("Loreal content 3.mp4"),
-      asset("Loreal content 4.png"),
+      asset("Loreal content 4.webp"),
     ],
   },
   {
@@ -163,11 +163,11 @@ const projects = [
     coords: "19.0760° N, 72.8777° E",
     description:
       "Atmospheric gallery environments, luminous spatial reflections, and tactile packaging hardware prototypes designed for contemporary craft.",
-    image: asset("Sony content 1.png"),
+    image: asset("Sony content 1.webp"),
     detailImages: [
-      asset("Sony content 1.png"),
-      asset("Sony content 2.png"),
-      asset("Sony content 3.png"),
+      asset("Sony content 1.webp"),
+      asset("Sony content 2.webp"),
+      asset("Sony content 3.webp"),
     ],
     detailSections: [
       {
@@ -188,6 +188,11 @@ const projects = [
     ],
   },
 ];
+
+function preloadProject(index: number) {
+  const project = projects[index];
+  [project.image, ...project.detailImages].forEach(preloadMedia);
+}
 
 const experience = [
   {
@@ -347,18 +352,8 @@ export default function App() {
         }));
 
   useEffect(() => {
-    [current.image, ...detailImages].forEach(preloadMedia);
+    preloadProject(active);
   }, [active]);
-
-  useEffect(() => {
-    const timer = window.setTimeout(() => {
-      projects.forEach((project) => {
-        [project.image, ...project.detailImages].forEach(preloadMedia);
-      });
-    }, 300);
-
-    return () => window.clearTimeout(timer);
-  }, []);
 
   const moveProject = (direction: number) => {
     setActive((value) => (value + direction + projects.length) % projects.length);
@@ -417,6 +412,8 @@ export default function App() {
                     className={index === active ? "selected" : ""}
                     key={project.number}
                     onClick={() => setActive(index)}
+                    onFocus={() => preloadProject(index)}
+                    onMouseEnter={() => preloadProject(index)}
                   >
                     <i /> {project.title}
                   </button>
@@ -426,7 +423,16 @@ export default function App() {
             </aside>
 
             <div className="project-reel">
-              <button className="peek" onClick={() => moveProject(-1)}>
+              <button
+                className="peek"
+                onClick={() => moveProject(-1)}
+                onFocus={() =>
+                  preloadProject((active + projects.length - 1) % projects.length)
+                }
+                onMouseEnter={() =>
+                  preloadProject((active + projects.length - 1) % projects.length)
+                }
+              >
                 <img
                   src={projects[(active + projects.length - 1) % projects.length].image}
                   alt=""
@@ -457,7 +463,12 @@ export default function App() {
                 </span>
                 <Corners />
               </button>
-              <button className="peek" onClick={() => moveProject(1)}>
+              <button
+                className="peek"
+                onClick={() => moveProject(1)}
+                onFocus={() => preloadProject((active + 1) % projects.length)}
+                onMouseEnter={() => preloadProject((active + 1) % projects.length)}
+              >
                 <img
                   src={projects[(active + 1) % projects.length].image}
                   alt=""
@@ -475,6 +486,8 @@ export default function App() {
                     className={index === active ? "selected" : ""}
                     key={project.number}
                     onClick={() => setActive(index)}
+                    onFocus={() => preloadProject(index)}
+                    onMouseEnter={() => preloadProject(index)}
                   >
                     WORK {project.number} // {project.year}
                   </button>
@@ -656,7 +669,7 @@ export default function App() {
                             }
                             src={image}
                             alt={`${current.title} content ${index + 1}`}
-                            loading="eager"
+                            loading={index === 0 ? "eager" : "lazy"}
                             decoding="async"
                           />
                         )}
