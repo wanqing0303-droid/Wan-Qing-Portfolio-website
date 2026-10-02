@@ -151,6 +151,28 @@ const projects = [
       asset("Loreal content 3.mp4"),
       asset("Loreal content 4.webp"),
     ],
+    detailSections: [
+      {
+        heading: "01 // PROJECT OBJECTIVE",
+        caption: "INTRODUCTION AND CHALLENGE BRIEF",
+        text: "We participated in L’Oréal Brandstorm 2026, exploring the future of luxury fragrances and how technology could transform the fragrance discovery experience.",
+      },
+      {
+        heading: "02 // PRIMARY RESEARCH",
+        caption: "PRIMARY RESEARCH STATISTICS",
+        text: "We translated our research into clear, digestible insights, highlighting key consumer behaviours, preferences, and expectations.",
+      },
+      {
+        heading: "03 // IDEATION",
+        caption: "SAMPLE VR CHOICE SELECTION",
+        text: "We developed a VR concept that blends technology and beauty, aligning with L’Oréal’s focus on innovation while addressing our research finding that consumers seek products that reflect their identity and fit their personal preferences.",
+      },
+      {
+        heading: "04 // INDIVIDUAL SUBMISSION",
+        caption: "ONE-PAGE SUBMISSION TO L’ORÉAL",
+        text: "For my individual submission, I identified a pain point faced by travel enthusiasts and explored a solution that could make their travel experience more convenient and seamless.",
+      },
+    ],
   },
   {
     number: "05",
