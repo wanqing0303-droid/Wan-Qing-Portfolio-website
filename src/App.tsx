@@ -125,6 +125,7 @@ const projects = [
       asset("Loreal content 1.png"),
       asset("Loreal content 2.png"),
       asset("Loreal content 3.mp4"),
+      asset("Loreal content 4.png"),
     ],
   },
   {
