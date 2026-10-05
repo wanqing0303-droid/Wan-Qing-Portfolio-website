@@ -403,7 +403,6 @@ main {
 @keyframes archive-reveal {
   from {
     opacity: .55;
-    transform: scale(1.015);
   }
 
   to {
