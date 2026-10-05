@@ -78,6 +78,11 @@ body {
   min-width: 320px;
 }
 
+::selection {
+  color: var(--archive-white);
+  background: var(--archive-red);
+}
+
 button,
 a {
   color: inherit;
@@ -90,6 +95,12 @@ button {
 
 a {
   text-decoration: none;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--archive-red);
+  outline-offset: 3px;
 }
 
 .site-shell {
@@ -386,6 +397,18 @@ main {
   height: 100%;
   object-fit: cover;
   object-position: center;
+  animation: archive-reveal .36s ease-out;
+}
+
+@keyframes archive-reveal {
+  from {
+    opacity: .55;
+    transform: scale(1.015);
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .featured-project > .seijo-slide-image {
@@ -541,17 +564,47 @@ main {
   height: 420px;
   overflow: hidden;
   border: 1px solid #e5e5e5;
+  background-color: var(--archive-surface);
+  background-image:
+    linear-gradient(var(--archive-border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--archive-border) 1px, transparent 1px);
+  background-size: 24px 24px;
 }
 
 .experience-card img {
+  position: relative;
+  z-index: 1;
   width: 100%;
   height: 100%;
   object-fit: cover;
   filter: saturate(1);
 }
 
+.experience-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--archive-gray);
+  font-family: "Space Mono:Bold", monospace;
+  letter-spacing: 1px;
+}
+
+.experience-placeholder b {
+  color: var(--archive-black);
+  font-size: 14px;
+}
+
+.experience-placeholder small {
+  font-size: 9px;
+}
+
 .experience-card p {
   position: absolute;
+  z-index: 2;
   top: 12px;
   right: 12px;
   left: 12px;
@@ -817,6 +870,7 @@ main {
   overflow: hidden;
   border: 2px solid #000;
   background: #fff;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, .35);
 }
 
 .portfolio-modal {
@@ -1042,6 +1096,27 @@ main {
   filter: saturate(1);
 }
 
+.experience-figure {
+  position: relative;
+  min-height: 360px;
+  overflow: hidden;
+  background-color: var(--archive-surface);
+  background-image:
+    linear-gradient(var(--archive-border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--archive-border) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.experience-figure img,
+.experience-figure figcaption {
+  position: relative;
+  z-index: 1;
+}
+
+.experience-figure figcaption {
+  background: var(--archive-white);
+}
+
 .case-modal > .corner {
   margin: 6px;
 }
@@ -1185,8 +1260,8 @@ main {
   }
 
   .case-modal {
-    height: auto;
-    min-height: 620px;
+    height: min(720px, calc(100dvh - 48px));
+    min-height: 0;
   }
 
   .case-content {
@@ -1200,5 +1275,15 @@ main {
   .case-modal figcaption {
     gap: 8px;
     font-size: 7px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .featured-project > img {
+    animation: none;
   }
 }

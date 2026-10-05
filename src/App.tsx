@@ -1,29 +1,29 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react"
 
-const asset = (name: string) => `/assets/${name}`;
+const asset = (name: string) => `/assets/${name}`
 
-const preloadedMedia = new Set<string>();
-const mediaPreloaders: Array<HTMLImageElement | HTMLVideoElement> = [];
+const preloadedMedia = new Set<string>()
+const mediaPreloaders: Array<HTMLImageElement | HTMLVideoElement> = []
 
 function preloadMedia(source: string) {
-  if (preloadedMedia.has(source)) return;
+  if (preloadedMedia.has(source)) return
 
-  preloadedMedia.add(source);
+  preloadedMedia.add(source)
 
   if (source.toLowerCase().endsWith(".mp4")) {
-    const video = document.createElement("video");
-    video.preload = "auto";
-    video.muted = true;
-    video.src = source;
-    video.load();
-    mediaPreloaders.push(video);
-    return;
+    const video = document.createElement("video")
+    video.preload = "auto"
+    video.muted = true
+    video.src = source
+    video.load()
+    mediaPreloaders.push(video)
+    return
   }
 
-  const image = new Image();
-  image.decoding = "async";
-  image.src = source;
-  mediaPreloaders.push(image);
+  const image = new Image()
+  image.decoding = "async"
+  image.src = source
+  mediaPreloaders.push(image)
 }
 
 const projects = [
@@ -54,8 +54,7 @@ const projects = [
     role: "UX Research / Strategy",
     status: "INDEXED",
     coords: "38.7223° N, 9.1393° W",
-    description:
-      "",
+    description: "",
     image: asset("ION front pic.jpg"),
     detailImages: [
       asset("ION Content 1.webp"),
@@ -95,8 +94,7 @@ const projects = [
     role: "Digital product + UX",
     status: "INDEXED",
     coords: "52.3676° N, 4.9041° E",
-    description:
-      "",
+    description: "",
     image: asset("Chateraise front pic.jpg"),
     detailImages: [
       asset("Chateraise content 1.webp"),
@@ -244,11 +242,11 @@ const projects = [
       },
     ],
   },
-];
+]
 
 function preloadProject(index: number) {
-  const project = projects[index];
-  [project.image, ...project.detailImages].forEach(preloadMedia);
+  const project = projects[index]
+  ;[project.image, ...project.detailImages].forEach(preloadMedia)
 }
 
 const experience = [
@@ -352,7 +350,7 @@ const experience = [
       "Foundation repository for the current Wan Qing Archive 2026.",
     ],
   },
-];
+]
 
 function Corners({ small = false }: { small?: boolean }) {
   return (
@@ -362,30 +360,36 @@ function Corners({ small = false }: { small?: boolean }) {
       <i className={`corner bl ${small ? "small" : ""}`} />
       <i className={`corner br ${small ? "small" : ""}`} />
     </>
-  );
+  )
 }
 
 function SectionTitle({
   children,
   aside,
 }: {
-  children: React.ReactNode;
-  aside: React.ReactNode;
+  children: React.ReactNode
+  aside: React.ReactNode
 }) {
   return (
     <div className="section-title">
       <h2>{children}</h2>
       <div>{aside}</div>
     </div>
-  );
+  )
 }
 
 export default function App() {
-  const [active, setActive] = useState(2);
-  const [modalOpen, setModalOpen] = useState(false);
-  const [selectedExperience, setSelectedExperience] = useState<number | null>(null);
-  const experienceRef = useRef<HTMLDivElement>(null);
-  const current = projects[active];
+  const [active, setActive] = useState(2)
+  const [activeSection, setActiveSection] = useState("portfolio")
+  const [modalOpen, setModalOpen] = useState(false)
+  const [selectedExperience, setSelectedExperience] = useState<number | null>(
+    null,
+  )
+  const experienceRef = useRef<HTMLDivElement>(null)
+  const modalRef = useRef<HTMLElement>(null)
+  const modalCloseRef = useRef<HTMLButtonElement>(null)
+  const current = projects[active]
+  const hasOpenModal = modalOpen || selectedExperience !== null
   const detailImages =
     "detailImages" in current
       ? current.detailImages
@@ -393,7 +397,7 @@ export default function App() {
           current.image,
           projects[(active + 1) % projects.length].image,
           projects[(active + 2) % projects.length].image,
-        ];
+        ]
   const detailSections =
     "detailSections" in current
       ? current.detailSections
@@ -404,35 +408,112 @@ export default function App() {
             index === 0
               ? current.description
               : `Supporting ${current.title} research and design development documenting the project's process, findings, and final experience direction.`,
-        }));
+        }))
 
   useEffect(() => {
-    preloadProject(active);
-  }, [active]);
+    preloadProject(active)
+  }, [active])
+
+  useEffect(() => {
+    const sections = ["portfolio", "experience", "about"]
+      .map((id) => document.getElementById(id))
+      .filter((section): section is HTMLElement => section !== null)
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0]
+
+        if (visible) setActiveSection(visible.target.id)
+      },
+      { rootMargin: "-20% 0px -60% 0px", threshold: [0, 0.1, 0.25] },
+    )
+
+    sections.forEach((section) => observer.observe(section))
+    return () => observer.disconnect()
+  }, [])
+
+  useEffect(() => {
+    if (!hasOpenModal) return
+
+    const previouslyFocused = document.activeElement as HTMLElement | null
+    const previousOverflow = document.body.style.overflow
+    document.body.style.overflow = "hidden"
+    modalCloseRef.current?.focus()
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setModalOpen(false)
+        setSelectedExperience(null)
+        return
+      }
+
+      if (event.key !== "Tab") return
+      const focusable = modalRef.current?.querySelectorAll<HTMLElement>(
+        'button, a[href], video[controls], [tabindex]:not([tabindex="-1"])',
+      )
+      if (!focusable?.length) return
+
+      const first = focusable[0]
+      const last = focusable[focusable.length - 1]
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault()
+        last.focus()
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault()
+        first.focus()
+      }
+    }
+
+    window.addEventListener("keydown", handleKeyDown)
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown)
+      document.body.style.overflow = previousOverflow
+      previouslyFocused?.focus()
+    }
+  }, [hasOpenModal])
 
   const moveProject = (direction: number) => {
-    setActive((value) => (value + direction + projects.length) % projects.length);
-  };
+    setActive(
+      (value) => (value + direction + projects.length) % projects.length,
+    )
+  }
 
   const scrollExperience = (direction: number) => {
-    experienceRef.current?.scrollBy({ left: direction * 374, behavior: "smooth" });
-  };
+    experienceRef.current?.scrollBy({
+      left: direction * 374,
+      behavior: "smooth",
+    })
+  }
 
   return (
     <div className="site-shell">
       <header className="header">
-        <a className="brand" href="#portfolio" aria-label="Wan Qing archive home">
+        <a
+          className="brand"
+          href="#portfolio"
+          aria-label="Wan Qing archive home"
+        >
           <img src={asset("33c6c.svg")} alt="Wan Qing" />
           <span>// ARCHIVE 2026</span>
         </a>
         <nav aria-label="Primary navigation">
-          <a className="active-link" href="#portfolio">
+          <a
+            className={activeSection === "portfolio" ? "active-link" : ""}
+            href="#portfolio"
+          >
             <span /> PORTFOLIO [{projects.length}]
           </a>
-          <a href="#experience">
+          <a
+            className={activeSection === "experience" ? "active-link" : ""}
+            href="#experience"
+          >
             <span /> EXPERIENCE
           </a>
-          <a href="#about">
+          <a
+            className={activeSection === "about" ? "active-link" : ""}
+            href="#about"
+          >
             <span /> ABOUT ME
           </a>
         </nav>
@@ -469,6 +550,8 @@ export default function App() {
                     onClick={() => setActive(index)}
                     onFocus={() => preloadProject(index)}
                     onMouseEnter={() => preloadProject(index)}
+                    aria-pressed={index === active}
+                    aria-label={`Show project ${project.number}: ${project.title}`}
                   >
                     <i /> {project.title}
                   </button>
@@ -481,22 +564,42 @@ export default function App() {
               <button
                 className="peek"
                 onClick={() => moveProject(-1)}
+                aria-label={`Show previous project: ${projects[(active + projects.length - 1) % projects.length].title}`}
                 onFocus={() =>
-                  preloadProject((active + projects.length - 1) % projects.length)
+                  preloadProject(
+                    (active + projects.length - 1) % projects.length,
+                  )
                 }
                 onMouseEnter={() =>
-                  preloadProject((active + projects.length - 1) % projects.length)
+                  preloadProject(
+                    (active + projects.length - 1) % projects.length,
+                  )
                 }
               >
                 <img
-                  src={projects[(active + projects.length - 1) % projects.length].image}
+                  src={
+                    projects[(active + projects.length - 1) % projects.length]
+                      .image
+                  }
                   alt=""
                   decoding="async"
                 />
-                <span>▲ {projects[(active + projects.length - 1) % projects.length].number} // PREVIOUS WORK</span>
+                <span>
+                  ▲{" "}
+                  {
+                    projects[(active + projects.length - 1) % projects.length]
+                      .number
+                  }{" "}
+                  // PREVIOUS WORK
+                </span>
               </button>
-              <button className="featured-project" onClick={() => setModalOpen(true)}>
+              <button
+                className="featured-project"
+                onClick={() => setModalOpen(true)}
+                aria-label={`Open ${current.title} case study`}
+              >
                 <img
+                  key={current.number}
                   className={
                     active === 0
                       ? "seijo-slide-image"
@@ -506,7 +609,7 @@ export default function App() {
                           ? "loreal-slide-image"
                           : active === 5
                             ? "elever-slide-image"
-                          : ""
+                            : ""
                   }
                   src={current.image}
                   alt={current.subtitle}
@@ -523,15 +626,21 @@ export default function App() {
               <button
                 className="peek"
                 onClick={() => moveProject(1)}
+                aria-label={`Show next project: ${projects[(active + 1) % projects.length].title}`}
                 onFocus={() => preloadProject((active + 1) % projects.length)}
-                onMouseEnter={() => preloadProject((active + 1) % projects.length)}
+                onMouseEnter={() =>
+                  preloadProject((active + 1) % projects.length)
+                }
               >
                 <img
                   src={projects[(active + 1) % projects.length].image}
                   alt=""
                   decoding="async"
                 />
-                <span>▼ {projects[(active + 1) % projects.length].number} // NEXT WORK</span>
+                <span>
+                  ▼ {projects[(active + 1) % projects.length].number} // NEXT
+                  WORK
+                </span>
               </button>
             </div>
 
@@ -545,6 +654,8 @@ export default function App() {
                     onClick={() => setActive(index)}
                     onFocus={() => preloadProject(index)}
                     onMouseEnter={() => preloadProject(index)}
+                    aria-pressed={index === active}
+                    aria-label={`Show work ${project.number} from ${project.year}: ${project.title}`}
                   >
                     WORK {project.number} // {project.year}
                   </button>
@@ -560,8 +671,18 @@ export default function App() {
             aside={
               <div className="section-controls">
                 <span>[SCROLL OR CLICK TO NAVIGATE]</span>
-                <button onClick={() => scrollExperience(-1)}>[ ◄ ]</button>
-                <button onClick={() => scrollExperience(1)}>[ ► ]</button>
+                <button
+                  onClick={() => scrollExperience(-1)}
+                  aria-label="Scroll experience left"
+                >
+                  [ ◄ ]
+                </button>
+                <button
+                  onClick={() => scrollExperience(1)}
+                  aria-label="Scroll experience right"
+                >
+                  [ ► ]
+                </button>
               </div>
             }
           >
@@ -573,9 +694,22 @@ export default function App() {
                 className="experience-card"
                 key={item.company}
                 onClick={() => setSelectedExperience(index)}
+                aria-label={`Open experience record for ${item.company}, ${item.role}`}
               >
                 <div>
-                  <img src={asset(item.image)} alt="" loading="lazy" decoding="async" />
+                  <span className="experience-placeholder" aria-hidden="true">
+                    <b>EXP // {String(index + 1).padStart(2, "0")}</b>
+                    <small>IMAGE RECORD PENDING</small>
+                  </span>
+                  <img
+                    src={asset(item.image)}
+                    alt={`${item.company} project archive`}
+                    loading="lazy"
+                    decoding="async"
+                    onError={(event) => {
+                      event.currentTarget.hidden = true
+                    }}
+                  />
                   <span className="shade" />
                   <p>
                     <strong>{item.company}</strong>
@@ -601,7 +735,9 @@ export default function App() {
               decoding="async"
             />
             <span className="shade" />
-            <span className="portrait-dot"><i /></span>
+            <span className="portrait-dot">
+              <i />
+            </span>
             <span className="coordinates">1.3521° N, 103.8198° E</span>
             <svg
               className="portrait-signature"
@@ -616,7 +752,9 @@ export default function App() {
                 />
               </defs>
               <text>
-                <textPath href="#signature-curve">Hi I&apos;m Wan Qing</textPath>
+                <textPath href="#signature-curve">
+                  Hi I&apos;m Wan Qing
+                </textPath>
               </text>
             </svg>
             <Corners />
@@ -627,10 +765,11 @@ export default function App() {
               <div>
                 <h3>WAN QING IN A NUTSHELL //</h3>
                 <p>
-                  I’m a curious and entrepreneurial person who loves turning ideas into something real.
-                  I’m known for being warm, funny, and always up for trying something new. I enjoy meeting
-                  interesting people, exploring new perspectives, and bringing a little creativity into
-                  whatever I do.
+                  I’m a curious and entrepreneurial person who loves turning
+                  ideas into something real. I’m known for being warm, funny,
+                  and always up for trying something new. I enjoy meeting
+                  interesting people, exploring new perspectives, and bringing a
+                  little creativity into whatever I do.
                 </p>
               </div>
               <footer>
@@ -645,20 +784,26 @@ export default function App() {
                 <label>EDUCATION</label>
                 <h4>BACHELORS IN BUSINESS</h4>
                 <p>
-                  <b>RELEVANT MODULES:</b> USER INTERFACE &amp; USER EXPERIENCE, CONSUMER BEHAVIOUR,
-                  DESIGN COMMUNICATION &amp; BEHAVIOURAL CHANGE, DIGITAL MARKETING, STRATEGY
+                  <b>RELEVANT MODULES:</b> USER INTERFACE &amp; USER EXPERIENCE,
+                  CONSUMER BEHAVIOUR, DESIGN COMMUNICATION &amp; BEHAVIOURAL
+                  CHANGE, DIGITAL MARKETING, STRATEGY
                 </p>
                 <div className="education-meta">
                   <span>
                     <label>LOCATION</label>SINGAPORE [UTC+8]
                   </span>
                   <span>
-                    <label>STATUS</label><i /> AVAILABLE
+                    <label>STATUS</label>
+                    <i /> AVAILABLE
                   </span>
                 </div>
-                <small>Fresh Graduate from Singapore Management University</small>
+                <small>
+                  Fresh Graduate from Singapore Management University
+                </small>
               </div>
-              <a href="mailto:wanqing0303@gmail.com">GET IN TOUCH <span>↳</span></a>
+              <a href="mailto:wanqing0303@gmail.com">
+                GET IN TOUCH <span>↳</span>
+              </a>
             </article>
           </div>
         </section>
@@ -680,32 +825,52 @@ export default function App() {
       {modalOpen && (
         <div
           className="modal-backdrop portfolio-backdrop"
-          role="dialog"
-          aria-modal="true"
-          aria-label="Portfolio item details"
           onClick={() => setModalOpen(false)}
         >
-          <article className="case-modal portfolio-modal" onClick={(event) => event.stopPropagation()}>
+          <article
+            ref={modalRef}
+            className="case-modal portfolio-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="portfolio-modal-title"
+            onClick={(event) => event.stopPropagation()}
+          >
             <header>
-              <span><i /> WAN QING // CASE STUDY [{current.number}]</span>
-              <button onClick={() => setModalOpen(false)}>[CLOSE ✕]</button>
+              <span>
+                <i /> WAN QING // CASE STUDY [{current.number}]
+              </span>
+              <button ref={modalCloseRef} onClick={() => setModalOpen(false)}>
+                [CLOSE ✕]
+              </button>
             </header>
             <div className="case-content custom-modal-scroll">
               <div className="case-heading">
                 <label>{current.role} // ARCHIVE SPEC</label>
-                <h2>{current.title}</h2>
+                <h2 id="portfolio-modal-title">{current.title}</h2>
                 <p>{current.subtitle}</p>
               </div>
               <div className="case-meta">
-                <span><label>CLIENT</label>{current.client}</span>
-                <span><label>YEAR</label>{current.year}</span>
-                <span><label>ROLE</label>{current.role}</span>
-                <span><label>STATUS</label>{current.status}</span>
+                <span>
+                  <label>CLIENT</label>
+                  {current.client}
+                </span>
+                <span>
+                  <label>YEAR</label>
+                  {current.year}
+                </span>
+                <span>
+                  <label>ROLE</label>
+                  {current.role}
+                </span>
+                <span>
+                  <label>STATUS</label>
+                  {current.status}
+                </span>
               </div>
               <div className="case-notes">
                 {detailImages.map((image, index) => {
-                  const section = detailSections[index];
-                  const isVideo = image.toLowerCase().endsWith(".mp4");
+                  const section = detailSections[index]
+                  const isVideo = image.toLowerCase().endsWith(".mp4")
                   return (
                     <div className="additional-study" key={image}>
                       <figure>
@@ -722,7 +887,9 @@ export default function App() {
                         ) : (
                           <img
                             className={
-                              current.number === "03" && index === 4 ? "chateraise-figure-five" : ""
+                              current.number === "03" && index === 4
+                                ? "chateraise-figure-five"
+                                : ""
                             }
                             src={image}
                             alt={`${current.title} content ${index + 1}`}
@@ -733,7 +900,8 @@ export default function App() {
                         <figcaption>
                           <span>
                             FIG {String(index + 1).padStart(2, "0")}.{" "}
-                            {section?.caption ?? `${current.title} CONTENT STUDY`}
+                            {section?.caption ??
+                              `${current.title} CONTENT STUDY`}
                           </span>
                           <span>
                             {index === 0
@@ -750,7 +918,7 @@ export default function App() {
                         <p>{section?.text ?? current.description}</p>
                       </section>
                     </div>
-                  );
+                  )
                 })}
               </div>
             </div>
@@ -762,37 +930,77 @@ export default function App() {
       {selectedExperience !== null && (
         <div
           className="modal-backdrop portfolio-backdrop"
-          role="dialog"
-          aria-modal="true"
-          aria-label="Experience record details"
           onClick={() => setSelectedExperience(null)}
         >
-          <article className="case-modal experience-modal" onClick={(event) => event.stopPropagation()}>
+          <article
+            ref={modalRef}
+            className="case-modal experience-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="experience-modal-title"
+            onClick={(event) => event.stopPropagation()}
+          >
             <header>
-              <span><i /> WAN QING // EXPERIENCE RECORD [{String(selectedExperience + 1).padStart(2, "0")}]</span>
-              <button onClick={() => setSelectedExperience(null)}>[CLOSE ✕]</button>
+              <span>
+                <i /> WAN QING // EXPERIENCE RECORD [
+                {String(selectedExperience + 1).padStart(2, "0")}]
+              </span>
+              <button
+                ref={modalCloseRef}
+                onClick={() => setSelectedExperience(null)}
+              >
+                [CLOSE ✕]
+              </button>
             </header>
             <div className="case-content custom-modal-scroll">
               <div className="case-heading">
                 <label>EXPERIENCE ARCHIVE // DOSSIER</label>
-                <h2>{experience[selectedExperience].company}</h2>
+                <h2 id="experience-modal-title">
+                  {experience[selectedExperience].company}
+                </h2>
                 <p>{experience[selectedExperience].role}</p>
               </div>
               <div className="case-meta">
-                <span><label>TENURE</label>{experience[selectedExperience].period}</span>
-                <span><label>LOCATION</label>{experience[selectedExperience].location}</span>
-                <span><label>CATEGORY</label>{experience[selectedExperience].domain}</span>
-                <span><label>STATUS</label>{experience[selectedExperience].status}</span>
+                <span>
+                  <label>TENURE</label>
+                  {experience[selectedExperience].period}
+                </span>
+                <span>
+                  <label>LOCATION</label>
+                  {experience[selectedExperience].location}
+                </span>
+                <span>
+                  <label>CATEGORY</label>
+                  {experience[selectedExperience].domain}
+                </span>
+                <span>
+                  <label>STATUS</label>
+                  {experience[selectedExperience].status}
+                </span>
               </div>
-              <figure>
+              <figure className="experience-figure">
+                <span className="experience-placeholder" aria-hidden="true">
+                  <b>
+                    EXP // {String(selectedExperience + 1).padStart(2, "0")}
+                  </b>
+                  <small>IMAGE RECORD PENDING</small>
+                </span>
                 <img
                   src={asset(experience[selectedExperience].image)}
                   alt={`${experience[selectedExperience].company} archive`}
                   decoding="async"
+                  onError={(event) => {
+                    event.currentTarget.hidden = true
+                  }}
                 />
                 <figcaption>
-                  <span>FIG 01. ARCHIVE ARTIFACT &amp; ENVIRONMENT DOSSIER</span>
-                  <span>REF_ID // EXP-2026-{String(selectedExperience + 1).padStart(2, "0")}</span>
+                  <span>
+                    FIG 01. ARCHIVE ARTIFACT &amp; ENVIRONMENT DOSSIER
+                  </span>
+                  <span>
+                    REF_ID // EXP-2026-
+                    {String(selectedExperience + 1).padStart(2, "0")}
+                  </span>
                 </figcaption>
               </figure>
               <div className="case-notes">
@@ -813,5 +1021,5 @@ export default function App() {
         </div>
       )}
     </div>
-  );
+  )
 }
