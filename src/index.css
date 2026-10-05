@@ -140,7 +140,7 @@ a {
 
 .header nav {
   position: fixed;
-  top: 24ox
+  top: 24ox;
   z-index: 1;
   gap: 24px;
   justify-self: center;
