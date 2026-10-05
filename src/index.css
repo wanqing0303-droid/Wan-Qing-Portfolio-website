@@ -32,7 +32,13 @@
   font-family: "Noto Sans:Bold";
   src: url("https://static.figma.com/font/NotoSans-VF_3") format("woff2");
   font-style: normal;
-  font-weight: 700;
+  font-weight: 700;.header nav {
+  z-index: 1;
+  gap: 24px;
+  justify-self: center;
+  font-size: 13px;
+  letter-spacing: .65px;
+}
 }
 
 @font-face {
