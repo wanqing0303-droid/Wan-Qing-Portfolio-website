@@ -175,7 +175,6 @@ a {
 .header-status strong {
   gap: 6px;
   padding: 6px 10px;
-  border: 2px solid;
   font-size: 11px;
   letter-spacing: .44px;
 }
