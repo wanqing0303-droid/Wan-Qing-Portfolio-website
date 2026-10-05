@@ -261,9 +261,8 @@ const experience = [
     image: "QED front pic.jpg",
     description:
       "Developed networking programmes for senior executives from notable organizations, translating stakeholder needs into programme concepts and coordinating end-to-end execution.",
-    bullets: [
+    secondParagraph:
       "Worked closely with the founder on a pilot initiative, engaging partners and supporting the development and launch of new partnerships.",
-    ],
   },
   {
     company: "ATELIER BRUT",
@@ -276,79 +275,8 @@ const experience = [
     image: "d3722.png",
     description:
       "Bridged interactive kinetic interfaces with tangible gallery surfaces. Built bespoke exhibition navigation and interactive kinetic installations.",
-    bullets: [
-      "Spatial interactive installations with responsive sound-reactive sensors.",
-      "Exhibition catalog and visual collateral for 12,000+ visitors.",
-      "Digital archive portal engineered for long-term collection preservation.",
-    ],
-  },
-  {
-    company: "HYPERFRAME LABS",
-    date: "JUN - 24",
-    role: "UI/UX SYSTEM ARCHITECT",
-    period: "2023 – 2024",
-    location: "AMSTERDAM",
-    domain: "DIGITAL FRAMEWORKS",
-    status: "COMPLETED ARCHIVE",
-    image: "14ff5.png",
-    description:
-      "Researched and constructed scalable design systems, token architectures, and brutalist UI component standards deployed across desktop and mobile.",
-    bullets: [
-      "Multi-brand token architecture with mathematical spacing systems.",
-      "Micro-interaction library with strict performance benchmarks.",
-      "Technical documentation for 40+ engineering contributors.",
-    ],
-  },
-  {
-    company: "CREATIVE ENG. LAB",
-    date: "JAN - 23",
-    role: "RESEARCH FELLOW",
-    period: "2022 – 2023",
-    location: "LONDON",
-    domain: "TYPOGRAPHY & CODE",
-    status: "FELLOWSHIP RECORD",
-    image: "c2927.png",
-    description:
-      "Interdisciplinary fellowship investigating generative grid systems, early web archival aesthetics, and functionalist editorial structures.",
-    bullets: [
-      "Published papers on generative layout matrices and variable typography.",
-      "Exhibited open-source typographic specimens at London Design Week.",
-      "Co-founded the Monospaced Web Standard working initiative.",
-    ],
-  },
-  {
-    company: "OFFICE OF FORM",
-    date: "AUG - 22",
-    role: "COMMUNICATION DESIGNER",
-    period: "2021 – 2022",
-    location: "SINGAPORE",
-    domain: "EDITORIAL & PRINT",
-    status: "COMPLETED ARCHIVE",
-    image: "8d6a6.png",
-    description:
-      "Editorial design, custom typography, and physical publication bindings produced for visual arts institutions and independent publishers.",
-    bullets: [
-      "Designed six hardbound artist monographs and catalog raisonnés.",
-      "CMF specification and paper selection with European master printers.",
-      "Identity guidelines for contemporary craft and ceramics studios.",
-    ],
-  },
-  {
-    company: "ARCHIVE PROTOCOL",
-    date: "NOV - 21",
-    role: "FOUNDING INITIATOR",
-    period: "2020 – 2021",
-    location: "REMOTE",
-    domain: "ARCHIVAL THEORY",
-    status: "PERMANENT ARCHIVE",
-    image: "58e16.png",
-    description:
-      "Self-initiated experimental research repository recording physical ephemera into immutable semantic markdown and monochrome vector schemas.",
-    bullets: [
-      "Digital preservation of over 300 industrial design artifacts.",
-      "Open-source archival metadata framework compliant with ISO standards.",
-      "Foundation repository for the current Wan Qing Archive 2026.",
-    ],
+    secondParagraph:
+      "Produced spatial interactive installations with responsive sound-reactive sensors, exhibition collateral for more than 12,000 visitors, and a digital archive portal designed for long-term collection preservation.",
   },
 ]
 
@@ -1007,12 +935,7 @@ export default function App() {
                 <section>
                   <h3>ROLE RESPONSIBILITIES &amp; SCOPE</h3>
                   <p>{experience[selectedExperience].description}</p>
-                  <h4>KEY DELIVERABLES:</h4>
-                  <ul>
-                    {experience[selectedExperience].bullets.map((bullet) => (
-                      <li key={bullet}>{bullet}</li>
-                    ))}
-                  </ul>
+                  <p>{experience[selectedExperience].secondParagraph}</p>
                 </section>
               </div>
             </div>

@@ -1041,8 +1041,7 @@ main {
   border: 1px solid var(--archive-border);
 }
 
-.case-notes h3,
-.case-notes h4 {
+.case-notes h3 {
   margin: 0 0 12px;
   font-family: "Space Mono:Bold", monospace;
 }
@@ -1053,16 +1052,7 @@ main {
   letter-spacing: .78px;
 }
 
-.case-notes h4 {
-  margin-top: 18px;
-  color: var(--archive-gray);
-  font-size: 9px;
-  line-height: 12px;
-  letter-spacing: .9px;
-}
-
-.case-notes p,
-.case-notes li {
+.case-notes p {
   color: var(--archive-gray);
   font-size: 11px;
   line-height: 18px;
@@ -1075,19 +1065,6 @@ main {
 
 .case-notes p:last-child {
   margin-bottom: 0;
-}
-
-.case-notes ul {
-  display: grid;
-  gap: 6px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.case-notes li::before {
-  content: "• ";
-  color: var(--archive-black);
 }
 
 .experience-modal figure img {
