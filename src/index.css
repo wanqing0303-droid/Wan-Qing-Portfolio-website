@@ -142,7 +142,7 @@ a {
   position: static;
   z-index: 1;
   gap: 24px;
-  justify-self: space-between;
+  justify-self: cent;
   font-size: 13px;
   letter-spacing: .65px;
   border: none;
