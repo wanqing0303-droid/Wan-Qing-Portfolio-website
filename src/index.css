@@ -143,6 +143,7 @@ a {
   z-index: 1;
   gap: 24px;
   justify-self: centre;
+  
   font-size: 13px;
   letter-spacing: .65px;
 }
