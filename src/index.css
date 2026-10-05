@@ -1038,7 +1038,7 @@ main {
 .experience-modal figure img {
   height: 360px;
   aspect-ratio: auto;
-  filter: saturate();
+  filter: saturate(1);
 }
 
 .case-modal > .corner {
