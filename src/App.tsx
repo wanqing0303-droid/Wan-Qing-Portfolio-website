@@ -253,20 +253,18 @@ function preloadProject(index: number) {
 
 const experience = [
   {
-    company: "STUDIO MONOLITH",
-    date: "MAR - 26",
-    role: "LEAD ART DIRECTOR & PRINCIPAL DESIGNER",
-    period: "2025 – PRESENT",
+    company: "QED",
+    date: "2026",
+    role: "OPERATIONS EXECUTIVE",
+    period: "2026",
     location: "SINGAPORE",
-    domain: "IDENTITY & SPATIAL",
+    domain: "OPERATIONS & PARTNERSHIPS",
     status: "ACTIVE ENGAGEMENT",
-    image: "c124a.png",
+    image: "QED front pic.jpg",
     description:
-      "Directing overarching creative strategy and spatial typography for international architecture practices and contemporary galleries across Asia-Pacific.",
+      "Developed networking programmes for senior executives from notable organizations, translating stakeholder needs into programme concepts and coordinating end-to-end execution.",
     bullets: [
-      "Full identity redesign and physical environmental wayfinding systems.",
-      "Archival publication series and limited-edition monographs.",
-      "Cross-functional system stewardship with engineering teams.",
+      "Worked closely with the founder on a pilot initiative, engaging partners and supporting the development and launch of new partnerships.",
     ],
   },
   {
