@@ -215,7 +215,7 @@ const projects = [
     title: "ELEVER",
     subtitle: "Badminton Management Platform",
     client: "ELEVER",
-    role: "Research / Strategy / Design",
+    role: "UI/UX Design",
     status: "INDEXED",
     coords: "1.3521° N, 103.8198° E",
     description:
