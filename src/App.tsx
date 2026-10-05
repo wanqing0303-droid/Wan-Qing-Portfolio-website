@@ -254,7 +254,7 @@ function preloadProject(index: number) {
 const experience = [
   {
     company: "QED",
-    date: "OCT 2026",
+    date: "OCT - 2026",
     role: "OPERATIONS EXECUTIVE",
     period: "2026",
     location: "SINGAPORE",
