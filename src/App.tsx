@@ -44,6 +44,23 @@ const projects = [
       asset("Seijo content 2.jpg"),
       asset("Seijo content 3.jpg"),
     ],
+    detailSections: [
+      {
+        heading: "01 // BRANDING",
+        caption: "FIRST LAUNCH",
+        text: "As Creative Lead, I shaped the ideas behind each collection, translating relatable experiences and community insights into creative concepts. Beyond design direction, I also worked across marketing and community-building initiatives to shape how the brand connected with its audience.",
+      },
+      {
+        heading: "02 // EVENTS",
+        caption: "SEIJO GENESIS EVENT",
+        text: "I organised and hosted a community gathering that brought together 100+ attendees, creating an experience where people could connect beyond the brand and its products.",
+      },
+      {
+        heading: "03 // FASHION RUNWAY",
+        caption: "SEIJO X CHARGEDUP",
+        text: "I collaborated with ChargedUp and Tesla to integrate Tesla’s EV technology into an SMU fashion show. The partnership powered the runway experience, where models walked the red carpet lit by Tesla’s headlights—creating a distinctive intersection of fashion, technology, and experiential design.",
+      },
+    ],
   },
   {
     number: "02",
