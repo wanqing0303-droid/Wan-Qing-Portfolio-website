@@ -238,7 +238,7 @@ const projects = [
       {
         heading: "03 // COACH MANAGEMENT",
         caption: "COACH PROFILES AND AVAILABILITY",
-        text: "Lastly, dedicated coach directory makes it easier to manage profiles, roles, activity status, and upcoming birthdays while keeping key administrative actions accessible.",
+        text: "Lastly, a dedicated coach directory makes it easier to manage profiles, roles, activity status, and upcoming birthdays while keeping key administrative actions accessible.",
       },
     ],
   },
