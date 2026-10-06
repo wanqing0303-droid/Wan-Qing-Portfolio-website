@@ -303,7 +303,7 @@ const experience = [
     role: "FOUNDER & CREATIVE LEAD",
     period: "2023 – 2025",
     location: "SINGAPORE",
-    domain: "MA",
+    domain: "MARKETI",
     status: "COMPLETED ARCHIVE",
     image: "d3722.png",
     description:
