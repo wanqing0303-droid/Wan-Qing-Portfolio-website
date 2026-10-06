@@ -263,7 +263,7 @@ const experience = [
       "Developed networking programmes for senior executives from notable organizations, translating stakeholder needs into programme concepts and coordinating end-to-end execution.",
     secondParagraph:
       "Worked closely with the founder on a pilot initiative, engaging partners and supporting the development and launch of new partnerships.",
-    thirdParagraph: " Identified operational inefficiencies and researched materials, equipment and processes to improve workflow efficiency, including evaluating new labelling equipment and processes.""
+    thirdParagraph: " Identified operational inefficiencies and researched materials, equipment and processes to improve workflow efficiency, including evaluating new labelling equipment and processes.
   },
   {
     company: "ATELIER BRUT",
