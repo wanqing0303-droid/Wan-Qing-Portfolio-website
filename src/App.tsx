@@ -299,7 +299,7 @@ const experience = [
   },
   {
     company: "Stoneforest",
-    date: "OCT - 25",
+    date: "OCT - 23",
     role: "FOUNDER & CREATIVE LEAD",
     period: "2023 – 2025",
     location: "SINGAPORE",
