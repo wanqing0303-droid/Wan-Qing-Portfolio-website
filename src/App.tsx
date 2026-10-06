@@ -284,7 +284,7 @@ const experience = [
       "Identified operational inefficiencies and researched materials, equipment and processes to improve workflow efficiency, including evaluating new labelling equipment and processes.",
   },
   {
-    company: "Seij",
+    company: "S",
     date: "OCT - 25",
     role: "SENIOR SPATIAL & INTERACTION DESIGNER",
     period: "2024 – 2025",
