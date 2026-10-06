@@ -228,7 +228,7 @@ const projects = [
       {
         heading: "01 // CLASS SCHEDULING",
         caption: "MONTHLY CLASS MANAGEMENT",
-        text: "We created a centralised class schedule that gives administrators a clear monthly overview of badminton sessions, with quick access to list views and class creation tools n.",
+        text: "We created a centralised class schedule that gives administrators a clear monthly overview of badminton sessions, with quick access to list views and class creation tools based on w.",
       },
       {
         heading: "02 // STUDENT MANAGEMENT",
