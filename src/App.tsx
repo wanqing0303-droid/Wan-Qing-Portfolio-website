@@ -233,7 +233,7 @@ const projects = [
       {
         heading: "02 // STUDENT MANAGEMENT",
         caption: "STUDENT PROFILES AND GROUPS",
-        text: "The student management workspace brings profiles, groups, status controls, credits  information, and attendance history into one searchable and filterable interface.",
+        text: "The student management workspace brings profiles, groups, status controls, credits information, and attendance history into one searchable and filterable interface.",
       },
       {
         heading: "03 // COACH MANAGEMENT",
