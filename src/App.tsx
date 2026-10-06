@@ -298,7 +298,7 @@ const experience = [
       "Produced spatial interactive installations with responsive sound-reactive sensors, exhibition collateral for more than 12,000 visitors, and a digital archive portal designed for long-term collection preservation.",
   },
   {
-    company: "APM",
+    company: "APM MO",
     date: "APR - 23",
     role: "MARKETING INTERN",
     period: "2022",
