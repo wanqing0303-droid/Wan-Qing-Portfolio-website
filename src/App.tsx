@@ -285,7 +285,7 @@ const experience = [
   },
   {
     company: "Seijo Apparels",
-    date: "DEC - 25",
+    date: "DEC - 23",
     role: "FOUNDER & CREATIVE LEAD",
     period: "2023 – 2025",
     location: "SINGAPORE",
