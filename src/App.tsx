@@ -991,7 +991,7 @@ export default function App() {
                   <h3>ROLE RESPONSIBILITIES &amp; SCOPE</h3>
                   <p>{experience[selectedExperience].description}</p>
                   <p>{experience[selectedExperience].secondParagraph}</p>
-                  <p>{experience[selectedExperience].thirdParagraphParagraph}</p>
+                  <p>{experience[selectedExperience].thirdParagraphP}</p>
                 </section>
               </div>
             </div>
