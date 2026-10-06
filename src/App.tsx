@@ -228,7 +228,7 @@ const projects = [
       {
         heading: "01 // CLASS SCHEDULING",
         caption: "MONTHLY CLASS MANAGEMENT",
-        text: "We strategised with our clie Elever to create a centralised class schedule that gives administrators a clear monthly overview of badminton sessions, with quick access to list views and class creation tools.",
+        text: "We strategised with our client Elever to create a centralised class schedule that gives administrators a clear monthly overview of badminton sessions, with quick access to list views and class creation tools.",
       },
       {
         heading: "02 // STUDENT MANAGEMENT",
