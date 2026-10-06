@@ -288,7 +288,7 @@ const experience = [
     date: "OCT - 25",
     role: "FOUNDER & CREATIVE LEAD",
     period: "2023 – 2025",
-    location: "B",
+    location: "SINGAPORE",
     domain: "SPATIAL & INTERACTIVE",
     status: "COMPLETED ARCHIVE",
     image: "d3722.png",
