@@ -326,8 +326,7 @@ const experience = [
     image: "d3722.png",
     description:
       "Bridged interactive kinetic interfaces with tangible gallery surfaces. Built bespoke exhibition navigation and interactive kinetic installations.",
-    secondParagraph:
-      "Produced spatial interactive installations with res",
+    secondParagraph: "Produced spatial interactive installations with res",
   },
 ]
 
