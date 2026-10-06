@@ -1014,6 +1014,10 @@ main {
   object-position: center 80%;
 }
 
+.case-modal figure img.seijo-figure-three {
+  object-position: center 40%;
+}
+
 .case-modal figcaption {
   display: flex;
   justify-content: space-between;

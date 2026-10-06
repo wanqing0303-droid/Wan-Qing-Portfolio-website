@@ -815,9 +815,11 @@ export default function App() {
                         ) : (
                           <img
                             className={
-                              current.number === "03" && index === 4
-                                ? "chateraise-figure-five"
-                                : ""
+                              current.number === "01" && index === 2
+                                ? "seijo-figure-three"
+                                : current.number === "03" && index === 4
+                                  ? "chateraise-figure-five"
+                                  : ""
                             }
                             src={image}
                             alt={`${current.title} content ${index + 1}`}
