@@ -298,7 +298,7 @@ const experience = [
       "Produced spatial interactive installations with responsive sound-reactive sensors, exhibition collateral for more than 12,000 visitors, and a digital archive portal designed for long-term collection preservation.",
   },
   {
-    company: "Stone Apparels",
+    company: "Stoneforest Apparels",
     date: "OCT - 25",
     role: "FOUNDER & CREATIVE LEAD",
     period: "2023 – 2025",
