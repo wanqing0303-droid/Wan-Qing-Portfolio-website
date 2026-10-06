@@ -287,7 +287,7 @@ const experience = [
     company: "Seijo Apparels",
     date: "OCT - 25",
     role: "SENIOR SPATIAL & INTERACTION DESIGNER",
-    period: "2024 – 2025",
+    period: "2023 – 2025",
     location: "BERLIN / TOKYO",
     domain: "SPATIAL & INTERACTIVE",
     status: "COMPLETED ARCHIVE",
