@@ -268,6 +268,7 @@ function preloadProject(index: number) {
 
 const experience = [
   {
+    id: "qed-operations-2026",
     company: "QED Changemakers",
     date: "OCT - 2026",
     role: "OPERATIONS EXECUTIVE",
@@ -284,6 +285,7 @@ const experience = [
       "Identified operational inefficiencies and researched materials, equipment and processes to improve workflow efficiency, including evaluating new labelling equipment and processes.",
   },
   {
+    id: "seijo-founder-2023",
     company: "Seijo Apparels",
     date: "DEC - 23",
     role: "FOUNDER & CREATIVE LEAD",
@@ -298,6 +300,7 @@ const experience = [
       "Produced spatial interactive installations with responsive sound-reactive sensors, exhibition collateral for more than 12,000 visitors, and a digital archive portal designed for long-term collection preservation.",
   },
   {
+    id: "apm-marketing-2022",
     company: "APM Monaco",
     date: "APR - 23",
     role: "MARKETING INTERN",
@@ -312,6 +315,7 @@ const experience = [
       "Produced spatial interactive installations with responsive sound-reactive sensors, exhibition collateral for more than 12,000 visitors, and a digital archive portal designed for long-term collection preservation.",
   },
   {
+    id: "stoneforest-marketing-2022",
     company: "Stoneforest",
     date: "APR - 23",
     role: "MARKETING INTERN",
@@ -324,7 +328,7 @@ const experience = [
       "Bridged interactive kinetic interfaces with tangible gallery surfaces. Built bespoke exhibition navigation and interactive kinetic installations.",
     secondParagraph:
       "Produced spatial interactive installations with res",
-  }
+  },
 ]
 
 function Corners({ small = false }: { small?: boolean }) {
@@ -667,7 +671,7 @@ export default function App() {
             {experience.map((item, index) => (
               <button
                 className="experience-card"
-                key={item.company}
+                key={item.id}
                 onClick={() => setSelectedExperience(index)}
                 aria-label={`Open experience record for ${item.company}, ${item.role}`}
               >
