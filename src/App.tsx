@@ -300,7 +300,7 @@ const experience = [
   {
     company: "Stoneforest",
     date: "APR - 23",
-    role: "FOUNDER & CREATIVE LEAD",
+    role: "MARKETING INTERN",
     period: "2023 – 2025",
     location: "SINGAPORE",
     domain: "MARKETING",
