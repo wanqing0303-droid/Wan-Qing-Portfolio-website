@@ -311,7 +311,18 @@ const experience = [
     secondParagraph:
       "Produced spatial interactive installations with responsive sound-reactive sensors, exhibition collateral for more than 12,000 visitors, and a digital archive portal designed for long-term collection preservation.",
   },
-  {
+  {company: "Stoneforest",
+    date: "APR - 23",
+    role: "MARKETING INTERN",
+    period: "2022",
+    location: "SINGAPORE",
+    domain: "MARKETING",
+    status: "COMPLETED ARCHIVE",
+    image: "d3722.png",
+    description:
+      "Bridged interactive kinetic interfaces with tangible gallery surfaces. Built bespoke exhibition navigation and interactive kinetic installations.",
+    secondParagraph:
+      "Produced spatial interactive installations with res
     
   }
 ]
