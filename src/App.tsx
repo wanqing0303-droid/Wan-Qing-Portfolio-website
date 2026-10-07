@@ -331,9 +331,7 @@ const experience = [
     status: "COMPLETED ARCHIVE",
     image: "d3722.png",
     description:
-      "Engaged customers through a consultative approach, understanding their needs and offering personalised product recommendations without using a push-based sales approach.
-Sold high-ticket products and personally closed thousands of dollars in sales across boutique activations.
-Adapted recommendations based on customer preferences and feedback to deliver a positive purchasing experience.ic installations.",
+      "ic installations.",
     secondParagraph:
       "Produced spatial interactive installations with responsive sound-reactive sensors, exhibition collateral for more than 12,000 visitors, and a digital archive portal designed for long-term collection preservation.",
   },
