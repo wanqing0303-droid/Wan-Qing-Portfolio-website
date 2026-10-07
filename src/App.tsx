@@ -775,9 +775,9 @@ export default function App() {
                 <label>EDUCATION</label>
                 <h4>BACHELORS IN BUSINESS</h4>
                 <p>
-                  <b>RELEVANT MODULES:</b> USER INTERFACE &amp; USER EXPERIENCE,
-                  CONSUMER BEHAVIOUR, DESIGN COMMUNICATION &amp; BEHAVIOURAL
-                  CHANGE, DIGITAL MARKETING, STRATEGY
+                  <b>RELEVANT MODULES:</b> CONSUMER BEHAVIOUR, DESIGN
+                  COMMUNICATION &amp; BEHAVIOURAL CHANGE, DIGITAL MARKETING,
+                  STRATEGY, USER INTERFACE &amp; USER EXPERIENCE
                 </p>
                 <div className="education-meta">
                   <span>
