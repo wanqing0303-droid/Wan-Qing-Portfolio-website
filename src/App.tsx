@@ -487,19 +487,25 @@ export default function App() {
             className={activeSection === "portfolio" ? "active-link" : ""}
             href="#portfolio"
           >
-            <span /> PORTFOLIO [{projects.length}]
+            <span className="nav-dot" />
+            <span className="nav-label">PORTFOLIO [{projects.length}]</span>
+            <span className="nav-label-mobile">WORK</span>
           </a>
           <a
             className={activeSection === "experience" ? "active-link" : ""}
             href="#experience"
           >
-            <span /> EXPERIENCE
+            <span className="nav-dot" />
+            <span className="nav-label">EXPERIENCE</span>
+            <span className="nav-label-mobile">EXPERIENCE</span>
           </a>
           <a
             className={activeSection === "about" ? "active-link" : ""}
             href="#about"
           >
-            <span /> ABOUT ME
+            <span className="nav-dot" />
+            <span className="nav-label">ABOUT ME</span>
+            <span className="nav-label-mobile">ABOUT</span>
           </a>
         </nav>
         <div className="header-status">
