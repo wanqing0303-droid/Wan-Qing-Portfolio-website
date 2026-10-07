@@ -1393,7 +1393,7 @@ main {
     display: block;
     width: 90%;
     height: calc(100% - 14px);
-    transform: translate(-54px, 29px) rotate(-5deg);
+    transform: translate(-54px, 5px) rotate(-5deg);
   }
 
   .coordinates {
@@ -1575,7 +1575,7 @@ main {
 
   .portrait-signature {
     width: 94%;
-    transform: translate(-50px, 31px) rotate(-5deg);
+    transform: translate(-50px, 7px) rotate(-5deg);
   }
 
   .portfolio h1 {
