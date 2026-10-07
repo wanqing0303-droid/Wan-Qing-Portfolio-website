@@ -580,7 +580,7 @@ main {
 }
 
 .experience-card > div.seijo-cover-frame img {
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
 }
 
