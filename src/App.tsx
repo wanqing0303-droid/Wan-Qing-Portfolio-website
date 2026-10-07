@@ -364,7 +364,7 @@ function SectionTitle({
 }
 
 export default function App() {
-  const [active, setActive] = useState(1)
+  const [active, setActive] = useState(0)
   const [activeSection, setActiveSection] = useState("portfolio")
   const [modalOpen, setModalOpen] = useState(false)
   const [selectedExperience, setSelectedExperience] = useState<number | null>(
