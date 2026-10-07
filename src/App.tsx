@@ -28,41 +28,6 @@ function preloadMedia(source: string) {
 
 const projects = [
   {
-    number: "01",
-    year: "2025",
-    title: "SEIJO",
-    subtitle: "Entrepreneurship",
-    client: "WAN QING STUDIO",
-    role: "Creative Director",
-    status: "INACTIVE",
-    coords: "38.9067° N, 1.4206° E",
-    description:
-      "Monumental live event stage architecture, generative lighting systems, and dynamic crowd scenography engineered for Ibiza open-air pavilions.",
-    image: asset("SEIJO_title.jpg"),
-    detailImages: [
-      asset("Seijo content 1.jpg"),
-      asset("Seijo content 2.jpg"),
-      asset("Seijo content 3.jpg"),
-    ],
-    detailSections: [
-      {
-        heading: "01 // BRANDING",
-        caption: "FIRST LAUNCH",
-        text: "As Creative Lead, I shaped the ideas behind each collection, translating relatable experiences and community insights into creative concepts. Beyond design direction, I also worked across marketing and community-building initiatives to shape how the brand connected with its audience.",
-      },
-      {
-        heading: "02 // EVENTS",
-        caption: "SEIJO GENESIS EVENT",
-        text: "I organised and hosted a community gathering that brought together 100+ attendees, creating an experience where people could connect beyond the brand and its products.",
-      },
-      {
-        heading: "03 // FASHION RUNWAY",
-        caption: "SEIJO X CHARGEDUP",
-        text: "I collaborated with ChargedUp and Tesla to integrate Tesla’s EV technology into an SMU fashion show. The partnership powered the runway experience, where models walked the red carpet lit by Tesla’s headlights—creating a distinctive intersection of fashion, technology, and experiential design.",
-      },
-    ],
-  },
-  {
     number: "02",
     year: "2026",
     title: "ION ORCHARD",
@@ -293,11 +258,33 @@ const experience = [
     location: "SINGAPORE",
     domain: "CREATIVE",
     status: "COMPLETED ARCHIVE",
-    image: "d3722.png",
+    image: "SEIJO_title.jpg",
     description:
-      "Bridged interactive kinetic interfaces with tangible gallery surfaces. Built bespoke exhibition navigation and interactive kinetic installations.",
+      "As Founder and Creative Lead, I shaped SEIJO’s collections, brand direction, marketing initiatives, and community experiences.",
     secondParagraph:
-      "Produced spatial interactive installations with responsive sound-reactive sensors, exhibition collateral for more than 12,000 visitors, and a digital archive portal designed for long-term collection preservation.",
+      "The work brought together branding, event production, partnerships, fashion, technology, and experiential design.",
+    detailImages: [
+      "Seijo content 1.jpg",
+      "Seijo content 2.jpg",
+      "Seijo content 3.jpg",
+    ],
+    detailSections: [
+      {
+        heading: "01 // BRANDING",
+        caption: "FIRST LAUNCH",
+        text: "As Creative Lead, I shaped the ideas behind each collection, translating relatable experiences and community insights into creative concepts. Beyond design direction, I also worked across marketing and community-building initiatives to shape how the brand connected with its audience.",
+      },
+      {
+        heading: "02 // EVENTS",
+        caption: "SEIJO GENESIS EVENT",
+        text: "I organised and hosted a community gathering that brought together 100+ attendees, creating an experience where people could connect beyond the brand and its products.",
+      },
+      {
+        heading: "03 // FASHION RUNWAY",
+        caption: "SEIJO X CHARGEDUP",
+        text: "I collaborated with ChargedUp and Tesla to integrate Tesla’s EV technology into an SMU fashion show. The partnership powered the runway experience, where models walked the red carpet lit by Tesla’s headlights—creating a distinctive intersection of fashion, technology, and experiential design.",
+      },
+    ],
   },
   {
     id: "apm-marketing-2022",
@@ -357,7 +344,7 @@ function SectionTitle({
 }
 
 export default function App() {
-  const [active, setActive] = useState(2)
+  const [active, setActive] = useState(1)
   const [activeSection, setActiveSection] = useState("portfolio")
   const [modalOpen, setModalOpen] = useState(false)
   const [selectedExperience, setSelectedExperience] = useState<number | null>(
@@ -579,15 +566,13 @@ export default function App() {
                 <img
                   key={current.number}
                   className={
-                    active === 0
-                      ? "seijo-slide-image"
-                      : active === 2
-                        ? "chateraise-slide-image"
-                        : active === 3
-                          ? "loreal-slide-image"
-                          : active === 5
-                            ? "elever-slide-image"
-                            : ""
+                    current.number === "03"
+                      ? "chateraise-slide-image"
+                      : current.number === "04"
+                        ? "loreal-slide-image"
+                        : current.number === "06"
+                          ? "elever-slide-image"
+                          : ""
                   }
                   src={current.image}
                   alt={current.subtitle}
@@ -991,8 +976,54 @@ export default function App() {
                   <h3>ROLE RESPONSIBILITIES &amp; SCOPE</h3>
                   <p>{experience[selectedExperience].description}</p>
                   <p>{experience[selectedExperience].secondParagraph}</p>
-                  <p>{experience[selectedExperience].thirdParagraph}</p>
+                  {"thirdParagraph" in experience[selectedExperience] &&
+                    experience[selectedExperience].thirdParagraph && (
+                      <p>{experience[selectedExperience].thirdParagraph}</p>
+                    )}
                 </section>
+                {"detailImages" in experience[selectedExperience] &&
+                  experience[selectedExperience].detailImages.map(
+                    (image, index) => {
+                      const section =
+                        experience[selectedExperience].detailSections[index]
+                      return (
+                        <div
+                          className="additional-study"
+                          key={`${experience[selectedExperience].id}-${index}-${image}`}
+                        >
+                          <figure>
+                            <img
+                              className={
+                                index === 2 ? "seijo-figure-three" : ""
+                              }
+                              src={asset(image)}
+                              alt={`${experience[selectedExperience].company} ${section.heading}`}
+                              loading="lazy"
+                              decoding="async"
+                            />
+                            <figcaption>
+                              <span>
+                                FIG {String(index + 1).padStart(2, "0")}.{" "}
+                                {section.caption}
+                              </span>
+                              <span>
+                                ARCHIVE // EXP-
+                                {String(selectedExperience + 1).padStart(
+                                  2,
+                                  "0",
+                                )}
+                                -{String(index + 1).padStart(2, "0")}
+                              </span>
+                            </figcaption>
+                          </figure>
+                          <section>
+                            <h3>{section.heading}</h3>
+                            <p>{section.text}</p>
+                          </section>
+                        </div>
+                      )
+                    },
+                  )}
               </div>
             </div>
             <Corners />
