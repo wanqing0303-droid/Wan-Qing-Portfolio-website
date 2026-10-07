@@ -335,20 +335,6 @@ const experience = [
       "Drove thousands of dollars in daily sales during boutique retail activations by engaging customers, understanding their needs and recommending suitable products.",
     secondParagraph: `Adapted sales approaches based on customer preferences and real-time feedback, strengthening product communication and customer experience.`,
   },
-  {
-    id: "stoneforest-marketing-2022",
-    company: "Stoneforest",
-    date: "APR - 23",
-    role: "MARKETING INTERN",
-    period: "2022",
-    location: "SINGAPORE",
-    domain: "MARKETING",
-    status: "COMPLETED ARCHIVE",
-    image: "d3722.png",
-    description:
-      "Bridged interactive kinetic interfaces with tangible gallery surfaces. Built bespoke exhibition navigation and interactive kinetic installations.",
-    secondParagraph: "Produced spatial interactive installations with res",
-  },
 ]
 
 function Corners({ small = false }: { small?: boolean }) {
