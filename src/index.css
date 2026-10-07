@@ -574,6 +574,17 @@ main {
   filter: saturate(1);
 }
 
+.experience-card > div.seijo-cover-frame,
+.experience-figure.seijo-cover-frame {
+  background: rgb(41, 41, 41);
+}
+
+.experience-card > div.seijo-cover-frame img,
+.experience-figure.seijo-cover-frame img {
+  object-fit: contain;
+  object-position: center;
+}
+
 .experience-placeholder {
   position: absolute;
   inset: 0;

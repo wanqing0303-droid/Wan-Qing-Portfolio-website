@@ -258,7 +258,7 @@ const experience = [
     location: "SINGAPORE",
     domain: "CREATIVE",
     status: "COMPLETED ARCHIVE",
-    image: "SEIJO_title.jpg",
+    image: "Seijo experience cover.png",
     description:
       "As Founder and Creative Lead, I shaped SEIJO’s collections, brand direction, marketing initiatives, and community experiences.",
     secondParagraph:
@@ -659,7 +659,11 @@ export default function App() {
                 onClick={() => setSelectedExperience(index)}
                 aria-label={`Open experience record for ${item.company}, ${item.role}`}
               >
-                <div>
+                <div
+                  className={
+                    item.id === "seijo-founder-2023" ? "seijo-cover-frame" : ""
+                  }
+                >
                   <span className="experience-placeholder" aria-hidden="true">
                     <b>EXP // {String(index + 1).padStart(2, "0")}</b>
                     <small>IMAGE RECORD PENDING</small>
@@ -946,7 +950,13 @@ export default function App() {
                   {experience[selectedExperience].status}
                 </span>
               </div>
-              <figure className="experience-figure">
+              <figure
+                className={`experience-figure ${
+                  experience[selectedExperience].id === "seijo-founder-2023"
+                    ? "seijo-cover-frame"
+                    : ""
+                }`}
+              >
                 <span className="experience-placeholder" aria-hidden="true">
                   <b>
                     EXP // {String(selectedExperience + 1).padStart(2, "0")}
