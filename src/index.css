@@ -579,7 +579,11 @@ main {
   background: rgb(41, 41, 41);
 }
 
-.experience-card > div.seijo-cover-frame img,
+.experience-card > div.seijo-cover-frame img {
+  object-fit: cover;
+  object-position: center;
+}
+
 .experience-figure.seijo-cover-frame img {
   object-fit: contain;
   object-position: center;

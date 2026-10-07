@@ -286,7 +286,7 @@ const experience = [
     location: "SINGAPORE",
     domain: "CREATIVE",
     status: "COMPLETED ARCHIVE",
-    image: "Seijo experience cover.png",
+    image: "Seijo experience cover portrait.svg",
     description:
       "Co-founded and operated a Japanese-inspired streetwear brand, developing collections from concept to launch for a 16–30s target audience.",
     secondParagraph:
