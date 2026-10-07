@@ -322,7 +322,7 @@ const experience = [
   },
   {
     id: "apm-marketing-2022",
-    company: "Maverick Ma",
+    company: "Maverick Made",
     date: "APR - 23",
     role: "MARKETING INTERN",
     period: "2022",
