@@ -1387,24 +1387,13 @@ main {
   }
 
   .portrait-signature {
-    display: none;
-  }
-
-  .portrait-frame::after {
-    position: absolute;
-    z-index: 2;
-    top: 48px;
-    left: 20px;
-    content: "Hi I'm Wan Qing";
-    color: var(--archive-white);
-    font-family: "Caveat:Bold", cursive;
-    font-size: 34px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    line-height: 1;
-    text-shadow: 0 2px 7px rgba(0, 0, 0, .45);
-    transform: rotate(-5deg);
-    transform-origin: left center;
+    top: 7px;
+    bottom: 7px;
+    left: 7px;
+    display: block;
+    width: 90%;
+    height: calc(100% - 14px);
+    transform: translate(-54px, 72px) rotate(-5deg);
   }
 
   .coordinates {
@@ -1584,9 +1573,9 @@ main {
     letter-spacing: .15px;
   }
 
-  .portrait-frame::after {
-    left: 16px;
-    font-size: 30px;
+  .portrait-signature {
+    width: 94%;
+    transform: translate(-50px, 78px) rotate(-5deg);
   }
 
   .portfolio h1 {
