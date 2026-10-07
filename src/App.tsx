@@ -333,7 +333,7 @@ const experience = [
     description:
       "Drove thousands of dollars in daily sales during boutique retail activations by engaging customers, understanding their needs and recommending suitable products.",
     secondParagraph:
-      "ection preservation.",
+      "ection.",
   },
   {
     id: "stoneforest-marketing-2022",
