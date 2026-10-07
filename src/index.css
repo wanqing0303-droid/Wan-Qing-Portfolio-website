@@ -1167,6 +1167,10 @@ main {
 }
 
 @media (max-width: 640px) {
+  body {
+    overflow-x: hidden;
+  }
+
   .header,
   .portfolio,
   .experience,
@@ -1177,20 +1181,61 @@ main {
   }
 
   .header {
-    height: 64px;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 56px 44px;
+    height: 100px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .brand img {
-    width: 112px;
+    width: 104px;
+    height: auto;
   }
 
   .header-status > strong {
-    padding: 5px 7px;
+    gap: 4px;
+    padding: 4px 6px;
+    font-size: 9px;
+    letter-spacing: .3px;
+  }
+
+  .header-status i {
+    width: 6px;
+    height: 6px;
+  }
+
+  .header nav {
+    grid-row: 2;
+    grid-column: 1 / -1;
+    justify-content: space-between;
+    width: 100%;
+    gap: 8px;
+    padding: 10px 0 11px;
+    border: 0;
+    border-top: 1px solid var(--archive-rule);
+    background: var(--archive-white);
+    font-size: 9px;
+    letter-spacing: .35px;
+  }
+
+  .header nav a {
+    gap: 3px;
+  }
+
+  .header nav a span {
+    width: 5px;
+    height: 5px;
+  }
+
+  main {
+    padding-top: 100px;
   }
 
   .index-line {
-    padding-top: 30px;
-    font-size: 9px;
+    padding-top: 14px;
+    font-size: 8px;
+    letter-spacing: .55px;
   }
 
   .index-line span:last-child,
@@ -1200,51 +1245,164 @@ main {
   }
 
   .portfolio h1 {
-    margin-top: 36px;
-    font-size: 16px;
-    letter-spacing: 2px;
+    gap: 7px;
+    margin-top: 26px;
+    padding-bottom: 8px;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 1.3px;
+    text-align: center;
+  }
+
+  .portfolio h1 i {
+    flex: 0 0 auto;
+    width: 6px;
+    height: 6px;
   }
 
   .project-stage {
     min-height: 0;
+    gap: 12px;
+    padding: 20px 0 28px;
+  }
+
+  .peek {
+    height: 56px;
+  }
+
+  .peek span {
+    font-size: 9px;
+    letter-spacing: .65px;
   }
 
   .featured-project {
-    aspect-ratio: 1.25;
+    border-width: 6px;
+    aspect-ratio: 1.05;
   }
 
   .featured-copy strong {
-    font-size: 19px;
-    letter-spacing: 2px;
+    font-size: 20px;
+    letter-spacing: 1.8px;
   }
 
   .featured-copy small {
-    width: 80%;
+    width: 88%;
+    margin-top: 4px;
+    font-size: 9px;
+    line-height: 14px;
+    letter-spacing: 1.4px;
     text-align: center;
   }
 
+  .featured-copy b {
+    margin-top: 16px;
+    padding: 5px 10px;
+    font-size: 9px;
+    letter-spacing: 1.2px;
+  }
+
+  .experience,
+  .about {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+
+  .section-title {
+    align-items: flex-start;
+  }
+
+  .section-title h2 {
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 1px;
+  }
+
+  .experience-track {
+    gap: 12px;
+    margin-top: 18px;
+    scroll-padding-left: 0;
+  }
+
   .experience-card {
-    flex-basis: 82vw;
+    flex-basis: calc(100vw - 48px);
+    max-width: 340px;
+    height: 420px;
+    padding: 12px;
+  }
+
+  .experience-card > div {
+    height: 394px;
+  }
+
+  .experience-card p {
+    gap: 8px;
+    font-size: 10px;
+    letter-spacing: .7px;
+  }
+
+  .experience-card p strong:first-child {
+    max-width: 68%;
   }
 
   .portrait-frame {
-    height: 420px;
+    height: 360px;
+    padding: 7px;
   }
 
   .portrait-frame > img {
-    height: 396px;
+    height: 344px;
+  }
+
+  .portrait-frame .shade {
+    inset: 7px;
+  }
+
+  .portrait-dot,
+  .coordinates {
+    top: 15px;
+  }
+
+  .portrait-dot {
+    left: 15px;
   }
 
   .portrait-signature {
-    width: 78%;
+    top: 7px;
+    bottom: 7px;
+    left: 7px;
+    width: 90%;
+    height: calc(100% - 14px);
+    transform: translate(0, -24px) rotate(5deg);
   }
 
   .portrait-signature text {
-    font-size: 48px;
+    font-size: 44px;
   }
 
   .coordinates {
+    right: 15px;
     font-size: 9px;
+  }
+
+  .about-grid {
+    gap: 12px;
+    padding-top: 16px;
+  }
+
+  .bio-card,
+  .education-card {
+    min-height: 0;
+    padding: 18px;
+  }
+
+  .bio-card h3 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .bio-card p {
+    font-size: 11px;
+    line-height: 18px;
   }
 
   .bio-card footer,
@@ -1254,30 +1412,162 @@ main {
     align-items: flex-start;
   }
 
+  .bio-card footer {
+    gap: 6px;
+    margin-top: 20px;
+    line-height: 14px;
+  }
+
+  .education-card {
+    font-size: 10px;
+  }
+
+  .education-card h4 {
+    font-size: 10px;
+    line-height: 15px;
+  }
+
+  .education-card p {
+    line-height: 16px;
+  }
+
+  .education-meta {
+    gap: 12px;
+    line-height: 14px;
+  }
+
+  .education-card > a {
+    padding: 10px 12px;
+    font-size: 11px;
+  }
+
   .footer {
-    gap: 24px;
+    gap: 18px;
+    padding-top: 36px;
+    padding-bottom: 24px;
+    font-size: 9px;
+    line-height: 14px;
+    letter-spacing: .7px;
+  }
+
+  .footer > div:last-child {
+    gap: 8px;
+    font-size: 10px;
+    line-height: 16px;
   }
 
   .modal-backdrop {
-    padding: 24px 12px;
+    padding: 8px;
   }
 
   .case-modal {
-    height: min(720px, calc(100dvh - 48px));
+    height: calc(100dvh - 16px);
     min-height: 0;
+    border-width: 1px;
+  }
+
+  .case-modal > header {
+    min-height: 48px;
+    height: auto;
+    gap: 8px;
+    padding: 8px 10px;
+    font-size: 8px;
+    line-height: 12px;
+    letter-spacing: .55px;
+  }
+
+  .case-modal > header span {
+    min-width: 0;
+  }
+
+  .case-modal > header button {
+    flex: 0 0 auto;
+    padding: 4px 5px;
+    font-size: 10px;
+    letter-spacing: .7px;
   }
 
   .case-content {
-    padding: 18px;
+    padding: 14px;
+  }
+
+  .case-heading label {
+    font-size: 8px;
+    letter-spacing: 1.1px;
+  }
+
+  .case-heading h2 {
+    font-size: 15px;
+    line-height: 21px;
+  }
+
+  .case-heading p {
+    font-size: 10px;
+    line-height: 16px;
   }
 
   .case-meta {
     grid-template-columns: 1fr 1fr;
+    gap: 10px 8px;
+    padding: 10px 0;
+    font-size: 8px;
+    line-height: 12px;
   }
 
   .case-modal figcaption {
-    gap: 8px;
+    flex-direction: column;
+    gap: 4px;
     font-size: 7px;
+    line-height: 11px;
+    letter-spacing: .6px;
+  }
+
+  .case-notes {
+    gap: 16px;
+    padding: 16px 0 8px;
+  }
+
+  .case-notes section {
+    padding: 16px;
+  }
+
+  .case-notes h3 {
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .case-notes p {
+    font-size: 10px;
+    line-height: 17px;
+  }
+
+  .experience-modal figure img {
+    height: 240px;
+  }
+
+  .experience-figure {
+    min-height: 240px;
+  }
+}
+
+@media (max-width: 360px) {
+  .header nav {
+    gap: 4px;
+    font-size: 8px;
+    letter-spacing: .15px;
+  }
+
+  .portfolio h1 {
+    font-size: 12px;
+    letter-spacing: .8px;
+  }
+
+  .featured-copy strong {
+    font-size: 18px;
+  }
+
+  .experience-card {
+    flex-basis: calc(100vw - 40px);
   }
 }
 
