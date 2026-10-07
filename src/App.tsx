@@ -260,9 +260,15 @@ const experience = [
     status: "COMPLETED ARCHIVE",
     image: "Seijo experience cover.png",
     description:
-      "As Founder and Creative Lead, I shaped SEIJO’s collections, brand direction, marketing initiatives, and community experiences.",
+      "Co-founded and operated a Japanese-inspired streetwear brand, developing collections from concept to launch for a 16–30s target audience.",
     secondParagraph:
-      "The work brought together branding, event production, partnerships, fashion, technology, and experiential design.",
+      "Led brand concept development, creative direction, marketing, sourcing and operations, coordinating product development and event execution.",
+    thirdParagraph:
+      "Planned and executed pop-up events and community activations, including a 100+ participant outdoor event and retail booths averaging ~S$800 in daily sales.",
+    fourthParagraph:
+      "Developed partnerships and B2B opportunities, including supplying shirts for school clubs and camps.",
+    fifthParagraph:
+      "Created and managed digital content and campaign materials, with brand content reaching 400K+ views and 36K likes.",
     detailImages: [
       "Seijo content 1.jpg",
       "Seijo content 2.jpg",
@@ -989,6 +995,14 @@ export default function App() {
                   {"thirdParagraph" in experience[selectedExperience] &&
                     experience[selectedExperience].thirdParagraph && (
                       <p>{experience[selectedExperience].thirdParagraph}</p>
+                    )}
+                  {"fourthParagraph" in experience[selectedExperience] &&
+                    experience[selectedExperience].fourthParagraph && (
+                      <p>{experience[selectedExperience].fourthParagraph}</p>
+                    )}
+                  {"fifthParagraph" in experience[selectedExperience] &&
+                    experience[selectedExperience].fifthParagraph && (
+                      <p>{experience[selectedExperience].fifthParagraph}</p>
                     )}
                 </section>
                 {"detailImages" in experience[selectedExperience] &&
