@@ -331,7 +331,7 @@ const experience = [
     status: "COMPLETED ARCHIVE",
     image: "d3722.png",
     description:
-      "Bridged interactive kinetic interfaces with tangible gallery surfaces. Built bespoke exhibition navigation and interactive kinetic installations.",
+      "Bridged interactive interfaces with tangible gallery surfaces. Built bespoke exhibition navigation and interactive kinetic installations.",
     secondParagraph:
       "Produced spatial interactive installations with responsive sound-reactive sensors, exhibition collateral for more than 12,000 visitors, and a digital archive portal designed for long-term collection preservation.",
   },
