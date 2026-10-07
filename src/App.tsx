@@ -332,8 +332,7 @@ const experience = [
     image: "d3722.png",
     description:
       "Drove thousands of dollars in daily sales during boutique retail activations by engaging customers, understanding their needs and recommending suitable products.",
-    secondParagraph:
-      "Adapted sales approaches based on customer preferences and real-time feedback, strengthening product communication and customer experience.",
+    secondParagraph: `Adapted sales approaches based on customer preferences and real-time feedback, strengthening product communication and customer experience.`,
   },
   {
     id: "stoneforest-marketing-2022",
