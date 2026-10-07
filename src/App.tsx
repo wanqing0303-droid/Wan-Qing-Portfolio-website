@@ -324,7 +324,7 @@ const experience = [
     id: "sales-2026",
     company: "Maverick Made",
     date: "APR - 23",
-    role: "MA",
+    role: "S",
     period: "2025-2026",
     location: "SINGAPORE",
     domain: "SALES",
