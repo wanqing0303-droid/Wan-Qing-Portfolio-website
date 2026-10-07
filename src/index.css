@@ -584,6 +584,15 @@ main {
   object-position: center;
 }
 
+.experience-card > div.maverick-cover-frame {
+  background: rgb(226, 226, 209);
+}
+
+.experience-card > div.maverick-cover-frame img {
+  object-fit: contain;
+  object-position: center;
+}
+
 .experience-figure.seijo-cover-frame img {
   object-fit: contain;
   object-position: center;

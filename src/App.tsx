@@ -330,6 +330,7 @@ const experience = [
     domain: "SALES",
     status: "COMPLETED ARCHIVE",
     image: "Maverick Made cover.png",
+    modalImage: "Maverick Made booth.png",
     description:
       "Drove thousands of dollars in daily sales during boutique retail activations by engaging customers, understanding their needs and recommending suitable products.",
     secondParagraph: `Adapted sales approaches based on customer preferences and real-time feedback, strengthening product communication and customer experience.`,
@@ -694,7 +695,11 @@ export default function App() {
               >
                 <div
                   className={
-                    item.id === "seijo-founder-2023" ? "seijo-cover-frame" : ""
+                    item.id === "seijo-founder-2023"
+                      ? "seijo-cover-frame"
+                      : item.id === "sales-2026"
+                        ? "maverick-cover-frame"
+                        : ""
                   }
                 >
                   <span className="experience-placeholder" aria-hidden="true">
@@ -997,7 +1002,11 @@ export default function App() {
                   <small>IMAGE RECORD PENDING</small>
                 </span>
                 <img
-                  src={asset(experience[selectedExperience].image)}
+                  src={asset(
+                    "modalImage" in experience[selectedExperience]
+                      ? experience[selectedExperience].modalImage
+                      : experience[selectedExperience].image,
+                  )}
                   alt={`${experience[selectedExperience].company} archive`}
                   decoding="async"
                   onError={(event) => {
