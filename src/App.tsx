@@ -252,7 +252,7 @@ const experience = [
       "QED content 1.jpg",
       "QED content 2.png",
       "QED content 3.jpg",
-      "Q content 4.jpeg",
+      "qe content 4.jpeg",
     ],
     detailSections: [
       {
