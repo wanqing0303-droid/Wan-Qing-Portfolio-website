@@ -333,7 +333,7 @@ const experience = [
     description:
       "Drove thousands of dollars in daily sales during boutique retail activations by engaging customers, understanding their needs and recommending suitable products.",
     secondParagraph:
-      "Produced spatial interactive installations with responsive sound-reactive sensors, exhibition collateral for more than 12,000 visitors, and a digital archive portal designed for long-term collection preservation.",
+      "ection preservation.",
   },
   {
     id: "stoneforest-marketing-2022",
