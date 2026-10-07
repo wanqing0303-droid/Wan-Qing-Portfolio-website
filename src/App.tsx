@@ -327,7 +327,7 @@ const experience = [
     role: "MARKETING INTERN",
     period: "2025-2026",
     location: "SINGAPORE",
-    domain: "s",
+    domain: "S",
     status: "COMPLETED ARCHIVE",
     image: "d3722.png",
     description:
