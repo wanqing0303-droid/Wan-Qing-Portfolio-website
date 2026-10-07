@@ -248,6 +248,34 @@ const experience = [
       "Worked closely with the founder on a pilot initiative, engaging partners and supporting the development and launch of new partnerships.",
     thirdParagraph:
       "Identified operational inefficiencies and researched materials, equipment and processes to improve workflow efficiency, including evaluating new labelling equipment and processes.",
+    detailImages: [
+      "QED content 1.jpg",
+      "QED content 2.png",
+      "QED content 3.jpg",
+      "QED content 4.jpg",
+    ],
+    detailSections: [
+      {
+        heading: "01 // EVENT COORDINATION",
+        caption: "EVENT COORDINATION",
+        text: "Coordinated events and managed vendors to ensure smooth on-site execution.",
+      },
+      {
+        heading: "02 // MARKETING COLLATERAL DESIGN",
+        caption: "MARKETING COLLATERAL DESIGN",
+        text: "Designed marketing collaterals aligned with the company’s brand identity and visual guidelines.",
+      },
+      {
+        heading: "03 // EVENT EMCEEING",
+        caption: "EVENT EMCEEING",
+        text: "Volunteered as an emcee to facilitate events and engage participants.",
+      },
+      {
+        heading: "04 // PILOT PROJECT BROCHURE",
+        caption: "PILOT PROJECT BROCHURE",
+        text: "Designed a brochure for a pilot project to communicate its concept and value proposition to potential partners.",
+      },
+    ],
   },
   {
     id: "seijo-founder-2023",
@@ -1018,7 +1046,10 @@ export default function App() {
                           <figure>
                             <img
                               className={
-                                index === 2 ? "seijo-figure-three" : ""
+                                experience[selectedExperience].id ===
+                                  "seijo-founder-2023" && index === 2
+                                  ? "seijo-figure-three"
+                                  : ""
                               }
                               src={asset(image)}
                               alt={`${experience[selectedExperience].company} ${section.heading}`}
