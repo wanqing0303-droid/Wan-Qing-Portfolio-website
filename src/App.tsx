@@ -321,7 +321,7 @@ const experience = [
     ],
   },
   {
-    id: "sal-2022",
+    id: "sales-2022",
     company: "Maverick Made",
     date: "APR - 23",
     role: "MARKETING INTERN",
