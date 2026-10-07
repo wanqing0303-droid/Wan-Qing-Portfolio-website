@@ -329,7 +329,7 @@ const experience = [
     location: "SINGAPORE",
     domain: "SALES",
     status: "COMPLETED ARCHIVE",
-    image: "Maverick Made cover.png",
+    image: "Maverick Made cover extended.svg",
     modalImage: "Maverick Made booth.png",
     description:
       "Drove thousands of dollars in daily sales during boutique retail activations by engaging customers, understanding their needs and recommending suitable products.",
@@ -992,7 +992,9 @@ export default function App() {
                 className={`experience-figure ${
                   experience[selectedExperience].id === "seijo-founder-2023"
                     ? "seijo-cover-frame"
-                    : ""
+                    : experience[selectedExperience].id === "sales-2026"
+                      ? "maverick-modal-frame"
+                      : ""
                 }`}
               >
                 <span className="experience-placeholder" aria-hidden="true">

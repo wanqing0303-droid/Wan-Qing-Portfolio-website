@@ -589,8 +589,12 @@ main {
 }
 
 .experience-card > div.maverick-cover-frame img {
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
+}
+
+.experience-figure.maverick-modal-frame img {
+  object-position: center 40%;
 }
 
 .experience-figure.seijo-cover-frame img {
